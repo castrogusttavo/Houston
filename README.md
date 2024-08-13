@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Icons - Houston Pro
 
-## Getting Started
+Welcome to the professional edition of Houston for React — an extensive library of meticulously crafted icons designed to elevate the visual appeal of your web and mobile applications. With Houston React Pro , you gain access to a vast selection of icons tailored to suit every need, allowing for highly customizable and dynamic user interfaces.
 
-First, run the development server:
+Discover more at our website: [houston.com](https://houston.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## FAQ
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Q: How can I download and use free React icons from Houston React Icons?**
+A: You can install the package via npm or yarn and then import the react icons into your react components. Detailed package installation instructions are provided in the [Installation](#installation) section.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Q: Are these React icons customizable in terms of size and color?**
+A: Yes, all react icons are fully customizable. You can adjust their size, color, and other properties easily within your React application. See [Usage Examples](#usage-examples) for more information.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Q: Can I contribute my own designs to the Houston React collection?**
+A: Absolutely! We welcome contributions. Please refer to our [Contributing](#contributing) section for guidelines on how to submit your icons.
 
-## Learn More
+**Q: Is there a live demo where I can see these React icons in action?**
+A: Yes, we have a live example available at [Houston React Example](#live-example). It showcases the usage import various react icons and their customization options.
 
-To learn more about Next.js, take a look at the following resources:
+**Q: Are the react icons from Houston React Icons free for commercial use?**
+A: Houston React Pro is licensed for commercial use, adhering to the [CC0-1.0](#license). Please review the license details for more information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Enjoy the seamless integration of premium icons with Houston React Pro and take your application to the next level!
