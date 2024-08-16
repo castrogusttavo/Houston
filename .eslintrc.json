@@ -1,6 +1,7 @@
 {
   "extends": [
     "@hello.softis/eslint-config/next",
+    "@hello.softis/eslint-config/react",
     "next/core-web-vitals"
   ]
 }
