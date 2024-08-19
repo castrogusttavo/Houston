@@ -15,10 +15,12 @@ export default function privacyPolicy() {
         </p>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed text-base">
           This privacy notice for GUSTTAVO CASTRO (doing business Houston Pro)
-          (&quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot; or &quot;<strong>our</strong>
-          &quot;), describes how and why we might collect, store, use and/or share (&quot;
-          <strong>process</strong>&quot;) your information when you use our services
-          (&quot;<strong>Services</strong>&quot;), such as when you:
+          (&quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot; or
+          &quot;<strong>our</strong>
+          &quot;), describes how and why we might collect, store, use and/or
+          share (&quot;
+          <strong>process</strong>&quot;) your information when you use our
+          services (&quot;<strong>Services</strong>&quot;), such as when you:
         </p>
         <ul className="list-disc pl-[1.25rem]">
           <li className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed text-base pl-[.375em]">
@@ -69,8 +71,8 @@ export default function privacyPolicy() {
           Services we use:
         </h2>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed ">
-          We don&apos;t share share any personally identifying information publicly
-          or with third-parties, except when required to by law.
+          We don&apos;t share share any personally identifying information
+          publicly or with third-parties, except when required to by law.
         </p>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed ">
           We default to processing your data anonymously, but this isn&apos;t
@@ -113,8 +115,9 @@ export default function privacyPolicy() {
         <h2 className="text-2xl font-bold mb-[1em]- mt-[2em]">Cookies</h2>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed ">
           Our website uses cookies to provide you the best possible browsing
-          experience. Cookies are enabled by default but you&apos;re free to opt-out,
-          and we&apos;ll remove the cookies from your machine accordingly.{' '}
+          experience. Cookies are enabled by default but you&apos;re free to
+          opt-out, and we&apos;ll remove the cookies from your machine
+          accordingly.{' '}
           <a href="" className="text-blue-500 hover:underline">
             {' '}
             Click Here to opt-out
@@ -128,9 +131,10 @@ export default function privacyPolicy() {
           we have about you.
         </p>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed ">
-          In case you wish your data to be deleted from the services, we can&apos;t
-          guarantee that you&apos;ll sill be able to use &apos;Houston&apos; or &apos;Houston Pro&apos;
-          properly or whether we can be of any help if you request support.
+          In case you wish your data to be deleted from the services, we
+          can&apos;t guarantee that you&apos;ll sill be able to use
+          &apos;Houston&apos; or &apos;Houston Pro&apos; properly or whether we
+          can be of any help if you request support.
         </p>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed ">
           To request viewing or deleting your data you can send an email to{' '}
