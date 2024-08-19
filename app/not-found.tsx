@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <main className="flex justify-center antialiased">
       <div className="flex flex-col w-full max-w-[1336px] mx-auto min-h-full justify-center">
-        <div className="py-0 px-[1.88rem] mt-[7.12rem] flex items-center justify-center">
+        <div className="py-0 px-[1.88rem] mt-[7.12rem] flex flex-col lg:flex-row items-center justify-center">
           <div className="pt-[2.5rem] flex flex-1 max-w-[34rem]">
             <Image src={Error} alt="404 Image" />
           </div>
