@@ -1,23 +1,20 @@
+import * as Logo from '@/public/logoHorizontal.svg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Header() {
   return (
     <nav className="bg-white text-primary border-neutral-100 flex gap-3 items-center w-screen md:w-full fixed z-30 px-4 h-[73px] top-0">
       <div className="w-full flex mx-auto items-center max-w-[80rem]">
-        <a>
-          <Image
-            src="https://hugeicons.com/assets/logo.svg"
-            alt="Houston logo"
-            width={167}
-            height={33}
-          />
-        </a>
+        <Link href="/">
+          <Image src={Logo} alt="Houston logo" />
+        </Link>
         <div className="flex-grow" />
         <ul className="flex w-full items-center justify-between gap-12">
           <div />
           <ul className="flex items-center gap-10 -ml-28">
             <li className="flex item-center">
-              <a href="#" >
+              <a href="#">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -42,28 +39,28 @@ export function Header() {
               </a>
             </li>
             <li className="relative">
-              <a
-                href="#"
+              <Link
+                href="/icons"
                 className="font-normal text-grey-600 hover:text-black transition-colors"
               >
                 <span>Icons</span>
-              </a>
+              </Link>
             </li>
             <li className="relative">
-              <a
-                href="#"
+              <Link
+                href="/example"
                 className="font-normal text-grey-600 hover:text-black transition-colors"
               >
                 <span>Example</span>
-              </a>
+              </Link>
             </li>
             <li className="relative">
-              <a
-                href="#"
+              <Link
+                href="/pricing"
                 className="font-normal text-grey-600 hover:text-black transition-colors"
               >
                 <span>Pricing</span>
-              </a>
+              </Link>
             </li>
             <li className="relative">
               <a

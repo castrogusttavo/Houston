@@ -9,7 +9,6 @@ import { DialogPromotion } from '@/components/DialogPromotion'
 import { CookieToast } from '@/components/CookieToast'
 import { Footer } from '@/components/Footer'
 import { ReactTyped } from 'react-typed'
-import Image from 'next/image'
 
 export default function Home() {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -454,11 +453,6 @@ export default function Home() {
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2011.png"
-                alt="Image 11"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
                 src="https://hugeicons.com/home/components/Image%2002.png"
                 alt="Image 02"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
@@ -486,11 +480,6 @@ export default function Home() {
               <img
                 src="https://hugeicons.com/home/components/Image%2006.png"
                 alt="Image 06"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2011.png"
-                alt="Image 11"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
             </ul>
@@ -3998,24 +3987,16 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-7 sm:mt-12">
             <div className="flex flex-col sm:flex-row sm:items-center rounded-none sm:rounded-xl px-5 py-8 bg-gradient-to-b from-[#555dc8] to-[#4851c2]">
               <div className="rounded-full max-w-max p-3 bg-white/10">
-                <svg
-                  width="37"
-                  height="37"
-                  viewBox="0 0 37 37"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <svg
+                xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" data-src="https://cdn.hugeicons.com/icons/linkedin-02-solid-rounded.svg" role="img" color="#ffffff">
                   <path
-                    d="M15.0954 8.63501C15.0954 8.63501 16.7643 8.28581 18.6923 8.28581C20.6202 8.28581 22.2891 8.63501 22.2891 8.63501L22.9566 7.25822C23.0975 6.96749 23.4077 6.79779 23.7243 6.84887C26.9435 7.36803 29.9435 9.08985 29.9435 9.08985C29.9435 9.08985 33.6911 12.8399 33.6911 26.0657C33.6926 26.3039 33.5817 26.5351 33.3899 26.6737C30.9293 28.4507 27.9408 29.6179 26.7351 30.0485C26.4156 30.1625 26.0657 30.034 25.8836 29.7455L25.0398 28.4099C24.8088 28.0444 24.9288 27.5581 25.3026 27.3445L27.0659 26.3372L26.3526 25.7746C26.3526 25.7746 23.4996 27.502 18.6923 27.502C13.8849 27.502 11.032 25.7746 11.032 25.7746L10.3188 26.3372L12.0819 27.3445C12.4558 27.5581 12.5757 28.0444 12.3448 28.4099L11.501 29.7455C11.3189 30.034 10.9689 30.1625 10.6494 30.0485C9.44375 29.6179 6.45524 28.4507 3.99468 26.6737C3.80277 26.5351 3.692 26.3039 3.6935 26.0657C3.6935 12.8399 7.44348 9.08985 7.44348 9.08985C7.44348 9.08985 10.4435 7.36766 13.6602 6.84887C13.977 6.79779 14.287 6.96749 14.428 7.25822L15.0954 8.63501Z"
-                    fill="white"
+                    d="M5 9H4.5C3.55719 9 3.08579 9 2.79289 9.29289C2.5 9.58579 2.5 10.0572 2.5 11V19.5C2.5 20.4428 2.5 20.9142 2.79289 21.2071C3.08579 21.5 3.55719 21.5 4.5 21.5H5C5.94281 21.5 6.41421 21.5 6.70711 21.2071C7 20.9142 7 20.4428 7 19.5V11C7 10.0572 7 9.58579 6.70711 9.29289C6.41421 9 5.94281 9 5 9Z" fill="#ffffff"
                   />
                   <path
-                    d="M26.5685 19.5898C26.5685 21.2467 25.3932 22.5898 23.9435 22.5898C22.4937 22.5898 21.3185 21.2467 21.3185 19.5898C21.3185 17.9331 22.4937 16.5898 23.9435 16.5898C25.3932 16.5898 26.5685 17.9331 26.5685 19.5898Z"
-                    fill="#7C83DD"
+                    d="M7 4.75C7 5.99264 5.99264 7 4.75 7C3.50736 7 2.5 5.99264 2.5 4.75C2.5 3.50736 3.50736 2.5 4.75 2.5C5.99264 2.5 7 3.50736 7 4.75Z" fill="#ffffff"
                   />
                   <path
-                    d="M16.0685 19.5898C16.0685 21.2467 14.8932 22.5898 13.4435 22.5898C11.9937 22.5898 10.8185 21.2467 10.8185 19.5898C10.8185 17.9331 11.9937 16.5898 13.4435 16.5898C14.8932 16.5898 16.0685 17.9331 16.0685 19.5898Z"
-                    fill="#7C83DD"
+                    d="M11.826 9H11C10.0572 9 9.58579 9 9.29289 9.29289C9 9.58579 9 10.0572 9 11V19.5C9 20.4428 9 20.9142 9.29289 21.2071C9.58579 21.5 10.0572 21.5 11 21.5H11.5C12.4428 21.5 12.9142 21.5 13.2071 21.2071C13.5 20.9142 13.5 20.4428 13.5 19.5L13.5001 16.0001C13.5001 14.3433 14.0281 13.0001 15.5879 13.0001C16.3677 13.0001 17 13.6717 17 14.5001V19.0001C17 19.9429 17 20.4143 17.2929 20.7072C17.5857 21.0001 18.0572 21.0001 19 21.0001H19.4987C20.4413 21.0001 20.9126 21.0001 21.2055 20.7073C21.4984 20.4145 21.4985 19.9432 21.4987 19.0006L21.5001 13.5002C21.5001 11.015 19.1364 9.00024 16.7968 9.00024C15.4649 9.00024 14.2767 9.65309 13.5001 10.674C13.5 10.0439 13.5 9.72893 13.3632 9.495C13.2765 9.34686 13.1531 9.22353 13.005 9.13687C12.7711 9 12.4561 9 11.826 9Z" fill="#ffffff"
                   />
                 </svg>
               </div>
@@ -4025,8 +4006,8 @@ export default function Home() {
                 </p>
                 <p className="text-white/50 mt-1">
                   Join us on {''}
-                  <a href="" className="underline">
-                    Discord
+                  <a target="_blank" href="https://www.linkedin.com/in/castrogusttavo" className="underline">
+                    LinkedIn
                   </a>
                 </p>
               </div>
@@ -4056,7 +4037,7 @@ export default function Home() {
                 </p>
                 <p className="text-white/50 mt-1">
                   Follow us on {''}
-                  <a href="" className="underline">
+                  <a target="_blank" href="https://x.com/gustta_dev" className="underline">
                     X/Twitter
                   </a>
                 </p>
@@ -4088,7 +4069,7 @@ export default function Home() {
                 </p>
                 <p className="text-black mt-1">
                   Say hi at {''}
-                  <a href="" className="font-semibold">
+                  <a target="_blank" href="" className="font-semibold">
                     hello.softis@gmail.com
                   </a>
                 </p>
@@ -4112,19 +4093,19 @@ export default function Home() {
             </span>
           </div>
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:justify-center">
-            <a className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full">
+            <a href="" target="_blank" className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full">
               Use for free
             </a>
-            <a className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full">
+            <a href="" className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full">
               Buy now
             </a>
           </div>
         </div>
-        <Footer />
 
         <DialogPromotion />
         <CookieToast />
       </main>
+      <Footer />
     </div>
   )
 }

@@ -12,14 +12,18 @@ export function CookieToast() {
   }
 
   return (
-    <Toast.Provider swipeDirection="left" duration={30000} label='Cookie Notification' >
+    <Toast.Provider
+      swipeDirection="left"
+      duration={30000}
+      label="Cookie Notification"
+    >
       <Toast.Root
         className="border-box m-0 min-w-0 p-4 relative bg-white border border-grey-100 rounded-lg overflow-hidden h-full data-[state=open]:animate-slideIn data-[state=closed]:animate-hide data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=cancel]:translate-x-0 data-[swipe=cancel]:transition-[transform_200ms_ease-out] data-[swipe=end]:animate-swipeOut"
         open={isVisible}
         onOpenChange={setIsVisible}
       >
         <Toast.Title className="text-xl mb-1 text-grey-900 font-bold">
-          <span>🍪</span>
+          <span>🍪 </span>
           Our site uses cookies
         </Toast.Title>
         <Toast.Description className="text-sm text-grey-500 max-w-[270px]">

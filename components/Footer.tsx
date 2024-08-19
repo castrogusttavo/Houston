@@ -11,14 +11,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
-                  className="leading-6 text-grey-600 hover:text-grey-400"
-                >
-                  Figma plugin
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Preview in figma
@@ -27,6 +20,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Figma icon library
@@ -50,6 +44,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   React package (Free)
@@ -58,17 +53,10 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   React icons
-                </a>
-              </li>
-              <li>
-                <a
-                  href=""
-                  className="leading-6 text-grey-600 hover:text-grey-400"
-                >
-                  Free icon font
                 </a>
               </li>
             </ul>
@@ -100,6 +88,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Pricing
@@ -108,6 +97,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   License
@@ -115,7 +105,8 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://castrogusttavo.vercel.app"
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Author
@@ -123,7 +114,8 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href=""
+                  href="https://linkedin.com/in/castrogusttavo"
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Follow us on LinkedIn
@@ -137,6 +129,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Privacy policy
@@ -145,6 +138,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Cookie policy
@@ -153,6 +147,7 @@ export function Footer() {
               <li>
                 <a
                   href=""
+                  target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Terms of service
@@ -171,19 +166,25 @@ export function Footer() {
           <div className="shrink-0 bg-border w-1 h-5 hidden sm:block" />
           <div className="shrink-0 bg-border w-1 h-5 hidden sm:block" />
           <div className="flex gap-3">
-            <a href="" className="text-grey-600">
+            <a
+              href="https://github.com/castrogusttavo"
+              className="text-grey-600"
+            >
               <img
                 src="https://cdn.hugeicons.com/icons/github-stroke-rounded.svg"
                 alt=""
               />
             </a>
-            <a href="" className="text-grey-600">
+            <a
+              href="https://linkedin.com/in/castrogusttavo"
+              className="text-grey-600"
+            >
               <img
                 src="https://cdn.hugeicons.com/icons/linkedin-01-stroke-rounded.svg"
                 alt=""
               />
             </a>
-            <a href="" className="text-grey-600">
+            <a href="https://x.com/gustta_dev" className="text-grey-600">
               <img
                 src="https://cdn.hugeicons.com/icons/twitter-stroke-rounded.svg"
                 alt=""
@@ -193,7 +194,9 @@ export function Footer() {
         </div>
         <p className="mt-8 leading-5 text-shape-primary font-medium md:order-1 md:mt-0">
           © 2024 {''}
-          <a href="castrogusttavo.vercel.app">Gusttavo Castro. </a>
+          <a target="_blank" href="https://castrogusttavo.vercel.app">
+            Gusttavo Castro.{' '}
+          </a>
           All rights reserved.
         </p>
       </div>

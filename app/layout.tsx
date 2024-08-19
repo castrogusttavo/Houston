@@ -6,6 +6,9 @@ const exo2 = Exo_2({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Houston Pro - Most Beautiful Icons Library',
+  icons: {
+    icon: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
