@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export function Footer() {
   return (
     <footer className="px-6 pb-8 pt-16 sm:pt-20 lg:px-8 lg:pt-[6rem] border-t">
@@ -9,22 +11,22 @@ export function Footer() {
             </h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
+                <Link
                   href=""
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Preview in figma
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href=""
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Figma icon library
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -34,30 +36,30 @@ export function Footer() {
             </h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
-                  href=""
+                <Link
+                  href="/docs"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Docs
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
+                <Link
+                  href="https://www.npmjs.com/package/@hugeicons/hugeicons-react"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   React package (Free)
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
+                <Link
+                  href="https://www.npmjs.com/package/@hugeicons/hugeicons-react"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   React icons
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -65,20 +67,20 @@ export function Footer() {
             <h3 className="font-semibold leading-6 text-grey-900">Resources</h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
-                  href=""
+                <Link
+                  href="/categories"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
+                <Link
+                  href="/styles"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Styles
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,40 +88,39 @@ export function Footer() {
             <h3 className="font-semibold leading-6 text-grey-900">More</h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
-                  href=""
-                  target="_blank"
+                <Link
+                  href="/pricing"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
+                <Link
+                  href="/policy/license-agreement"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   License
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://castrogusttavo.vercel.app"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Author
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://linkedin.com/in/castrogusttavo"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Follow us on LinkedIn
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -127,31 +128,28 @@ export function Footer() {
             <h3 className="font-semibold leading-6 text-grey-900">Policy</h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a
-                  href=""
-                  target="_blank"
+                <Link
+                  href="/policy/privacy-policy"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Privacy policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
-                  target="_blank"
+                <Link
+                  href="/policy/privacy-policy#cookies"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Cookie policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href=""
-                  target="_blank"
+                <Link
+                  href="/policy/terms-of-service"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Terms of service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -160,13 +158,13 @@ export function Footer() {
       <div className="mx-auto max-w-[80rem] mt-14 border-t border-grey-900/10 pt-8 md:items-center md:justify-between md:flex">
         <div className="flex flex-col sm:flex-row md:order-2 text-shape-primary gap-4">
           Contact us →
-          <a href="mailto:hello.softis@gmail.com" className="font-medium">
+          <Link href="mailto:hello.softis@gmail.com" className="font-medium">
             hello.softis@gmail.com
-          </a>
+          </Link>
           <div className="shrink-0 bg-border w-1 h-5 hidden sm:block" />
           <div className="shrink-0 bg-border w-1 h-5 hidden sm:block" />
           <div className="flex gap-3">
-            <a
+            <Link
               href="https://github.com/castrogusttavo"
               className="text-grey-600"
             >
@@ -174,8 +172,8 @@ export function Footer() {
                 src="https://cdn.hugeicons.com/icons/github-stroke-rounded.svg"
                 alt=""
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://linkedin.com/in/castrogusttavo"
               className="text-grey-600"
             >
@@ -183,20 +181,20 @@ export function Footer() {
                 src="https://cdn.hugeicons.com/icons/linkedin-01-stroke-rounded.svg"
                 alt=""
               />
-            </a>
-            <a href="https://x.com/gustta_dev" className="text-grey-600">
+            </Link>
+            <Link href="https://x.com/gustta_dev" className="text-grey-600">
               <img
                 src="https://cdn.hugeicons.com/icons/twitter-stroke-rounded.svg"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
         <p className="mt-8 leading-5 text-shape-primary font-medium md:order-1 md:mt-0">
           © 2024 {''}
-          <a target="_blank" href="https://castrogusttavo.vercel.app">
+          <Link target="_blank" href="https://castrogusttavo.vercel.app">
             Gusttavo Castro.{' '}
-          </a>
+          </Link>
           All rights reserved.
         </p>
       </div>

@@ -1,16 +1,79 @@
+'use client'
+
 import * as Logo from '@/public/logoHorizontal.svg'
+import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export function Header() {
+  const [isShowMenuBurger, setIsShowMenuBurger] = useState(false)
+
+  function handleClickOpenMenu() {
+    setIsShowMenuBurger(true)
+  }
+
   return (
     <nav className="bg-white text-primary border-neutral-100 flex gap-3 items-center w-screen md:w-full fixed z-30 px-4 h-[73px] top-0">
+      <Dialog.Root open={isShowMenuBurger} onOpenChange={setIsShowMenuBurger}>
+        <Dialog.Portal>
+          <Dialog.Overlay className="fixed inset-0 z-50 bg-black/50 data-[state=open]:animate in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
+          <Dialog.Content className="fixed z-50 gap-4 flex flex-col bg-white p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 lef-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm pt-20">
+            <ul className="flex flex-col gap-5">
+              <li>
+                <Link href="/icons" className="hover:text-grey-500 text-black">
+                  Icons
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/examples"
+                  className="hover:text-grey-500 text-black"
+                >
+                  Example
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="hover:text-grey-500 text-black"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/docs" className="hover:text-grey-500 text-black">
+                  Docs
+                </Link>
+              </li>
+            </ul>
+            <Dialog.Close />
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
       <div className="w-full flex mx-auto items-center max-w-[80rem]">
+        <button className="block lg:hidden mr-4" onClick={handleClickOpenMenu}>
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
         <Link href="/">
           <Image src={Logo} alt="Houston logo" />
         </Link>
         <div className="flex-grow" />
-        <ul className="flex w-full items-center justify-between gap-12">
+        <ul className="hidden lg:flex w-full items-center justify-between gap-12">
           <div />
           <ul className="flex items-center gap-10 -ml-28">
             <li className="flex item-center">
@@ -41,7 +104,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/icons"
-                className="font-normal text-grey-600 hover:text-black transition-colors"
+                className="font-normal text-grey-500 hover:text-black transition-colors"
               >
                 <span>Icons</span>
               </Link>
@@ -49,7 +112,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/examples"
-                className="font-normal text-grey-600 hover:text-black transition-colors"
+                className="font-normal text-grey-500 hover:text-black transition-colors"
               >
                 <span>Example</span>
               </Link>
@@ -57,7 +120,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/pricing"
-                className="font-normal text-grey-600 hover:text-black transition-colors"
+                className="font-normal text-grey-500 hover:text-black transition-colors"
               >
                 <span>Pricing</span>
               </Link>
@@ -65,7 +128,7 @@ export function Header() {
             <li className="relative">
               <a
                 href="#"
-                className="font-normal text-grey-600 hover:text-black transition-colors"
+                className="font-normal text-grey-500 hover:text-black transition-colors"
               >
                 <span>Docs</span>
               </a>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import * as Toast from '@radix-ui/react-toast'
 import { Cross2Icon } from '@radix-ui/react-icons'
+import Link from 'next/link'
 
 export function CookieToast() {
   const [isVisible, setIsVisible] = useState(true)
@@ -30,9 +31,9 @@ export function CookieToast() {
           <p className="mb-1">We use cookies to improve our website.</p>
           <p className="mb-0">
             View out {''}
-            <a href="" className="text-blue-500">
+            <Link href="/privacy/cookie" className="text-blue-500">
               privacy policy
-            </a>
+            </Link>
             {''} for more info.
           </p>
         </Toast.Description>

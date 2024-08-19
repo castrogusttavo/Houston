@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
+import Link from 'next/link'
 
 export function DialogPromotion() {
   const [isVisible, setIsVisible] = useState(false)
@@ -52,10 +53,16 @@ export function DialogPromotion() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center mt-11">
-                  <button className="h-14 px-8 py-5 bg-amber-200 rounded-full border border-white justify-center items-center gap-2 inline-flex text-yellow-900 text-base font-bold focus:border-yellow-700/50 focus:border-4 transition-colors">
+                  <Link
+                    href="/pricing"
+                    className="h-14 px-8 py-5 bg-amber-200 rounded-full border border-white justify-center items-center gap-2 inline-flex text-yellow-900 text-base font-bold focus:border-yellow-700/50 focus:border-4 transition-colors"
+                  >
                     Show me the discounted price
-                  </button>
-                  <button className="text-center text-yellow-800 opacity-70 text-base font-medium underline mt-4">
+                  </Link>
+                  <button
+                    onClick={handleClickCloseDialog}
+                    className="text-center text-yellow-800 opacity-70 text-base font-medium underline mt-4"
+                  >
                     I want to explore more
                   </button>
                 </div>

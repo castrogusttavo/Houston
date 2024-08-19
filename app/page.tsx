@@ -49,7 +49,7 @@ export default function Home() {
                         />
                       </div>
                       <div className="flex items-center space-x-3">
-                        <p className="text-sm sm:text-base text-gray-400 sm:block">
+                        <p className="text-sm hidden sm:text-base text-gray-400 sm:block">
                           Press ENTER
                         </p>
                         <button>
