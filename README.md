@@ -90,9 +90,9 @@ import { ListSettingIcon } from "hugeicons-react";
 Set the fill style of your icons using the fillType prop:
 
 ```jsx
-import { MarketingIcon } from "hugeicons-react";
+import { AddSquareIcons } from "hugeicons-react";
 
-<MarketingIcon fillType="solid" /> // Solid fill
+<AddSquareIcons fillType="solid" /> // Solid fill
 ```
 
 ## Live Example
