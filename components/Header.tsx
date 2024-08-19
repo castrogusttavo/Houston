@@ -48,7 +48,7 @@ export function Header() {
             </li>
             <li className="relative">
               <Link
-                href="/example"
+                href="/examples"
                 className="font-normal text-grey-600 hover:text-black transition-colors"
               >
                 <span>Example</span>
