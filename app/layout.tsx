@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Exo_2 } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const exo2 = Exo_2({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Houston Pro - Most Beautiful Icons Library',
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={exo2.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

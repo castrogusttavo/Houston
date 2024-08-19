@@ -20,7 +20,7 @@ export default function NotFound() {
             </span>
             <p className="mt-[1.5rem] text-md font-medium text-grey-600 leading-[155%]">
               <span>
-                I think you've reached the edge of the universe. <br />
+                I think you&apos;ve reached the edge of the universe. <br />
               </span>
               <span>The page you requested was not found.</span>
             </p>

@@ -12,7 +12,9 @@ export function TagValidation({ job, title, subtitle }: TagValidationProps) {
           <div
             key={index}
             className={`inline-flex px-2 py-0.5 rounded justify-center items-center ${
-              j === 'Developers' ? 'bg-red-50 text-red-800' : 'bg-green-50 text-green-800'
+              j === 'Developers'
+                ? 'bg-red-50 text-red-800'
+                : 'bg-green-50 text-green-800'
             } font-normal text-sm`}
           >
             {j}

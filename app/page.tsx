@@ -164,7 +164,7 @@ export default function Home() {
               Plus a new styles ways to design.
             </p>
             <h3 className="text-center text-3xl sm:text-4xl mt-3 font-bold px-6 sm:px-0 text-grey-950">
-              The world's greatest icon styles
+              The world&apos; greatest icon styles
             </h3>
             <Carousel />
           </div>
@@ -320,8 +320,8 @@ export default function Home() {
                 <h4 className="text-lg font-bold mt-5 text-white">
                   Nicely customizable.
                   <span className="text-lg font-normal text-grey-400 ml-1">
-                    Easily customize icons' color, size, stroke width, and more
-                    to match your brand's style.
+                    Easily customize icon&apos; color, size, stroke width, and
+                    more to match your brand&apos; style.
                   </span>
                 </h4>
               </div>
@@ -3987,16 +3987,27 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-7 sm:mt-12">
             <div className="flex flex-col sm:flex-row sm:items-center rounded-none sm:rounded-xl px-5 py-8 bg-gradient-to-b from-[#555dc8] to-[#4851c2]">
               <div className="rounded-full max-w-max p-3 bg-white/10">
-              <svg
-                xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" data-src="https://cdn.hugeicons.com/icons/linkedin-02-solid-rounded.svg" role="img" color="#ffffff">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  data-src="https://cdn.hugeicons.com/icons/linkedin-02-solid-rounded.svg"
+                  role="img"
+                  color="#ffffff"
+                >
                   <path
-                    d="M5 9H4.5C3.55719 9 3.08579 9 2.79289 9.29289C2.5 9.58579 2.5 10.0572 2.5 11V19.5C2.5 20.4428 2.5 20.9142 2.79289 21.2071C3.08579 21.5 3.55719 21.5 4.5 21.5H5C5.94281 21.5 6.41421 21.5 6.70711 21.2071C7 20.9142 7 20.4428 7 19.5V11C7 10.0572 7 9.58579 6.70711 9.29289C6.41421 9 5.94281 9 5 9Z" fill="#ffffff"
+                    d="M5 9H4.5C3.55719 9 3.08579 9 2.79289 9.29289C2.5 9.58579 2.5 10.0572 2.5 11V19.5C2.5 20.4428 2.5 20.9142 2.79289 21.2071C3.08579 21.5 3.55719 21.5 4.5 21.5H5C5.94281 21.5 6.41421 21.5 6.70711 21.2071C7 20.9142 7 20.4428 7 19.5V11C7 10.0572 7 9.58579 6.70711 9.29289C6.41421 9 5.94281 9 5 9Z"
+                    fill="#ffffff"
                   />
                   <path
-                    d="M7 4.75C7 5.99264 5.99264 7 4.75 7C3.50736 7 2.5 5.99264 2.5 4.75C2.5 3.50736 3.50736 2.5 4.75 2.5C5.99264 2.5 7 3.50736 7 4.75Z" fill="#ffffff"
+                    d="M7 4.75C7 5.99264 5.99264 7 4.75 7C3.50736 7 2.5 5.99264 2.5 4.75C2.5 3.50736 3.50736 2.5 4.75 2.5C5.99264 2.5 7 3.50736 7 4.75Z"
+                    fill="#ffffff"
                   />
                   <path
-                    d="M11.826 9H11C10.0572 9 9.58579 9 9.29289 9.29289C9 9.58579 9 10.0572 9 11V19.5C9 20.4428 9 20.9142 9.29289 21.2071C9.58579 21.5 10.0572 21.5 11 21.5H11.5C12.4428 21.5 12.9142 21.5 13.2071 21.2071C13.5 20.9142 13.5 20.4428 13.5 19.5L13.5001 16.0001C13.5001 14.3433 14.0281 13.0001 15.5879 13.0001C16.3677 13.0001 17 13.6717 17 14.5001V19.0001C17 19.9429 17 20.4143 17.2929 20.7072C17.5857 21.0001 18.0572 21.0001 19 21.0001H19.4987C20.4413 21.0001 20.9126 21.0001 21.2055 20.7073C21.4984 20.4145 21.4985 19.9432 21.4987 19.0006L21.5001 13.5002C21.5001 11.015 19.1364 9.00024 16.7968 9.00024C15.4649 9.00024 14.2767 9.65309 13.5001 10.674C13.5 10.0439 13.5 9.72893 13.3632 9.495C13.2765 9.34686 13.1531 9.22353 13.005 9.13687C12.7711 9 12.4561 9 11.826 9Z" fill="#ffffff"
+                    d="M11.826 9H11C10.0572 9 9.58579 9 9.29289 9.29289C9 9.58579 9 10.0572 9 11V19.5C9 20.4428 9 20.9142 9.29289 21.2071C9.58579 21.5 10.0572 21.5 11 21.5H11.5C12.4428 21.5 12.9142 21.5 13.2071 21.2071C13.5 20.9142 13.5 20.4428 13.5 19.5L13.5001 16.0001C13.5001 14.3433 14.0281 13.0001 15.5879 13.0001C16.3677 13.0001 17 13.6717 17 14.5001V19.0001C17 19.9429 17 20.4143 17.2929 20.7072C17.5857 21.0001 18.0572 21.0001 19 21.0001H19.4987C20.4413 21.0001 20.9126 21.0001 21.2055 20.7073C21.4984 20.4145 21.4985 19.9432 21.4987 19.0006L21.5001 13.5002C21.5001 11.015 19.1364 9.00024 16.7968 9.00024C15.4649 9.00024 14.2767 9.65309 13.5001 10.674C13.5 10.0439 13.5 9.72893 13.3632 9.495C13.2765 9.34686 13.1531 9.22353 13.005 9.13687C12.7711 9 12.4561 9 11.826 9Z"
+                    fill="#ffffff"
                   />
                 </svg>
               </div>
@@ -4006,7 +4017,11 @@ export default function Home() {
                 </p>
                 <p className="text-white/50 mt-1">
                   Join us on {''}
-                  <a target="_blank" href="https://www.linkedin.com/in/castrogusttavo" className="underline">
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/castrogusttavo"
+                    className="underline"
+                  >
                     LinkedIn
                   </a>
                 </p>
@@ -4037,7 +4052,11 @@ export default function Home() {
                 </p>
                 <p className="text-white/50 mt-1">
                   Follow us on {''}
-                  <a target="_blank" href="https://x.com/gustta_dev" className="underline">
+                  <a
+                    target="_blank"
+                    href="https://x.com/gustta_dev"
+                    className="underline"
+                  >
                     X/Twitter
                   </a>
                 </p>
@@ -4083,20 +4102,28 @@ export default function Home() {
           </h5>
           <div className="text-center mt-5">
             <span className="text-zinc-400 font-normal">
-              36,000+ beautiful icons. Whether it's for SaaS, websites, print,
-              or any moder interface,
+              36,000+ beautiful icons. Whether it&apos; for SaaS, websites,
+              print, or any modern interface,
               <br />
               Houston Pro has you covered.
-            </span> {''}
+            </span>{' '}
+            {''}
             <span className="text-slate-300 font-semibold">
-               Made for developers and designers.
+              Made for developers and designers.
             </span>
           </div>
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:justify-center">
-            <a href="" target="_blank" className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full">
+            <a
+              href=""
+              target="_blank"
+              className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full"
+            >
               Use for free
             </a>
-            <a href="" className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full">
+            <a
+              href=""
+              className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full"
+            >
               Buy now
             </a>
           </div>
