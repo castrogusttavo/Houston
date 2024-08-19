@@ -12,13 +12,24 @@ export default function NotFound() {
           </div>
           <div className="flex flex-col mx-[1.88rem] ml-[8rem]">
             <h1 className="text-comet-500 text-9xl font-bold">404...</h1>
-            <h2 className="text-grey-900 text-4xl font-bold">Repito 404. Câmbio</h2>
-            <span className="font-mono mt-[3.5rem] text-md font-bold uppercase text-green-600 relative">Houston responda: </span>
+            <h2 className="text-grey-900 text-4xl font-bold">
+              Repeat 404. Over.
+            </h2>
+            <span className="font-mono mt-[3.5rem] text-md font-bold uppercase text-green-600 relative">
+              Houston, respond:{' '}
+            </span>
             <p className="mt-[1.5rem] text-md font-medium text-grey-600 leading-[155%]">
-              <span>Acho que você chegou ao limite do universo. <br /></span>
-              <span>A página que você requisitou não foi encontrada.</span>
+              <span>
+                I think you've reached the edge of the universe. <br />
+              </span>
+              <span>The page you requested was not found.</span>
             </p>
-            <Link href="/" className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-lg mt-[2rem] leading-0 uppercase">Return Home</Link>
+            <Link
+              href="/"
+              className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-lg mt-[2rem] leading-0 uppercase"
+            >
+              Return Home
+            </Link>
           </div>
         </div>
       </div>
