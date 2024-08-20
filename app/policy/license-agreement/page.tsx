@@ -3,10 +3,9 @@ import { Footer } from '@/components/Footer'
 
 export default function licenseAgreement() {
   return (
-    <div className="antialiased font-sans overflow-x-hidden min-h-screen transition-[grid-template-columns] duration-300 ease-in-out text-grey-900">
+    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out text-grey-900">
       <Header />
-      <main className="max-w-[80rem] mx-auto px-5 lg:px-0">
-        <div className="py-10 sm:py-16" />
+      <main className="max-w-[80rem] mx-auto px-5 lg:px-0 py-10 sm:py-16 overflow-x-hidden">
         <h1 className="text-4xl font-bold mb-[.8888889em]">
           License Agreement
         </h1>
@@ -304,7 +303,6 @@ export default function licenseAgreement() {
             on operational needs or strategic considerations.
           </li>
         </ol>
-        <div className="pb-10 sm:pb-16" />
       </main>
       <Footer />
     </div>

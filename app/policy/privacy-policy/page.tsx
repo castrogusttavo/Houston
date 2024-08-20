@@ -3,10 +3,9 @@ import { Footer } from '@/components/Footer'
 
 export default function privacyPolicy() {
   return (
-    <div className="antialiased font-sans overflow-x-hidden min-h-screen transition-[grid-template-columns] duration-300 ease-in-out text-grey-900">
+    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out text-grey-900">
       <Header />
-      <main className="max-w-[80rem] mx-auto px-5 lg:px-0">
-        <div className="py-10 sm:py-16" />
+      <main className="max-w-[80rem] mx-auto px-5 lg:px-0 overflow-x-hidden py-10 sm:py-16">
         <h1 className="text-4xl font-bold mb-[.8888889em]">Privacy Policy</h1>
         <p className="text-[#374151] mt-[1.25em] mb-[1.25em] leading-relaxed text-base">
           <strong className="text-grey-900">
@@ -172,7 +171,6 @@ export default function privacyPolicy() {
             hello.softis@gmail.com
           </a>
         </p>
-        <div className="pb-10 sm:pb-16" />
       </main>
       <Footer />
     </div>

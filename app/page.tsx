@@ -20,7 +20,7 @@ export default function Home() {
   }
 
   return (
-    <div className="antialiased font-sans overflow-x-hidden min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
+    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <Header />
       <main className="max-w-screen min-h-screen overflow-hidden">
         <div className="bg-gradient-to-b from-white to-[#F3F4F5]">

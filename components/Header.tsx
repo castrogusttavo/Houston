@@ -14,7 +14,7 @@ export function Header() {
   }
 
   return (
-    <nav className="bg-white text-primary border-neutral-100 flex gap-3 items-center w-screen md:w-full fixed z-30 px-4 h-[73px] top-0">
+    <nav className="bg-white text-primary border-neutral-100 flex gap-3 items-center w-screen md:w-full sticky z-30 px-4 h-[73px] top-0">
       <Dialog.Root open={isShowMenuBurger} onOpenChange={setIsShowMenuBurger}>
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 z-50 bg-black/50 data-[state=open]:animate in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
