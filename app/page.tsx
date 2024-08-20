@@ -170,7 +170,7 @@ export default function Home() {
           </div>
         </div>
         <div className="grid max-w-[80rem] grid-cols-1 sm:grid-cols-2 mx-auto pt-32 sm:pt-40 w-full px-6 lg:px-0">
-          <div className="pl-5 lg:pl-0">
+          <div>
             <p className="text-2xl font-bold mb-7 text-black">
               Join over 50,000 developers and
               <br />
@@ -258,7 +258,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mt-32 py-20 sm:mt-40 sm:py-24 bg-[#f8f8f9] w-full px-6 lg:px-0">
+        <div className="mt-32 py-20 sm:mt-40 sm:py-24 bg-[#f8f8f9] w-full px-6 lg:px-0 mx-auto">
           <div className="max-w-[80rem] mx-auto px-5 sm:px-0">
             <h3 className="text-3xl sm:text-4xl mb-3 font-bold text-grey-900">
               Icon design matters
@@ -354,7 +354,7 @@ export default function Home() {
                 </h4>
               </div>
             </div>
-            <p className="text-lg text-grey-500 mt-40 font-semibold">
+            <p className="text-lg text-grey-300 mt-40 font-semibold">
               Available for
             </p>
             <div className="grid grid-cols-4 sm:flex items-center gap-2 mt-3 pr-7 sm:pr-0">
