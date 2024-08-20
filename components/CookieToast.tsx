@@ -31,7 +31,10 @@ export function CookieToast() {
           <p className="mb-1">We use cookies to improve our website.</p>
           <p className="mb-0">
             View out {''}
-            <Link href="/privacy/cookie" className="text-blue-500">
+            <Link
+              href="/policy/privacy-policy#cookies"
+              className="text-blue-500"
+            >
               privacy policy
             </Link>
             {''} for more info.
