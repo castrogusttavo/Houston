@@ -45,7 +45,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://www.npmjs.com/package/@hugeicons/hugeicons-react"
+                  href="https://www.npmjs.com/package/@houstonicons/react"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
@@ -54,7 +54,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://www.npmjs.com/package/@hugeicons/hugeicons-react"
+                  href="/react-icons"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >

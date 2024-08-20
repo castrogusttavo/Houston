@@ -8,7 +8,7 @@ export default function NotFound() {
       <div className="flex flex-col w-full max-w-[1336px] mx-auto min-h-full justify-center">
         <div className="py-0 px-[1.88rem] mt-[7.12rem] flex flex-col lg:flex-row items-center justify-center">
           <div className="pt-[2.5rem] flex flex-1 max-w-[34rem]">
-            <Image src={Error} alt="404 Image" />
+            <Image src={Error} alt="404 Image by:Rocketseat" />
           </div>
           <div className="flex flex-col mx-[1.88rem] ml-[8rem]">
             <h1 className="text-comet-500 text-9xl font-bold">404...</h1>
