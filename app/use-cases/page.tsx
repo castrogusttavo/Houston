@@ -1,13 +1,162 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { ExplorerStyles } from '@/components/ExploreStyles'
 import * as Tooltip from '@radix-ui/react-tooltip'
 
-export default function PricingPage() {
+export default function ExamplesPage() {
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <Header />
       <main className="max-w-screen min-h-screen overflow-hidden">
-        <div className="item-center mx-auto mt-12 mb-10 grid max-w-5xl grid-cols-1 gap-4 px-4 sm:grid-cols-3">
+        <div className="max-w-[80rem] mx-auto mt-10 flex flex-col items-center px-6 sm:mt-20 sm:px-0">
+          <div className="space-y-2 text-center">
+            <h1 className="mx-auto max-w-3xl text-3xl font-bold tracking-[-1px] text-grey-900 sm:text-5xl sm:leading-relaxed">
+              You can make beautiful design
+              <br />
+              with Houston Pro
+            </h1>
+            <p className="mx-auto max-w-max rounded-lg bg-blue-50 px-3 py-1 text-center text-sm font-normal text-blue-500 sm:text-base">
+              If icons ar right, they enhance navigation and boost satisfaction.
+            </p>
+            <p className="text-grey-700 mx-auto mt-4 max-w-2xl">
+              Whether it&apos; SaaS, website, or any modern interfaces, Houston Pro adds a magical
+              <br />
+              touch to your designs. Explore a few below...
+            </p>
+          </div>
+          <div className="max-w-[80rem] mx-auto mt-16 space-y-6">
+            <div className="flex flex-col gap-6 sm:flex-row">
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2010.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2002.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-6 sm:flex-row">
+                            <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2009.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2008.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-6 sm:flex-row">
+                            <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2007.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2006.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-6 sm:flex-row">
+                            <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2011.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2001.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="relative p-1 sm:p-2 group">
+                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2005.png" alt="" />
+                  </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="relative p-1 sm:p-2 group">
+                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2012.png" alt="" />
+                  </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-6 sm:flex-row">
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2004.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="relative p-1 sm:p-2 group">
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2003.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="relative p-1 sm:p-2 group">
+                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div className="relative z-10">
+                    <img src="https://hugeicons.com/use-cases/components/Image%2013.png" alt="" />
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ExplorerStyles />
+        <div className="mt-14 flex w-full flex-col items-center overflow-hidden">
+        <div className="item-center mx-auto mb-10 grid max-w-5xl grid-cols-1 gap-4 px-4 sm:grid-cols-3">
           <div className="flex flex-col items-center gap-2">
             <div className="flex gap-2">
               <svg
@@ -240,643 +389,9 @@ export default function PricingPage() {
             </span>
           </div>
         </div>
-        <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center px-6 pb-20">
-          <div className="mb-12 space-y-3 text-center">
-            <h1 className="mx-auto max-w-4xl text-3xl font-bold tracking-[-1px] text-grey-900 sm:text-5xl sm:leading-[54px]">
-              The small details you wanted to make your design more beautiful
-            </h1>
-            <p className="mx-auto max-w-max rounded-lg bg-gray-200 px-4 py-1 text-center text-lg font-medium text-grey-800 sm:text-base">
-              Get the super beautiful icon library, created for developers and
-              designers
-            </p>
-          </div>
-          <div className="grid w-max grid-cols-1 gap-5 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
-            <div className="w-[19rem] h-full px-6 py-8 bg-gray-50/50 border border-grey-200 rounded-lg lg:w-auto">
-              <h4 className="text-4xl mb-4 text-yellow-700">Solo</h4>
-              <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
-                Essential icons for solo developers.
-              </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-7xl leading-none font-semibold">4,00</h2>
-              </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
-                Buy now
-              </a>
-              <ul className="max-w-[366px]">
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    License key for <strong>1 user</strong>
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Access to 9 icon styles
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    NPM package for easy integration into React/Next/React
-                    Native projects
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Request missing icons <strong>7/month</strong>
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div className="w-[19rem] h-full px-6 py-8 border border-grey-200 rounded-lg lg:w-auto bg-gray-50/50">
-              <h4 className="text-5xl mb-4 text-softis-mid font-bold">
-                Startup
-              </h4>
-              <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
-                Collaboration tools for small teams.
-              </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-8xl leading-none font-bold">8,00</h2>
-              </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
-                Buy now
-              </a>
-              <ul className="max-w-[366px]">
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Includes everything in the Solo plan, plus:
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    License key for <strong>5 users</strong>
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Access to over 36,000+ icons
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Figma files for direct design integration
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    SVG icons for flexible usage
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div className="w-[19rem] h-full px-6 py-8 bg-gray-50/50 border border-grey-200 rounded-lg lg:w-auto">
-              <h4 className="text-4xl mb-4 text-red-700">Business</h4>
-              <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
-                Unlimited projects for large teams.
-              </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-7xl leading-none font-semibold">16,99</h2>
-              </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
-                Buy now
-              </a>
-              <ul className="max-w-[366px]">
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Includes everything in the Startup plan, plus:
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    License key for <strong>25 users</strong>
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Unlimited projects (no project number restriction)
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Exclusive Figma plugin for quick and customization directly
-                    in Figma. <strong>(Coming Soon!)</strong>
-                  </p>
-                </li>
-                <li className="flex items-center py-5 border-t border-grey-100">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <p className="font-xs font-normal sm:text-md ml-4">
-                    Priority support for request and updates.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="relative mt-5 pb-15 w-full flex items-start overflow-hidden rounded-xl border-b-2 border-l border-r border-t border-grey-200 bg-gray-100 p-8">
-            <img
-              src="https://hugeicons.com/home/pricing-details-object.png"
-              className="absolute bottom-0 left-0 hidden h-[200px] md:block"
-              alt=""
-            />
-            <div className="relative z-10 flex-1">
-              <h2 className="mb-4 font-medium text-grey-800 text-lg">Why?</h2>
-              <p className="text-grey-800 text-sm">
-                Save time and effort by selecting the right icon library. <br />{' '}
-                Poorly designed icons can be difficult and users may get
-                confused or frustrated. <br /> Houston Pro provides the
-                beautiful and consistent icons.
-              </p>
-              <p className="mt-4 max-w-max rounded-lg bg-blue-100 px-3 py-1 text-sm font-normal text-black">
-                For developers, the icons are well optimized for blazing fast
-                performance.
-              </p>
-            </div>
-            <div>
-              <p className="text-grey-800 text-lg font-medium">Specially...</p>
-              <div className="mt-3 space-y-2.5">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <span className="flex items-center gap-1.5 text-sm font-medium">
-                    Save time
-                  </span>
-                </div>
-              </div>
-              <div className="mt-3 space-y-2.5">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <span className="flex items-center gap-1.5 text-sm font-medium">
-                    Stand out against competitors
-                  </span>
-                </div>
-              </div>
-              <div className="mt-3 space-y-2.5">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <span className="flex items-center gap-1.5 text-sm font-medium">
-                    Grab users attention & create consistent UI
-                  </span>
-                </div>
-              </div>
-              <div className="mt-3 space-y-2.5">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <span className="flex items-center gap-1.5 text-sm font-medium">
-                    Your highly desired "Human support"
-                  </span>
-                </div>
-              </div>
-              <div className="mt-3 space-y-2.5">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    xmlns="https://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    color="currentColor"
-                    className="text-green-700"
-                  >
-                    <path
-                      d="M5 14L8.5 17.5L19 6.5"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    />
-                  </svg>
-                  <span className="flex items-center gap-1.5 text-sm font-medium">
-                    Free future updates for the lifetime package
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h1 className="pl-5 text-left text-2xl text-grey-900 sm:pl-0 sm:text-center font-semibold">
-            Design impressions
-          </h1>
-          <div className="relative z-20 overflow-hidden mt-7 duration-200">
-            <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll">
-              <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
-                alt="Image 02"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
-                alt="Image 10"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
-                alt="Image 09"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
-                alt="Image 08"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
-                alt="Image 07"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
-                alt="Image 06"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
-                alt="Image 02"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
-                alt="Image 10"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
-                alt="Image 09"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
-                alt="Image 08"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
-                alt="Image 07"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
-                alt="Image 06"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-            </ul>
-          </div>
-          <div className="relative z-20 overflow-hidden duration-200">
-            <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll direction-reverse">
-              <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
-                alt="Image 01"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
-                alt="Image 04"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
-                alt="Image 13"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
-                alt="Image 05"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
-                alt="Image 03"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
-                alt="Image 12"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
-                alt="Image 01"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
-                alt="Image 04"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
-                alt="Image 13"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
-                alt="Image 05"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
-                alt="Image 03"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-              <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
-                alt="Image 12"
-                className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
-              />
-            </ul>
-          </div>
-        </div>
-        <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center px-5 pb-20">
-          <div className="relative mt-2 flex-2 w-full flex-col justify-center gap-[84px] py-[50px]">
-            <div className="flex flex-col items-center gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                color="currentColor"
-                className="h-11 w-11 text-[#AFE67F]"
-              >
-                <path
-                  opacity="0.4"
-                  d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="1.5"
-                />
-              </svg>
-              <h3 className="text-lg font-semibold leading-normal tracking-[-1px] text-grey-800">
+        <div className="relative mt-2 flex w-full flex-col justify-center gap-[84px] py-12">
+          <div className="flex flex-col items-center gap-4">
+          <h3 className="text-lg font-semibold leading-normal tracking-[-1px] text-grey-800">
                 Trusted by popular creators
               </h3>
               <div className="mt-3 flex items-center -space-x-3">
@@ -985,45 +500,8 @@ export default function PricingPage() {
                   </Tooltip.Root>
                 </Tooltip.Provider>
               </div>
-            </div>
           </div>
         </div>
-        <div className="top-[#FFF] flex w-full flex-col items-center gap-6 border-b border-gray-100 bg-gradient-to-b from-[#F1F8FF] to-[#FFF] px-5 py-[50px] sm:py-[70px]">
-          <h3 className="text-center text-xl font-semibold leading-normal tracking-[-1px] text-grey-900 sm:text-3xl">
-            Need help choosing a plan?
-          </h3>
-          <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-10 sm:space-y-0">
-            <p className="text-grey-500">
-              Send us a message:{' '}
-              <a
-                href="https://x.com/gustta_dev"
-                className="underline text-black underline-offset-4"
-                target="_blank"
-              >
-                Twitter(X)
-              </a>
-            </p>
-            <p className="text-grey-500">
-              Or mail us:{' '}
-              <a
-                href="mailto:hello.softis@gmail.com"
-                className="underline text-black underline-offset-4"
-                target="_blank"
-              >
-                hello.softis@gmail.com
-              </a>
-            </p>
-          </div>
-          <div className="mt-5 rounded-lg bg-blue-100 px-3 py-1.5 text-center text-ms text-blue-900 sm:mt-[34px] sm:text-left sm:text-base">
-            If you are a student or a new founder, take our love with{' '}
-            <span className="font-bold">50% OFF. </span>
-            <a
-              href="https://linkedin.com/in/castrogusttavo"
-              className="underline"
-            >
-              Send us a message
-            </a>
-          </div>
         </div>
         <div className="relative flex h-[500px] mt-24 sm:mt-36 flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
           <h5 className="text-center text-white text-3xl sm:text-5xl font-semibold">
