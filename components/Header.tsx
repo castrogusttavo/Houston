@@ -5,9 +5,11 @@ import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export function Header() {
   const [isShowMenuBurger, setIsShowMenuBurger] = useState(false)
+  const pathname = usePathname()
 
   function handleClickOpenMenu() {
     setIsShowMenuBurger(true)
@@ -21,14 +23,17 @@ export function Header() {
           <Dialog.Content className="fixed z-50 gap-4 flex flex-col bg-white p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 lef-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm pt-20">
             <ul className="flex flex-col gap-5">
               <li>
-                <Link href="/icons" className="hover:text-grey-500 text-black">
+                <Link
+                  href="/icons"
+                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
+                >
                   Icons
                 </Link>
               </li>
               <li>
                 <Link
                   href="/examples"
-                  className="hover:text-grey-500 text-black"
+                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
                 >
                   Example
                 </Link>
@@ -36,13 +41,16 @@ export function Header() {
               <li>
                 <Link
                   href="/pricing"
-                  className="hover:text-grey-500 text-black"
+                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
                 >
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/docs" className="hover:text-grey-500 text-black">
+                <Link
+                  href="/docs"
+                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
+                >
                   Docs
                 </Link>
               </li>
@@ -77,7 +85,7 @@ export function Header() {
           <div />
           <ul className="flex items-center gap-10 -ml-28">
             <li className="flex item-center">
-              <a href="#">
+              <Link href="/icons">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -99,20 +107,20 @@ export function Header() {
                     fill="currentColor"
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li className="relative">
               <Link
                 href="/icons"
-                className="font-normal text-grey-500 hover:text-black transition-colors"
+                className={`hover:text-black transition-colors  ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Icons</span>
               </Link>
             </li>
             <li className="relative">
               <Link
-                href="/examples"
-                className="font-normal text-grey-500 hover:text-black transition-colors"
+                href="/use-cases"
+                className={`hover:text-black transition-colors ${pathname === '/use-cases' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Example</span>
               </Link>
@@ -120,18 +128,18 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/pricing"
-                className="font-normal text-grey-500 hover:text-black transition-colors"
+                className={`hover:text-black transition-colors  ${pathname === '/pricing' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Pricing</span>
               </Link>
             </li>
             <li className="relative">
-              <a
-                href="#"
-                className="font-normal text-grey-500 hover:text-black transition-colors"
+              <Link
+                href="/docs"
+                className={`hover:text-black transition-colors ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Docs</span>
-              </a>
+              </Link>
             </li>
           </ul>
           <li>
