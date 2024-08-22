@@ -1,5 +1,3 @@
-![logo](./public/logo.svg)
-
 # Houston Pro - React Icons
 
 Welcome to the professional edition of Houston for React — an extensive library of meticulously crafted icons designed to elevate the visual appeal of your web and mobile applications. With Houston React Pro , you gain access to a vast selection of icons tailored to suit every need, allowing for highly customizable and dynamic user interfaces.
