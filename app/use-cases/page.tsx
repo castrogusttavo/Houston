@@ -3,6 +3,11 @@ import { Footer } from '@/components/Footer'
 import { ExplorerStyles } from '@/components/ExploreStyles'
 import Link from 'next/link'
 import * as Tooltip from '@radix-ui/react-tooltip'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Houston Pro Use Cases - Icon Solutions for Your Industry',
+}
 
 export default function ExamplesPage() {
   return (

@@ -2,6 +2,11 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import Link from 'next/link'
 import * as Tooltip from '@radix-ui/react-tooltip'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Houston Pro Pricing - Flexible Plans for Developers and Designers',
+}
 
 export default function PricingPage() {
   return (

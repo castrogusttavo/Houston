@@ -1,6 +1,11 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StyleIconCard } from '@/components/StyleIconCard'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Icon Styles',
+}
 
 export default function StylesPage() {
   return (

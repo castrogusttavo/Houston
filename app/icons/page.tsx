@@ -3,6 +3,11 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { YoutubeIcon, Video01Icon } from '@houstonicons/react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SVG and React Icons - Icon Library',
+}
 
 export default function IconsPage() {
   return (

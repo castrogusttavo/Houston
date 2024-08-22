@@ -1,6 +1,11 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Beautiful and Free React icons - SVG, React, React Native compatible',
+}
 
 export default function ReactIconsPage() {
   return (
