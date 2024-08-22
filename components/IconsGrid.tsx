@@ -64,7 +64,6 @@ const IconItem = ({
                 size={28}
                 fillType={variant.fillType}
                 cornerStyle={variant.cornerStyle}
-                ref={svgRef as React.RefObject<SVGSVGElement>} // Passa a referência para o SVG
               />
             </div>
           )
