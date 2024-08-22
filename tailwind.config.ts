@@ -29,8 +29,10 @@ const config: Config = {
         'top-header-background':
           "url('https://hugeicons.com/home/top_header_background.svg')",
         'icons-bg': "url('https://hugeicons.com/home/icons-bg.svg')",
-        'pro-footer-sm-bg': "url('https://hugeicons.com/home/pro-footer-sm-bg.png')",
+        'pro-footer-sm-bg':
+          "url('https://hugeicons.com/home/pro-footer-sm-bg.png')",
         'pro-footer-bg': "url('https://hugeicons.com/pro-footer-bg.png')",
+        'icon-box-bg': "url('https://hugeicons.com/_next/static/media/icon-box-bg.ab806028.svg')"
       },
       keyframes: {
         hide: {
@@ -89,7 +91,7 @@ const config: Config = {
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideRightAndFade:
           'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
-        dash: 'dash 3s linear infinite',
+        dash: 'dash 4s linear infinite',
       },
     },
   },

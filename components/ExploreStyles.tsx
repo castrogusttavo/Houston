@@ -18,19 +18,48 @@ const tagsStyles: TagsProps = {
 
 const styleTagImages = {
   Rounded: [
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2001.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2001.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2005.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2005.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2004.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2004.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2002.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2002.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2003.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2003.png',
+    },
   ],
   Sharp: [
-    {},
-    {},
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Sharp%2001.png',
+      egIcon:
+        'https://hugeicons.com/use-cases/styles-box/Big%20Icons%20S%2002.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Sharp%2002.png',
+      egIcon:
+        'https://hugeicons.com/use-cases/styles-box/Big%20Icons%20S%2001.png',
+    },
   ],
   Standard: [
-    {},
-    {},
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Standard%2001.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/02.png',
+    },
+    {
+      sideBar: 'https://hugeicons.com/use-cases/styles-box/Standard%2002.png',
+      egIcon: 'https://hugeicons.com/use-cases/styles-box/01.png',
+    },
   ],
 }
 
@@ -45,10 +74,12 @@ export function ExplorerStyles() {
         const stylesLength = tagsStyles[activeTab].length
         return (prevIndex + 1) % stylesLength
       })
-    }, 3000)
+    }, 4000)
 
     return () => clearInterval(interval)
   }, [activeTab])
+
+  const currentImages = styleTagImages[activeTab][activeTagIndex]
 
   return (
     <div className="my-28 border-y border-gray-100 py-28 antialiased">
@@ -68,6 +99,47 @@ export function ExplorerStyles() {
               }}
               className={`border-gray-300 text-grey-800 group relative cursor-pointer flex items-center border-b-2 border-l border-r border-t justify-center rounded-xl px-6 py-2.5 ${isActive ? 'bg-white' : 'bg-gray-200 border-transparent'}`}
             >
+              {index === activeIndex && (
+                <svg
+                  width="55"
+                  height="20"
+                  viewBox="0 0 55 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute -top-[27px] left-5 group-hover:block block"
+                >
+                  <path
+                    d="M7 9.3031C13.5 13 12.5 12.5 19 16"
+                    stroke="#3B82F6"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="1"
+                    pathLength="1"
+                    stroke-dashoffset="0px"
+                    stroke-dasharray="1px 1px"
+                  />
+                  <path
+                    d="M52 6.3031C48 10.2031 45.7 12.6031 42.5 15.8031"
+                    stroke="#3B82F6"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="1"
+                    pathLength="1"
+                    stroke-dashoffset="0px"
+                    stroke-dasharray="1px 1px"
+                  />
+                  <path
+                    d="M26.5 4C28 6.5 27.5 6 30.4906 10.6061"
+                    stroke="#3B82F6"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    opacity="1"
+                    pathLength="1"
+                    stroke-dashoffset="0px"
+                    stroke-dasharray="1px 1px"
+                  />
+                </svg>
+              )}
               <span>{tab}</span>
             </button>
           )
@@ -79,6 +151,7 @@ export function ExplorerStyles() {
             <div
               key={index}
               className="flex cursor-pointer items-center space-x-4"
+              onClick={() => setActiveTagIndex(index)}
             >
               {activeTagIndex === index ? (
                 <svg className="h-[28px] w-[28px]" viewBox="0 0 50 50">
@@ -129,12 +202,12 @@ export function ExplorerStyles() {
         </div>
         <div className="mt-7 -ml-7 sm:-ml-0 flex items-center sm:mt-0">
           <img
-            src="https://hugeicons.com/use-cases/styles-box/Rounded%2001.png"
+            src={currentImages.sideBar}
             alt=""
             className="h-[330px] rounded-[12px] object-fill sm:h-[430px]"
           />
           <img
-            src="https://hugeicons.com/use-cases/styles-box/Big%20Icons%2001.png"
+            src={currentImages.egIcon}
             alt=""
             className="-ml-10 sm:-ml-14 w-[120px] rounded-[12px] object-fill sm:w-[180px]"
           />
