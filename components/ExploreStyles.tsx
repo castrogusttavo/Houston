@@ -19,49 +19,48 @@ const tagsStyles: TagsProps = {
 const styleTagImages = {
   Rounded: [
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2001.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2001.png',
+      sideBar: '/useCases/stylesBox/StandardStrokeSideBar.png',
+      egIcon: '/useCases/stylesBox/StandardStrokeEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2005.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2005.png',
+      sideBar: '/useCases/stylesBox/RoundedTwotoneSideBar.png',
+      egIcon: '/useCases/stylesBox/RoundedTwotoneEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2004.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2004.png',
+      sideBar: '/useCases/stylesBox/RoundedDuotoneSideBar.png',
+      egIcon: '/useCases/stylesBox/RoundedDuotoneEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2002.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2002.png',
+      sideBar: '/useCases/stylesBox/RoundedBulkSideBar.png',
+      egIcon: '/useCases/stylesBox/RoundedBulkEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Rounded%2003.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/Big%20Icons%2003.png',
+      sideBar: '/useCases/stylesBox/RoundedSolidSideBar.png',
+      egIcon: '/useCases/stylesBox/RoundedSolidEg.png',
     },
   ],
   Sharp: [
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Sharp%2001.png',
-      egIcon:
-        'https://hugeicons.com/use-cases/styles-box/Big%20Icons%20S%2002.png',
+      sideBar: '/useCases/stylesBox/SharpStrokeSideBar.png',
+      egIcon: '/useCases/stylesBox/SharpStrokeEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Sharp%2002.png',
-      egIcon:
-        'https://hugeicons.com/use-cases/styles-box/Big%20Icons%20S%2001.png',
+      sideBar: '/useCases/stylesBox/SharpSolidSideBar.png',
+      egIcon: '/useCases/stylesBox/SharpSolidEg.png',
     },
   ],
   Standard: [
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Standard%2001.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/02.png',
+      sideBar: '/useCases/stylesBox/StandardStrokeSideBar.png',
+      egIcon: '/useCases/stylesBox/StandardStrokeEg.png',
     },
     {
-      sideBar: 'https://hugeicons.com/use-cases/styles-box/Standard%2002.png',
-      egIcon: 'https://hugeicons.com/use-cases/styles-box/01.png',
+      sideBar: '/useCases/stylesBox/StandardSolidSideBar.png',
+      egIcon: '/useCases/stylesBox/StandardSolidEg.png',
     },
   ],
 }
+
 
 export function ExplorerStyles() {
   const [activeIndex, setActiveIndex] = useState(0)

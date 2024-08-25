@@ -34,56 +34,56 @@ export default function StylesPage() {
           <StyleIconCard
             styleName="Stroke"
             description="HoustonIcons'; stroke icons showcase a sleek and modern aesthetic with a single, consistent outlined path. Their minimalist design is adaptable to various backgrounds and scalable dimensions. Ideal for digital interfaces, these vector-based icons allow customization where any color applied affects only the stroke, preserving a clean and personalized visual appeal."
-            image1="https://hugeicons.com/styles/stroke-1.svg"
-            image2="https://hugeicons.com/styles/stroke-2.svg"
+            image1="/styles/stroke-1.svg"
+            image2="/styles/stroke-2.svg"
           />
         </div>
         <div className="py-[55px]">
           <StyleIconCard
             styleName="Solid"
             description="HoustonIcons' solid icons are characterized by bold, filled shapes that create a strong and impactful visual presence. Versatile for various applications, they are commonly used in digital interfaces. Customization is straightforward, with any chosen color filling the entire shape ensuring a cohesive and striking appearance."
-            image1="https://hugeicons.com/styles/solid-1.svg"
-            image2="https://hugeicons.com/styles/solid-2.svg"
+            image1="/styles/solid-1.svg"
+            image2="/styles/solid-2.svg"
           />
         </div>
         <div className="py-[55px] bg-[#F8F8F8]">
           <StyleIconCard
             styleName="Twotone"
             description="HoustonIcons' twotone icons blend two distinct colors, allowing for independent customization of the primary and secondary colors. The default setup assigns specific sections for each color, with the secondary set at 40% opacity. This design enables multicolored effect on the outlines of the icons."
-            image1="https://hugeicons.com/styles/twotone-1.svg"
-            image2="https://hugeicons.com/styles/twotone-2.svg"
+            image1="/styles/twotone-1.svg"
+            image2="/styles/twotone-2.svg"
           />
         </div>
         <div className="py-[55px]">
           <StyleIconCard
             styleName="Duotone"
             description="HoustonIcons'  duotone icons feature a sophisticated dual-color design with two layers-primary and secondary colors, where the secondary color defaults to 40% opacity. This design uniquely affects both the stroke and fill of the icons, allowing users to apply colors to both layers for a customizable and dynamic appearance."
-            image1="https://hugeicons.com/styles/duotone-1.svg"
-            image2="https://hugeicons.com/styles/duotone-2.svg"
+            image1="/styles/duotone-1.svg"
+            image2="/styles/duotone-2.svg"
           />
         </div>
         <div className="py-[55px] bg-[#F8F8F8]">
           <StyleIconCard
             styleName="Bulk"
-            description="HoustonIcons' dual-color icons employ a scheme that affects only the fill, providing versatile design options. Users can apply colors directly to both layers, creating multicolored icosn with ease, suitable for various modern design projects."
-            image1="https://hugeicons.com/styles/bulk-1.svg"
-            image2="https://hugeicons.com/styles/bulk-2.svg"
+            description="HoustonIcons' dual-color icons employ a scheme that affects only the fill, providing versatile design options. Users can apply colors directly to both layers, creating multicolored icons with ease, suitable for various modern design projects."
+            image1="/styles/bulk-1.svg"
+            image2="/styles/bulk-2.svg"
           />
         </div>
         <div className="py-[55px]">
           <StyleIconCard
             styleName="Rounded"
             description="HoustonIcons' rounded icons are defined by equally rounded corners and smooth curves, offering a visually appealing and approachable design. This consistent, friendly appearance make them ideal for projects aiming for a modern and user-friendly aesthetic, adding a touch of warmth to digital interfaces."
-            image1="https://hugeicons.com/styles/rounded-1.svg"
-            image2="https://hugeicons.com/styles/rounded-2.svg"
+            image1="/styles/rounded-1.svg"
+            image2="/styles/rounded-2.svg"
           />
         </div>
         <div className="py-[55px] bg-[#F8F8F8]">
           <StyleIconCard
             styleName="Sharp"
             description="HoustonIcons' sharp icons feature crisp, non-rounded edges, delivering a bold and refined visual language. Crafted for projects that require distinct outlines, they offer a modern and professional look. The precise detailing enhances the sophistication of any design, making them a compelling choice for refined visual communication."
-            image1="https://hugeicons.com/styles/sharp-1.svg"
-            image2="https://hugeicons.com/styles/sharp-2.svg"
+            image1="/styles/sharp-1.svg"
+            image2="/styles/sharp-2.svg"
           />
         </div>
       </main>

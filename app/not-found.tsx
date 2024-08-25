@@ -1,4 +1,4 @@
-import * as Error from '@/public/error404.png'
+import Error from '@/public/error404.png'
 import Link from 'next/link'
 import Image from 'next/image'
 

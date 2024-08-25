@@ -6,7 +6,7 @@ Thousands of designers, developers, and content creators use Houston Pro for unl
 
 Discover more at our website: [houston.com](https://houston-icons.vercel.app/)
 
-![image](https://github.com/hugeicons/hugeicons-react/assets/130147052/fbbdccfc-074a-45de-8aaf-218db2fcda28)
+![image](./public/tools.svg)
 
 
 ## Table of Contents

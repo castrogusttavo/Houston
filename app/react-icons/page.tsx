@@ -25,7 +25,7 @@ export default function ReactIconsPage() {
                 precious development time.
               </p>
               <img
-                src="https://hugeicons.com/_next/static/media/supported_sources.3bdde585.png"
+                src="/supportedSources.png"
                 alt="Houston Pro React icon library"
                 className="mt-5 w-full max-w-[561px] sm:mt-11"
               />
@@ -1780,7 +1780,7 @@ export default function ReactIconsPage() {
             </p>
           </div>
           <img
-            src="https://hugeicons.com/_next/static/media/tools.92ec8ded.svg"
+            src="/tools.svg"
             alt=""
             className="mt-7 overflow-hidden sm:pt-[45px]"
           />
@@ -1823,7 +1823,7 @@ export default function ReactIconsPage() {
                   </div>
                 </div>
                 <img
-                  src="https://hugeicons.com/_next/static/media/npm_command.0a2bebec.svg"
+                  src="/npmComand.svg"
                   alt=""
                   className="z-50 mt-5 lg:mt-0 lg:w-[46%]"
                 />
@@ -1960,7 +1960,7 @@ export default function ReactIconsPage() {
                   </div>
                 </div>
                 <img
-                  src="https://hugeicons.com/_next/static/media/free-icons.ae6295e5.png"
+                  src="/freeIcons.png"
                   alt=""
                   className="z-50 mt-5 lg:mt-0 lg:w-[46%]"
                 />
@@ -2386,7 +2386,7 @@ export default function ReactIconsPage() {
                         Adding more
                       </h3>
                       <p className="mt-2 self-stretch font-normal leading-[165%] tracking-[-0.13px] text-grey-700">
-                        Houston Pro is commited to be the best and eager to add
+                        Houston Pro is committed to be the best and eager to add
                         more react icons and features.
                       </p>
                     </div>

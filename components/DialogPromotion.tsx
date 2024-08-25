@@ -3,7 +3,9 @@
 import { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross2Icon } from '@radix-ui/react-icons'
+import DiscountHeader from '@/public/discountHeader.png'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function DialogPromotion() {
   const [isVisible, setIsVisible] = useState(false)
@@ -11,7 +13,7 @@ export function DialogPromotion() {
   useEffect(() => {
     const timerOpenDialog = setTimeout(() => {
       setIsVisible(true)
-    }, 60000)
+    }, 30000)
 
     return () => clearTimeout(timerOpenDialog)
   }, [])
@@ -38,9 +40,9 @@ export function DialogPromotion() {
               </Dialog.Close>
               <div className="flex min-h-full flex-1 flex-col justify-center w-full">
                 <div className="sm:w-full flex flex-col items-center gap-12">
-                  <img
+                  <Image
                     className="h-[185px] w-full mx-auto object-contain"
-                    src="https://hugeicons.com/assets/disount-header.png"
+                    src={DiscountHeader}
                     alt="Stop Icon"
                   />
                   <div className="text-center">

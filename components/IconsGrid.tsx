@@ -79,7 +79,6 @@ export function IconsGrid() {
 
   const [searchTerm, setSearchTerm] = useState(searchTermFromURL)
   const [filteredIcons, setFilteredIcons] = useState<string[]>([])
-  const [listWidth, setListWidth] = useState(1000)
 
   useEffect(() => {
     const params = new URLSearchParams()
@@ -88,13 +87,6 @@ export function IconsGrid() {
 
     router.replace(`/icons?${params.toString()}`)
   }, [searchTerm, router])
-
-  useEffect(() => {
-    const handleResize = () => setListWidth(window.innerWidth)
-    handleResize()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   useEffect(() => {
     const results = iconNames.filter((iconName) =>

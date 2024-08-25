@@ -117,37 +117,37 @@ export default function Home() {
                   </p>
                   <div className="flex items-center space-x-1 sm:space-x-4">
                     <img
-                      src="https://hugeicons.com/logos/figma.png"
+                      src="/logos/figma.png"
                       alt="Figma"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/react.png"
+                      src="/logos/react.png"
                       alt="React"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/svelte.png"
+                      src="/logos/svelte.png"
                       alt="Next"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/javascript.png"
+                      src="/logos/javascript.png"
                       alt="Javascript"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/flutter.png"
+                      src="/logos/flutter.png"
                       alt="React Native"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/npm.png"
+                      src="/logos/npm.png"
                       alt="Npm"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="https://hugeicons.com/logos/svg.png"
+                      src="/logos/svg.png"
                       alt="Svg"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
@@ -272,32 +272,32 @@ export default function Home() {
               <CardValueUX
                 title="Real & understandable"
                 description="Icons created from real objects for great user experience"
-                imageCover="https://hugeicons.com/icon-design-matters/Real%20&%20understandable.png"
+                imageCover="/iconDesignMatters/Real&Understandable.png"
               />
               <CardValueUX
                 title="Icons that fit the moment"
                 description="Choose from various icon variations to suit your use case; we have plenty"
-                imageCover="https://hugeicons.com/icon-design-matters/Icons%20that%20fit%20the%20moment.png"
+                imageCover="/iconDesignMatters/IconsThatFitTheMoment.png"
               />
               <CardValueUX
                 title="Consistent design"
                 description="Expertly crafted icons by professionals for high consistency"
-                imageCover="https://hugeicons.com/icon-design-matters/Consistent%20design.png"
+                imageCover="/iconDesignMatters/ConsistentDesign.png"
               />
               <CardValueUX
                 title="Serious, playful, standard"
                 description="If icons are used right, it makes experience better"
-                imageCover="https://hugeicons.com/icon-design-matters/Serious,%20playful,%20standard.png"
+                imageCover="/iconDesignMatters/SeriousPlayfulStandard.png"
               />
               <CardValueUX
                 title="Editable stroke to match your font"
                 description="Customize the stroke that matches your typography"
-                imageCover="https://hugeicons.com/icon-design-matters/Editable%20stroke%20to%20match%20your%20font.png"
+                imageCover="/iconDesignMatters/EditableStrokeToMatchYourFont.png"
               />
               <CardValueUX
                 title="Outlined icons for design system"
                 description="Ensures scalability and consistency, no adjustments needed"
-                imageCover="https://hugeicons.com/icon-design-matters/Outlined%20icons%20for%20design%20system.png"
+                imageCover="/iconDesignMatters/OutlinedIconsForDesignSystem.png"
               />
             </div>
           </div>
@@ -315,7 +315,7 @@ export default function Home() {
               <div>
                 <img
                   className="w-full"
-                  src="https://hugeicons.com/build-the-way/Nicely%20customizable.png"
+                  src="/buildTheWay/NicelyCustomizable.png"
                   alt="Nicely customizable"
                 />
                 <h4 className="text-lg font-bold mt-5 text-white">
@@ -329,7 +329,7 @@ export default function Home() {
               <div>
                 <img
                   className="w-full"
-                  src="https://hugeicons.com/build-the-way/Tree%20Shakable.png"
+                  src="/buildTheWay/TreeShakable.png"
                   alt="Tree shakable"
                 />
                 <h4 className="text-lg font-bold mt-5 text-white">
@@ -343,7 +343,7 @@ export default function Home() {
               <div>
                 <img
                   className="w-full"
-                  src="https://hugeicons.com/build-the-way/Lightweight%20Scalable.png"
+                  src="/buildTheWay/LightweightScalable.png"
                   alt="Lightweight e scalable"
                 />
                 <h4 className="text-lg font-bold mt-5 text-white">
@@ -359,41 +359,41 @@ export default function Home() {
               Available for
             </p>
             <div className="grid grid-cols-4 sm:flex items-center gap-2 mt-3 pr-7 sm:pr-0">
-              <img
-                src="https://hugeicons.com/logos/figma.png"
-                alt="Figma"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/react.png"
-                alt="React"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/svelte.png"
-                alt="Next"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/javascript.png"
-                alt="Javascript"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/flutter.png"
-                alt="React Native"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/npm.png"
-                alt="Npm"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
-              <img
-                src="https://hugeicons.com/logos/svg.png"
-                alt="Svg"
-                className="w-full h-full sm:w-16 sm:h-16"
-              />
+                    <img
+                      src="/logos/figma.png"
+                      alt="Figma"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/react.png"
+                      alt="React"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/svelte.png"
+                      alt="Next"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/javascript.png"
+                      alt="Javascript"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/flutter.png"
+                      alt="React Native"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/npm.png"
+                      alt="Npm"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/svg.png"
+                      alt="Svg"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
             </div>
           </div>
         </div>
@@ -424,62 +424,62 @@ export default function Home() {
           <div className="relative z-20 overflow-hidden mt-7 duration-200">
             <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll">
               <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
+                src="/home/components/Image02.png"
                 alt="Image 02"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
+                src="/home/components/Image10.png"
                 alt="Image 10"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
+                src="/home/components/Image09.png"
                 alt="Image 09"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
+                src="/home/components/Image08.png"
                 alt="Image 08"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
+                src="/home/components/Image07.png"
                 alt="Image 07"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
+                src="/home/components/Image06.png"
                 alt="Image 06"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
+                src="/home/components/Image02.png"
                 alt="Image 02"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
+                src="/home/components/Image10.png"
                 alt="Image 10"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
+                src="/home/components/Image09.png"
                 alt="Image 09"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
+                src="/home/components/Image08.png"
                 alt="Image 08"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
+                src="/home/components/Image07.png"
                 alt="Image 07"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
+                src="/home/components/Image06.png"
                 alt="Image 06"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
@@ -488,62 +488,62 @@ export default function Home() {
           <div className="relative z-20 overflow-hidden duration-200">
             <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll direction-reverse">
               <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
+                src="/home/components/Image01.png"
                 alt="Image 01"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
+                src="/home/components/Image04.png"
                 alt="Image 04"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
+                src="/home/components/Image13.png"
                 alt="Image 13"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
+                src="/home/components/Image05.png"
                 alt="Image 05"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
+                src="/home/components/Image03.png"
                 alt="Image 03"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
+                src="/home/components/Image12.png"
                 alt="Image 12"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
+                src="/home/components/Image01.png"
                 alt="Image 01"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
+                src="/home/components/Image04.png"
                 alt="Image 04"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
+                src="/home/components/Image13.png"
                 alt="Image 13"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
+                src="/home/components/Image05.png"
                 alt="Image 05"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
+                src="/home/components/Image03.png"
                 alt="Image 03"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
+                src="/home/components/Image12.png"
                 alt="Image 12"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />

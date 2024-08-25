@@ -583,7 +583,7 @@ export default function PricingPage() {
           </div>
           <div className="relative mt-5 pb-15 w-full flex items-start overflow-hidden rounded-xl border-b-2 border-l border-r border-t border-grey-200 bg-gray-100 p-8">
             <img
-              src="https://hugeicons.com/home/pricing-details-object.png"
+              src="/pricingDetailsObject.png"
               className="absolute bottom-0 left-0 hidden h-[200px] md:block"
               alt=""
             />
@@ -732,62 +732,62 @@ export default function PricingPage() {
           <div className="relative z-20 overflow-hidden mt-7 duration-200">
             <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll">
               <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
+                src="/home/components/Image02.png"
                 alt="Image 02"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
+                src="/home/components/Image10.png"
                 alt="Image 10"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
+                src="/home/components/Image09.png"
                 alt="Image 09"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
+                src="/home/components/Image08.png"
                 alt="Image 08"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
+                src="/home/components/Image07.png"
                 alt="Image 07"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
+                src="/home/components/Image06.png"
                 alt="Image 06"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2002.png"
+                src="/home/components/Image02.png"
                 alt="Image 02"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2010.png"
+                src="/home/components/Image10.png"
                 alt="Image 10"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2009.png"
+                src="/home/components/Image09.png"
                 alt="Image 09"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2008.png"
+                src="/home/components/Image08.png"
                 alt="Image 08"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2007.png"
+                src="/home/components/Image07.png"
                 alt="Image 07"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2006.png"
+                src="/home/components/Image06.png"
                 alt="Image 06"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
@@ -796,62 +796,62 @@ export default function PricingPage() {
           <div className="relative z-20 overflow-hidden duration-200">
             <ul className="flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap animate-scroll direction-reverse">
               <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
+                src="/home/components/Image01.png"
                 alt="Image 01"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
+                src="/home/components/Image04.png"
                 alt="Image 04"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
+                src="/home/components/Image13.png"
                 alt="Image 13"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
+                src="/home/components/Image05.png"
                 alt="Image 05"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
+                src="/home/components/Image03.png"
                 alt="Image 03"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
+                src="/home/components/Image12.png"
                 alt="Image 12"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2001.png"
+                src="/home/components/Image01.png"
                 alt="Image 01"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2004.png"
+                src="/home/components/Image04.png"
                 alt="Image 04"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2013.png"
+                src="/home/components/Image13.png"
                 alt="Image 13"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2005.png"
+                src="/home/components/Image05.png"
                 alt="Image 05"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2003.png"
+                src="/home/components/Image03.png"
                 alt="Image 03"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
               <img
-                src="https://hugeicons.com/home/components/Image%2012.png"
+                src="/home/components/Image12.png"
                 alt="Image 12"
                 className="max-h-[20rem] sm:max-h-[30rem] object-cover rounded-lg"
               />
@@ -890,7 +890,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Davey%20Heuser.png"
+                        src="/feedback/DaveyHeuser.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -916,7 +916,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Jordan%20Hughes.png"
+                        src="/feedback/JordanHughes.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -942,7 +942,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Graeme.png"
+                        src="/feedback/Graeme.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -968,7 +968,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Liam%20McCabe.png"
+                        src="/feedback/LiamMcCabe.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />

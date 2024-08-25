@@ -1,9 +1,9 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { ExplorerStyles } from '@/components/ExploreStyles'
-import Link from 'next/link'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Houston Pro Use Cases - Icon Solutions for Your Industry',
@@ -38,10 +38,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2010.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image10Big.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -50,10 +47,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2002.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image02.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -64,10 +58,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2009.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image09.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -76,10 +67,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2008.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image08.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -90,10 +78,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2007.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image07.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -102,10 +87,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2006.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image06.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -116,22 +98,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2011.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2001.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image11.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -141,10 +108,7 @@ export default function ExamplesPage() {
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
-                  <img
-                    src="https://hugeicons.com/use-cases/components/Image%2005.png"
-                    alt=""
-                  />
+                  <img src="/home/components/Image05.png" alt="" />
                 </div>
               </div>
             </div>
@@ -153,10 +117,7 @@ export default function ExamplesPage() {
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
-                  <img
-                    src="https://hugeicons.com/use-cases/components/Image%2012.png"
-                    alt=""
-                  />
+                  <img src="/home/components/Image12.png" alt="" />
                 </div>
               </div>
             </div>
@@ -166,10 +127,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2004.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image04.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -178,10 +136,7 @@ export default function ExamplesPage() {
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
-                    <img
-                      src="https://hugeicons.com/use-cases/components/Image%2003.png"
-                      alt=""
-                    />
+                    <img src="/home/components/Image03.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -191,10 +146,7 @@ export default function ExamplesPage() {
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
-                  <img
-                    src="https://hugeicons.com/use-cases/components/Image%2013.png"
-                    alt=""
-                  />
+                  <img src="/home/components/Image13.png" alt="" />
                 </div>
               </div>
             </div>
@@ -445,7 +397,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Davey%20Heuser.png"
+                        src="/feedback/DaveyHeuser"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -471,7 +423,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Jordan%20Hughes.png"
+                        src="/feedback/JordanHughes"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -497,7 +449,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Graeme.png"
+                        src="/feedback/Graeme"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -523,7 +475,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="https://cdn.hugeicons.com//website/feedback/Liam%20McCabe.png"
+                        src="/feedback/LiamMcCabe"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
