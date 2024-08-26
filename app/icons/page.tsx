@@ -1,6 +1,5 @@
 'use client'
 
-import { Header } from '@/components/Header'
 import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
@@ -119,10 +118,6 @@ export default function IconsPage() {
     return () => clearTimeout(timeoutId)
   }, [searchTerm])
 
-  function handleClickClearSearch() {
-    setSearchTerm('')
-  }
-
   function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>): void {
     if (event.key === 'ArrowDown')
       setSelectedIndex((prevIndex) =>
@@ -146,7 +141,6 @@ export default function IconsPage() {
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
-      <Header />
       <main className="flex flex-col flex-1 max-h-[88vh]">
         {/* Filtragem de dados */}
         <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0]">
@@ -280,7 +274,6 @@ export default function IconsPage() {
             {searchTerm && (
               <button
                 className="absolute right-10 h-10 w-10 flex items-center justify-center"
-                onClick={handleClickClearSearch}
               >
                 <svg
                   width="24"
