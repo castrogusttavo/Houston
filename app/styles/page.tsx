@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { StyleIconCard } from '@/components/StyleIconCard'
+import { DialogPromotion } from '@/components/DialogPromotion'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -88,6 +89,8 @@ export default function StylesPage() {
         </div>
       </main>
       <Footer />
+
+      <DialogPromotion />
     </div>
   )
 }

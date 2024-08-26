@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { DialogPromotion } from '@/components/DialogPromotion'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -2429,6 +2430,8 @@ export default function ReactIconsPage() {
         </div>
       </main>
       <Footer />
+
+      <DialogPromotion />
     </div>
   )
 }

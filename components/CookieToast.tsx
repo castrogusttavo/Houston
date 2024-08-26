@@ -1,12 +1,20 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import * as Toast from '@radix-ui/react-toast'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 export function CookieToast() {
   const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    const hasSeenToast = localStorage.getItem('hasSeenCookieToast')
+    if (!hasSeenToast) {
+      setIsVisible(true)
+      localStorage.setItem('hasSeenCookieToast', 'true')
+    }
+  }, [])
 
   function handleClickCloseToast() {
     setIsVisible(false)
