@@ -1,5 +1,6 @@
 'use client'
 
+import { Header } from '@/components/Header'
 import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
@@ -145,7 +146,8 @@ export default function IconsPage() {
 
   return (
     <div className="antialiased font-sans max-h-[100vh] transition-[grid-template-columns] duration-300 ease-in-out">
-      <main className="flex flex-col flex-1 max-h-[80vh]">
+      <Header />
+      <main className="flex flex-col flex-1 max-h-[90vh]">
         {/* Filtragem de dados */}
         <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0]">
           <div className="flex gap-6 p-3 rounded-lg bg-white items-center border border-[#F0F2F7] mb-6 relative max-w-[80rem] mx-auto shadow-[0px_2px_3px_-2px_#B4E903]">
@@ -422,7 +424,7 @@ export default function IconsPage() {
         </div>
         {/* Renderização de ícones */}
         <div
-          className="select-none mx-auto relative h-fit max-w-full overflow-y-auto will-change-transform focus:outline-none focus:border-none overflow-x-hidden"
+          className="select-none mx-auto relative h-fit max-w-full overflow-auto will-change-transform focus:outline-none focus:border-none"
           style={{ direction: 'ltr' }}
         >
           <div className="h-[28154px] w-[1298px]">
