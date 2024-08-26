@@ -359,41 +359,41 @@ export default function Home() {
               Available for
             </p>
             <div className="grid grid-cols-4 sm:flex items-center gap-2 mt-3 pr-7 sm:pr-0">
-                    <img
-                      src="/logos/figma.png"
-                      alt="Figma"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/react.png"
-                      alt="React"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/svelte.png"
-                      alt="Next"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/javascript.png"
-                      alt="Javascript"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/flutter.png"
-                      alt="React Native"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/npm.png"
-                      alt="Npm"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/svg.png"
-                      alt="Svg"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
+              <img
+                src="/logos/figma.png"
+                alt="Figma"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/react.png"
+                alt="React"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/svelte.png"
+                alt="Next"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/javascript.png"
+                alt="Javascript"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/flutter.png"
+                alt="React Native"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/npm.png"
+                alt="Npm"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/svg.png"
+                alt="Svg"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
             </div>
           </div>
         </div>

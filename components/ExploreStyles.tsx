@@ -61,7 +61,6 @@ const styleTagImages = {
   ],
 }
 
-
 export function ExplorerStyles() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [activeTagIndex, setActiveTagIndex] = useState(0)

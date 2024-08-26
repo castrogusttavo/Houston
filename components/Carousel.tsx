@@ -80,7 +80,7 @@ export function Carousel() {
       behavior: 'instant',
     })
     setCurrentIndex(newIndex)
-  }, [])
+  }, [currentIndex])
 
   const handleNext = () => {
     if (!carouselRef.current) return
