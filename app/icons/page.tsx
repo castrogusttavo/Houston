@@ -272,9 +272,7 @@ export default function IconsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             {searchTerm && (
-              <button
-                className="absolute right-10 h-10 w-10 flex items-center justify-center"
-              >
+              <button className="absolute right-10 h-10 w-10 flex items-center justify-center">
                 <svg
                   width="24"
                   height="24"
