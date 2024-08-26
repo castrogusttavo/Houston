@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 
 export const metadata: Metadata = {
-  title: 'Houston Pro - Most Beautiful Icons Library',
+  title: 'React Icons - Houston Pro',
 }
 
 export default function RootLayout({

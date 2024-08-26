@@ -144,8 +144,8 @@ export default function IconsPage() {
   }
 
   return (
-    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
-      <main className="flex flex-col flex-1 max-h-[88vh]">
+    <div className="antialiased font-sans max-h-[100vh] transition-[grid-template-columns] duration-300 ease-in-out">
+      <main className="flex flex-col flex-1 max-h-[80vh]">
         {/* Filtragem de dados */}
         <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0]">
           <div className="flex gap-6 p-3 rounded-lg bg-white items-center border border-[#F0F2F7] mb-6 relative max-w-[80rem] mx-auto shadow-[0px_2px_3px_-2px_#B4E903]">
