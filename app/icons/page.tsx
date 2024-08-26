@@ -139,6 +139,10 @@ export default function IconsPage() {
     }
   }, [selectedIndex])
 
+  function handleClickClearSearch() {
+    setSearchTerm('')
+  }
+
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <main className="flex flex-col flex-1 max-h-[88vh]">
@@ -272,7 +276,10 @@ export default function IconsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             {searchTerm && (
-              <button className="absolute right-10 h-10 w-10 flex items-center justify-center">
+              <button
+                className="absolute right-10 h-10 w-10 flex items-center justify-center"
+                onClick={handleClickClearSearch}
+              >
                 <svg
                   width="24"
                   height="24"

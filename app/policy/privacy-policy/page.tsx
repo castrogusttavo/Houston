@@ -7,10 +7,6 @@ export const metadata: Metadata = {
 }
 
 export default function privacyPolicy() {
-  function handleClickClearCookies() {
-    localStorage.clear()
-  }
-
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out text-grey-900">
       <Header />
@@ -128,7 +124,6 @@ export default function privacyPolicy() {
           accordingly.{' '}
           <a
             href=""
-            onClick={handleClickClearCookies}
             className="text-blue-500 hover:underline"
           >
             {' '}
