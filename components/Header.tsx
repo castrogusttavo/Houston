@@ -15,6 +15,10 @@ export function Header() {
     setIsShowMenuBurger(true)
   }
 
+  function testeButton() {
+    console.log('Teste')
+  }
+
   return (
     <nav className="bg-white text-primary border-neutral-100 flex gap-3 items-center w-screen md:w-full sticky z-30 px-4 h-[73px] top-0">
       <Dialog.Root open={isShowMenuBurger} onOpenChange={setIsShowMenuBurger}>
@@ -112,6 +116,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/icons"
+                onClick={testeButton}
                 className={`hover:text-black transition-colors  ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Icons</span>
@@ -120,6 +125,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/use-cases"
+                onClick={testeButton}
                 className={`hover:text-black transition-colors ${pathname === '/use-cases' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Example</span>
@@ -128,6 +134,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/pricing"
+                onClick={testeButton}
                 className={`hover:text-black transition-colors  ${pathname === '/pricing' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Pricing</span>
@@ -136,6 +143,7 @@ export function Header() {
             <li className="relative">
               <Link
                 href="/docs"
+                onClick={testeButton}
                 className={`hover:text-black transition-colors ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Docs</span>

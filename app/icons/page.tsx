@@ -145,14 +145,14 @@ export default function IconsPage() {
   }
 
   return (
-    <div className="antialiased font-sans max-h-[100vh] transition-[grid-template-columns] duration-300 ease-in-out">
+    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <Header />
-      <main className="flex flex-col flex-1 max-h-[90vh]">
+      <main className="flex flex-col flex-1">
         {/* Filtragem de dados */}
         <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0]">
           <div className="flex gap-6 p-3 rounded-lg bg-white items-center border border-[#F0F2F7] mb-6 relative max-w-[80rem] mx-auto shadow-[0px_2px_3px_-2px_#B4E903]">
             <Popover.Root>
-              <Popover.Trigger className="w-[250px]" asChild>
+              <Popover.Trigger className="w-[250px] hidden sm:flex" asChild>
                 <button
                   className="inline-flex relative items-center justify-start font-bold whitespace-nowrap rounded-lg text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-grey-700 px-4 py-2 max-w-[250px] gap-2 h-[44px] bg-[#F0F2F7] border-none"
                   type="button"
@@ -248,7 +248,7 @@ export default function IconsPage() {
             </Popover.Root>
             <div
               data-orientation="vertical"
-              className="shrink-0 h-9 w-[1.5px] bg-[#D9DCE5]"
+              className="shrink-0 h-9 w-[1.5px] bg-[#D9DCE5] hidden sm:block"
             />
             <svg
               className="w-8 h-8 text-neutral-600"
@@ -306,7 +306,7 @@ export default function IconsPage() {
               </button>
             )}
           </div>
-          <div className="flex gap-2 items-center justify-center max-w-[80rem] mx-auto">
+          <div className="gap-2 items-center justify-center max-w-[80rem] mx-auto hidden sm:flex">
             <div dir="lrt" data-orientation="horizontal">
               <div
                 role="tablist"
@@ -424,25 +424,33 @@ export default function IconsPage() {
         </div>
         {/* Renderização de ícones */}
         <div
-          className="select-none mx-auto relative h-fit max-w-full overflow-auto will-change-transform focus:outline-none focus:border-none"
+          className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none"
           style={{ direction: 'ltr' }}
         >
-          <div className="h-[28154px] w-[1298px]">
+          <div className="h-[28154px] w-full max-w-[80rem] mx-auto">
             {filteredIcons.map((iconName, iconIndex) => {
               const IconComponent = Icon[
                 iconName as keyof typeof Icon
               ] as React.ComponentType<IconProps>
 
+              const maxColumns = 13
+              const columns = Math.min(
+                maxColumns,
+                Math.floor(window.innerWidth / 100),
+              )
+              const iconWidth = window.innerWidth / columns
+
               return iconVariants.map((variant, variantIndex) => {
                 const totalIndex =
                   iconIndex * iconVariants.length + variantIndex
-                const iconLeftPosition = 15 + (totalIndex % 13) * 99.846
-                const iconTopPosition = 18 + Math.floor(totalIndex / 13) * 100
+                const iconLeftPosition = 15 + (totalIndex % columns) * iconWidth
+                const iconTopPosition =
+                  18 + Math.floor(totalIndex / columns) * 100
 
                 return (
                   <div
                     key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
-                    className="absolute h-[82px] w-[100px] pr-[18px] inline-flex"
+                    className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
                     style={{
                       left: `${iconLeftPosition}px`,
                       top: `${iconTopPosition}px`,

@@ -1,9 +1,9 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
 
 export function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(2)
   const carouselRef = useRef<HTMLDivElement | null>(null)
 
   const cards = [
@@ -63,7 +63,9 @@ export function Carousel() {
     },
   ]
 
-  const infiniteCards = [...cards.slice(-2), ...cards, ...cards.slice(0, 2)]
+  const infiniteCards = useMemo(() => {
+    return [...cards.slice(-2), ...cards, ...cards.slice(0, 2)]
+  }, [cards])
 
   useEffect(() => {
     if (!carouselRef.current) return
@@ -74,39 +76,11 @@ export function Carousel() {
     const cardWidth =
       card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
 
-    const newIndex = currentIndex + 2
     carouselRef.current.scrollTo({
-      left: cardWidth * newIndex,
-      behavior: 'instant',
+      left: cardWidth * 2,
+      behavior: 'smooth',
     })
-    setCurrentIndex(newIndex)
-  }, [currentIndex])
-
-  const handleNext = () => {
-    if (!carouselRef.current) return
-
-    const card = carouselRef.current.querySelector('.card')
-    if (!card) return
-
-    const cardWidth =
-      card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
-
-    carouselRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
-    setCurrentIndex((prevIndex) => prevIndex + 1)
-  }
-
-  const handlePrev = () => {
-    if (!carouselRef.current) return
-
-    const card = carouselRef.current.querySelector('.card')
-    if (!card) return
-
-    const cardWidth =
-      card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
-
-    carouselRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' })
-    setCurrentIndex((prevIndex) => prevIndex - 1)
-  }
+  }, [])
 
   useEffect(() => {
     if (!carouselRef.current) return
@@ -121,20 +95,42 @@ export function Carousel() {
       setTimeout(() => {
         carouselRef.current?.scrollTo({
           left: cardWidth * 2,
-          behavior: 'instant',
+          behavior: 'smooth',
         })
-        setCurrentIndex(2)
       }, 300)
     } else if (currentIndex === 1) {
       setTimeout(() => {
         carouselRef.current?.scrollTo({
           left: cardWidth * (infiniteCards.length - 4),
-          behavior: 'instant',
+          behavior: 'smooth',
         })
-        setCurrentIndex(infiniteCards.length - 4)
       }, 300)
     }
   }, [currentIndex, infiniteCards.length])
+
+  const handleNext = () => {
+    if (!carouselRef.current) return
+
+    const card = carouselRef.current.querySelector('.card')
+    if (!card) return
+
+    const cardWidth =
+      card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
+    carouselRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
+    setCurrentIndex((prevIndex) => prevIndex + 1)
+  }
+
+  const handlePrev = () => {
+    if (!carouselRef.current) return
+
+    const card = carouselRef.current.querySelector('.card')
+    if (!card) return
+
+    const cardWidth =
+      card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
+    carouselRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' })
+    setCurrentIndex((prevIndex) => prevIndex - 1)
+  }
 
   return (
     <div
