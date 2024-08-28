@@ -100,7 +100,7 @@ export default function IconsPage() {
   const [searchTerm, setSearchTerm] = useState(searchTermFromURL)
   const [filteredIcons, setFilteredIcons] = useState<string[]>([])
 
-  const containerRef = useRef(null)
+  const containerRef = useRef<HTMLElement>(null)
   const [containerWidth, setContainerWidth] = useState(0)
 
   useEffect(() => {
