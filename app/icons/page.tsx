@@ -100,6 +100,9 @@ export default function IconsPage() {
   const [searchTerm, setSearchTerm] = useState(searchTermFromURL)
   const [filteredIcons, setFilteredIcons] = useState<string[]>([])
 
+  const containerRef = useRef(null)
+  const [containerWidth, setContainerWidth] = useState(0)
+
   useEffect(() => {
     const params = new URLSearchParams()
     if (searchTerm) params.set('search', searchTerm)
@@ -139,6 +142,22 @@ export default function IconsPage() {
       })
     }
   }, [selectedIndex])
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth)
+      }
+    }
+
+    updateWidth()
+    window.addEventListener('resize', updateWidth)
+    return () => window.removeEventListener('resize', updateWidth)
+  }, [])
+
+  const maxColumns = 13
+  const columns = Math.min(maxColumns, Math.floor(containerWidth / 100))
+  const iconWidth = containerWidth / columns
 
   function handleClickClearSearch() {
     setSearchTerm('')
@@ -306,7 +325,7 @@ export default function IconsPage() {
               </button>
             )}
           </div>
-          <div className="gap-2 items-center justify-center max-w-[80rem] mx-auto hidden sm:flex">
+          <div className="gap-2 items-center justify-center max-w-[80rem] mx-auto hidden lg:flex">
             <div dir="lrt" data-orientation="horizontal">
               <div
                 role="tablist"
@@ -427,18 +446,14 @@ export default function IconsPage() {
           className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none"
           style={{ direction: 'ltr' }}
         >
-          <div className="h-[28154px] w-full max-w-[80rem] mx-auto">
+          <div
+            ref={containerRef}
+            className="h-[28154px] w-full max-w-[80rem] mx-auto relative"
+          >
             {filteredIcons.map((iconName, iconIndex) => {
               const IconComponent = Icon[
                 iconName as keyof typeof Icon
               ] as React.ComponentType<IconProps>
-
-              const maxColumns = 13
-              const columns = Math.min(
-                maxColumns,
-                Math.floor(window.innerWidth / 100),
-              )
-              const iconWidth = window.innerWidth / columns
 
               return iconVariants.map((variant, variantIndex) => {
                 const totalIndex =
@@ -447,12 +462,17 @@ export default function IconsPage() {
                 const iconTopPosition =
                   18 + Math.floor(totalIndex / columns) * 100
 
+                const adjustedLeftPosition = Math.min(
+                  iconLeftPosition,
+                  containerWidth - iconWidth,
+                )
+
                 return (
                   <div
                     key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
                     className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
                     style={{
-                      left: `${iconLeftPosition}px`,
+                      left: `${adjustedLeftPosition}px`,
                       top: `${iconTopPosition}px`,
                     }}
                   >
