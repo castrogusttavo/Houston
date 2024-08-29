@@ -398,7 +398,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/DaveyHeuser"
+                        src="/feedback/DaveyHeuser.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -424,7 +424,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/JordanHughes"
+                        src="/feedback/JordanHughes.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -450,7 +450,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/Graeme"
+                        src="/feedback/Graeme.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -476,7 +476,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/LiamMcCabe"
+                        src="/feedback/LiamMcCabe.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
