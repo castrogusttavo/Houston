@@ -267,7 +267,7 @@ export default function PricingPage() {
                 <h3 className="text-4xl">$</h3>
                 <h2 className="text-7xl leading-none font-semibold">4,00</h2>
               </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
+              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer">
                 Buy now
               </a>
               <ul className="max-w-[366px]">
@@ -373,7 +373,7 @@ export default function PricingPage() {
                 <h3 className="text-4xl">$</h3>
                 <h2 className="text-8xl leading-none font-bold">8,00</h2>
               </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
+              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer">
                 Buy now
               </a>
               <ul className="max-w-[366px]">
@@ -481,7 +481,7 @@ export default function PricingPage() {
                 <h3 className="text-4xl">$</h3>
                 <h2 className="text-7xl leading-none font-semibold">16,99</h2>
               </div>
-              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200">
+              <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer">
                 Buy now
               </a>
               <ul className="max-w-[366px]">
