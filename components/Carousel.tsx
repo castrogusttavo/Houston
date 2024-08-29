@@ -1,10 +1,14 @@
 'use client'
 
-import { useState, useRef, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useRef, useMemo } from 'react'
 
 export function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(2)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [progress, setProgress] = useState(0)
   const carouselRef = useRef<HTMLDivElement | null>(null)
+  const isDragging = useRef(false)
+  const startX = useRef(0)
+  const scrollLeft = useRef(0)
 
   const cards = [
     {
@@ -63,9 +67,7 @@ export function Carousel() {
     },
   ]
 
-  const infiniteCards = useMemo(() => {
-    return [...cards.slice(-2), ...cards, ...cards.slice(0, 2)]
-  }, [cards])
+  const visibleCards = useMemo(() => cards, [cards])
 
   useEffect(() => {
     if (!carouselRef.current) return
@@ -75,38 +77,45 @@ export function Carousel() {
 
     const cardWidth =
       card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
-
     carouselRef.current.scrollTo({
-      left: cardWidth * 2,
+      left: cardWidth * currentIndex,
       behavior: 'smooth',
     })
-  }, [])
+  }, [currentIndex])
 
   useEffect(() => {
-    if (!carouselRef.current) return
+    const handleScroll = () => {
+      if (carouselRef.current) {
+        const scrollPosition = carouselRef.current.scrollLeft
+        const card = carouselRef.current.querySelector('.card')
+        if (!card) return
 
-    const card = carouselRef.current.querySelector('.card')
-    if (!card) return
+        const cardWidth =
+          card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
+        const index = Math.round(scrollPosition / cardWidth)
 
-    const cardWidth =
-      card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
+        if (index >= 0 && index < visibleCards.length) {
+          setCurrentIndex(index)
+        }
 
-    if (currentIndex === infiniteCards.length - 2) {
-      setTimeout(() => {
-        carouselRef.current?.scrollTo({
-          left: cardWidth * 2,
-          behavior: 'smooth',
-        })
-      }, 300)
-    } else if (currentIndex === 1) {
-      setTimeout(() => {
-        carouselRef.current?.scrollTo({
-          left: cardWidth * (infiniteCards.length - 4),
-          behavior: 'smooth',
-        })
-      }, 300)
+        // Atualiza o progresso
+        const maxScroll =
+          carouselRef.current.scrollWidth - carouselRef.current.clientWidth
+        const newProgress = (scrollPosition / maxScroll) * 100
+        setProgress(newProgress)
+      }
     }
-  }, [currentIndex, infiniteCards.length])
+
+    if (carouselRef.current) {
+      carouselRef.current.addEventListener('scroll', handleScroll)
+    }
+
+    return () => {
+      if (carouselRef.current) {
+        carouselRef.current.removeEventListener('scroll', handleScroll)
+      }
+    }
+  }, [visibleCards])
 
   const handleNext = () => {
     if (!carouselRef.current) return
@@ -116,8 +125,10 @@ export function Carousel() {
 
     const cardWidth =
       card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
-    carouselRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
-    setCurrentIndex((prevIndex) => prevIndex + 1)
+
+    if (currentIndex < visibleCards.length - 1) {
+      carouselRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' })
+    }
   }
 
   const handlePrev = () => {
@@ -128,8 +139,34 @@ export function Carousel() {
 
     const cardWidth =
       card.clientWidth + parseInt(getComputedStyle(card).marginRight, 10)
-    carouselRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' })
-    setCurrentIndex((prevIndex) => prevIndex - 1)
+
+    if (currentIndex > 0) {
+      carouselRef.current.scrollBy({ left: -cardWidth, behavior: 'smooth' })
+    }
+  }
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (carouselRef.current) {
+      isDragging.current = true
+      startX.current = e.pageX - carouselRef.current.offsetLeft
+      scrollLeft.current = carouselRef.current.scrollLeft
+    }
+  }
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !carouselRef.current) return
+
+    const x = e.pageX - carouselRef.current.offsetLeft
+    const walk = (x - startX.current) * 2 // Scroll fast
+    carouselRef.current.scrollLeft = scrollLeft.current - walk
+  }
+
+  const handleMouseUp = () => {
+    isDragging.current = false
+  }
+
+  const handleMouseLeave = () => {
+    isDragging.current = false
   }
 
   return (
@@ -137,10 +174,14 @@ export function Carousel() {
       className="relative space-x-4 mt-9 sm:mt-10"
       role="region"
       aria-roledescription="carousel"
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="overflow-hidden" ref={carouselRef}>
-        <div className="flex -ml-4">
-          {infiniteCards.map((card, index) => (
+        <div className="flex">
+          {visibleCards.map((card, index) => (
             <div
               key={index}
               className="card min-w-0 shrink-0 grow-0 pl-4 basis-1/1 md:basis-1/3 lg:basis-1/5"
@@ -162,7 +203,10 @@ export function Carousel() {
 
       <button
         onClick={handlePrev}
-        className="inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 left-1 sm:left-3 bg-black text-white hover:bg-neutral-900"
+        disabled={currentIndex === 0}
+        className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 left-1 sm:left-3 bg-black text-white hover:bg-neutral-900 ${
+          currentIndex === 0 ? 'opacity-50' : 'opacity-100'
+        }`}
       >
         <svg
           width="9"
@@ -182,7 +226,12 @@ export function Carousel() {
       </button>
       <button
         onClick={handleNext}
-        className="inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900"
+        disabled={currentIndex === visibleCards.length - 1}
+        className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900 ${
+          currentIndex === visibleCards.length - 1
+            ? 'opacity-50'
+            : 'opacity-100'
+        }`}
       >
         <svg
           width="9"
