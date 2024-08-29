@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
+import { useRouter } from 'next/navigation'
 import { Header } from '@/components/Header'
 import { Carousel } from '@/components/Carousel'
 import { TagValidation } from '@/components/TagValidation'
@@ -12,12 +13,22 @@ import { ReactTyped } from 'react-typed'
 import Link from 'next/link'
 
 export default function Home() {
+  const [querySearch, setQuerySearch] = useState('')
+  const router = useRouter()
   const inputRef = useRef<HTMLInputElement>(null)
 
   function handleClickInputFocus() {
     if (inputRef.current) {
       inputRef.current.focus()
     }
+  }
+
+  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setQuerySearch(event.target.value)
+  }
+
+  function handleSearchIcons() {
+    router.push(`/icons?search=${encodeURIComponent(querySearch)}`)
   }
 
   return (
@@ -47,13 +58,20 @@ export default function Home() {
                           className="h-10 w-full border-0 text-base sm:text-lg leading-relaxed placeholder focus:outline-none focus:ring-0 lg:h-12 lg:text-lg"
                           placeholder="Search 36,000+ icons..."
                           ref={inputRef}
+                          value={querySearch}
+                          onChange={handleInputChange}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                              handleSearchIcons()
+                            }
+                          }}
                         />
                       </div>
                       <div className="flex items-center space-x-3">
                         <p className="text-sm hidden sm:text-base text-gray-400 sm:block">
                           Press ENTER
                         </p>
-                        <button>
+                        <button onClick={handleSearchIcons}>
                           <svg
                             className="h-5 w-5 lg:h-6 lg:w-6"
                             width="25"
