@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
+import * as Tooltip from '@radix-ui/react-tooltip'
 import * as Icon from '@houstonicons/react'
 
 interface IconProps {
@@ -23,6 +24,19 @@ const iconVariants = [
   { fillType: 'solid', cornerStyle: 'rounded' },
   { fillType: 'stroke', cornerStyle: 'sharp' },
   { fillType: 'solid', cornerStyle: 'sharp' },
+] as const
+
+const searchTabsFilter = [
+  { tabTitle: 'All', tabSubtitle: '' },
+  { tabTitle: 'Stroke', tabSubtitle: '(standard)' },
+  { tabTitle: 'Solid', tabSubtitle: '(standard)' },
+  { tabTitle: 'Stroke', tabSubtitle: '(rounded)' },
+  { tabTitle: 'Duotone', tabSubtitle: '' },
+  { tabTitle: 'Twotone', tabSubtitle: '' },
+  { tabTitle: 'Solid', tabSubtitle: '(rounded)' },
+  { tabTitle: 'Bulk', tabSubtitle: '' },
+  { tabTitle: 'Stroke', tabSubtitle: '(sharp)' },
+  { tabTitle: 'Solid', tabSubtitle: '(sharp)' },
 ] as const
 
 const searchTermsPopover = [
@@ -88,7 +102,7 @@ const searchTermsPopover = [
   'Wifi',
 ]
 
-const iconsNames = Object.keys(Icon).slice(0, 6)
+const iconsNames = Object.keys(Icon).slice(-6)
 
 export default function IconsPage() {
   const router = useRouter()
@@ -96,6 +110,9 @@ export default function IconsPage() {
   const searchTermFromURL = searchParams.get('search') || ''
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const itemRefs = useRef<HTMLButtonElement[]>([])
+  const [selectedSearchTab, setSelectedSearchTab] = useState<
+    (typeof searchTabsFilter)[number]
+  >(searchTabsFilter[0])
 
   const [searchTerm, setSearchTerm] = useState(searchTermFromURL)
   const [filteredIcons, setFilteredIcons] = useState<string[]>([])
@@ -163,6 +180,21 @@ export default function IconsPage() {
     setSearchTerm('')
   }
 
+  function handleActiveTabClick(tab: (typeof searchTabsFilter)[number]) {
+    if (tab.tabTitle === 'All') setSelectedSearchTab(tab)
+
+    setSelectedSearchTab(tab)
+  }
+
+  function formateIconName(iconName: string) {
+    return iconName
+      .replace(/Icon$/, '')
+      .replace(/([A-Z])/g, '-$1')
+      .replace(/(\d+)/g, '-$1')
+      .toLowerCase()
+      .replace(/^-/, '')
+  }
+
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <Header />
@@ -185,7 +217,6 @@ export default function IconsPage() {
                     height="15"
                     viewBox="0 0 15 15"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
                     className="ml-auto h-7 w-7 shrink-0 opacity-80"
                   >
                     <path
@@ -208,7 +239,6 @@ export default function IconsPage() {
                   >
                     <div className="flex items-center border-b px-3">
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
                         viewBox="0 0 24 24"
@@ -273,7 +303,6 @@ export default function IconsPage() {
               className="w-8 h-8 text-neutral-600"
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M17.5 17.5L22 22"
@@ -307,7 +336,6 @@ export default function IconsPage() {
                   className="w-4 h-4 text-neutral-400"
                   viewBox="0 0 24 24"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fill-rule="evenodd"
@@ -333,110 +361,25 @@ export default function IconsPage() {
                 className="inline-flex h-10 items-center justify-center rounded-md text-inputs-shape-primary bg-transparent gap-1 p-0 lg:mt-8 outline-none"
                 tabIndex={0}
               >
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="active"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    All
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Stroke
-                  </span>
-                  <span className="text-sm opacity-50 -ml-2">(strandard)</span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Solid
-                  </span>
-                  <span className="text-sm opacity-50 -ml-2">(strandard)</span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Stroke
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Duotone
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Twotone
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Solid
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Bulk
-                  </span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Stroke
-                  </span>
-                  <span className="text-sm opacity-50 -ml-2">(sharp)</span>
-                </button>
-                <button
-                  type="button"
-                  role="tab"
-                  data-state="inactive"
-                  className="flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=true]:text-grey-950 data-[state=active]:shadow-sm relative gap-3 bg-[#EFF0F3] border px-4 py-3 rounded-lg border-solid border-[#ECEEF2] h-[44px] font-normal data-[state=active]:bg-[#C1D1DA] data-[state=active]:font-semibold data-[state=active]:border-transparent"
-                >
-                  <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
-                    Solid
-                  </span>
-                  <span className="text-sm opacity-50 -ml-2">(sharp)</span>
-                </button>
+                {searchTabsFilter.map((tab, index) => (
+                  <button
+                    type="button"
+                    role="tab"
+                    data-state="inactive"
+                    key={index}
+                    onClick={() => handleActiveTabClick(tab)}
+                    className={`flex justify-center items-center whitespace-nowrap text-sm ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative gap-3 border px-4 py-3 rounded-lg border-solid h-[44px] font-normal border-[#ECEEF2] ${selectedSearchTab === tab ? 'bg-[#C1D1DA] font-semibold border-transparent text-grey-950 shadow-sm' : 'bg-[#EFF0F3]'}`}
+                  >
+                    <span className="text-grey-800 text-md leading-[18px] tracking-[-0.7px]">
+                      {tab.tabTitle}
+                    </span>
+                    {tab.tabSubtitle !== '(rounded)' && (
+                      <span className="text-sm opacity-50 -ml-2">
+                        {tab.tabSubtitle}
+                      </span>
+                    )}
+                  </button>
+                ))}
               </div>
             </div>
           </div>
@@ -455,9 +398,24 @@ export default function IconsPage() {
                 iconName as keyof typeof Icon
               ] as React.ComponentType<IconProps>
 
-              return iconVariants.map((variant, variantIndex) => {
+              // Filtra as variantes baseadas na aba selecionada
+              const filteredVariants = iconVariants.filter((variant) => {
+                const matchesFillType =
+                  selectedSearchTab.tabTitle === 'All' ||
+                  variant.fillType === selectedSearchTab.tabTitle.toLowerCase()
+                const matchesCornerStyle =
+                  !selectedSearchTab.tabSubtitle ||
+                  variant.cornerStyle ===
+                    selectedSearchTab.tabSubtitle
+                      .replace(/[()]/g, '')
+                      .toLowerCase()
+
+                return matchesFillType && matchesCornerStyle
+              })
+
+              return filteredVariants.map((variant, variantIndex) => {
                 const totalIndex =
-                  iconIndex * iconVariants.length + variantIndex
+                  iconIndex * filteredVariants.length + variantIndex
                 const iconLeftPosition = 15 + (totalIndex % columns) * iconWidth
                 const iconTopPosition =
                   18 + Math.floor(totalIndex / columns) * 100
@@ -468,24 +426,43 @@ export default function IconsPage() {
                 )
 
                 return (
-                  <div
+                  <Tooltip.Provider
                     key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
-                    className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
-                    style={{
-                      left: `${adjustedLeftPosition}px`,
-                      top: `${iconTopPosition}px`,
-                    }}
+                    delayDuration={700}
                   >
-                    <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
-                      <div className="w-7 h-7">
-                        <IconComponent
-                          iconSize={28}
-                          fillType={variant.fillType}
-                          cornerStyle={variant.cornerStyle}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                    <Tooltip.Root>
+                      <Tooltip.Trigger asChild>
+                        <div
+                          className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
+                          style={{
+                            left: `${adjustedLeftPosition}px`,
+                            top: `${iconTopPosition}px`,
+                          }}
+                        >
+                          <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
+                            <div className="w-7 h-7">
+                              <IconComponent
+                                iconSize={28}
+                                fillType={variant.fillType}
+                                cornerStyle={variant.cornerStyle}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </Tooltip.Trigger>
+                      <Tooltip.Portal>
+                        <Tooltip.Content
+                          className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-softis-mid select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] z-50 mr-[20px]"
+                          side="bottom"
+                          align="center"
+                          sideOffset={5}
+                        >
+                          {formateIconName(iconName)}
+                          <Tooltip.Arrow className="fill-white" />
+                        </Tooltip.Content>
+                      </Tooltip.Portal>
+                    </Tooltip.Root>
+                  </Tooltip.Provider>
                 )
               })
             })}
