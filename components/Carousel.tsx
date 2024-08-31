@@ -228,7 +228,9 @@ export function Carousel() {
         onClick={handleNext}
         disabled={currentIndex === visibleCards.length - 5}
         className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900 ${
-          currentIndex === visibleCards.length - 5 ? 'opacity-50' : 'opacity-100'
+          currentIndex === visibleCards.length - 5
+            ? 'opacity-50'
+            : 'opacity-100'
         }`}
       >
         <svg
