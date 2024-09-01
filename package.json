@@ -1,12 +1,12 @@
 {
   "name": "houston",
-  "version": "0.3.1",
+  "version": "0.9.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint components/**/*.ts* --fix"
+    "lint": "eslint app/**/*.ts* --fix"
   },
   "dependencies": {
     "@hello.softis/andromeda-tokens": "^2.0.4",

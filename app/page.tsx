@@ -135,37 +135,37 @@ export default function Home() {
                   </p>
                   <div className="flex items-center space-x-1 sm:space-x-4">
                     <img
-                      src="/logos/figma.png"
+                      src="/logos/figma.svg"
                       alt="Figma"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/react.png"
+                      src="/logos/react.svg"
                       alt="React"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/svelte.png"
+                      src="/logos/next.svg"
                       alt="Next"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/javascript.png"
+                      src="/logos/js.svg"
                       alt="Javascript"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/flutter.png"
+                      src="/logos/reactNative.svg"
                       alt="React Native"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/npm.png"
+                      src="/logos/npm.svg"
                       alt="Npm"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/svg.png"
+                      src="/logos/svg.svg"
                       alt="Svg"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
@@ -195,7 +195,7 @@ export default function Home() {
               <br />
               designers globally.
             </p>
-            <div>
+            <div className="flex justify-center sm:block">
               <svg
                 width="180"
                 height="180"
@@ -254,7 +254,7 @@ export default function Home() {
               </svg>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-12 mt-14 sm:mt-0">
+          <div className="grid grid-cols-2 gap-10 sm:gap-12 mt-14 sm:mt-0">
             <TagValidation
               job={['Developers']}
               title="4,500"
@@ -378,37 +378,37 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-4 sm:flex items-center gap-2 mt-3 pr-7 sm:pr-0">
               <img
-                src="/logos/figma.png"
+                src="/logos/figma.svg"
                 alt="Figma"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/react.png"
+                src="/logos/react.svg"
                 alt="React"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/svelte.png"
+                src="/logos/next.svg"
                 alt="Next"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/javascript.png"
+                src="/logos/js.svg"
                 alt="Javascript"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/flutter.png"
+                src="/logos/reactNative.svg"
                 alt="React Native"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/npm.png"
+                src="/logos/npm.svg"
                 alt="Npm"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
-                src="/logos/svg.png"
+                src="/logos/svg.svg"
                 alt="Svg"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />

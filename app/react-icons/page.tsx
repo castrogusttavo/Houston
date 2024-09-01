@@ -26,7 +26,7 @@ export default function ReactIconsPage() {
                 precious development time.
               </p>
               <img
-                src="/supportedSources.png"
+                src="/supportedSources.svg"
                 alt="Houston Pro React icon library"
                 className="mt-5 w-full max-w-[561px] sm:mt-11"
               />

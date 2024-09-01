@@ -108,7 +108,7 @@ export default function IconsPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const searchTermFromURL = searchParams.get('search') || ''
-  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const itemRefs = useRef<HTMLButtonElement[]>([])
   const [selectedSearchTab, setSelectedSearchTab] = useState<
     (typeof searchTabsFilter)[number]
@@ -139,26 +139,9 @@ export default function IconsPage() {
     return () => clearTimeout(timeoutId)
   }, [searchTerm])
 
-  function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>): void {
-    if (event.key === 'ArrowDown')
-      setSelectedIndex((prevIndex) =>
-        prevIndex < searchTermsPopover.length - 1 ? prevIndex + 1 : prevIndex,
-      )
-
-    if (event.key === 'ArrowUp')
-      setSelectedIndex((prevIndex) =>
-        prevIndex > 0 ? prevIndex - 1 : prevIndex,
-      )
-  }
-
   useEffect(() => {
-    if (selectedIndex !== -1 && itemRefs.current[selectedIndex]) {
-      itemRefs.current[selectedIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-      })
-    }
-  }, [selectedIndex])
+    setSelectedIndex(0)
+  }, [])
 
   useEffect(() => {
     const updateWidth = () => {
@@ -233,10 +216,7 @@ export default function IconsPage() {
                   className="z-50 rounded-md border bg-white text-grey-900 shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-[250px] p-0 ml-6"
                   sideOffset={5}
                 >
-                  <div
-                    className="flex h-full w-full flex-col overflow-hidden rounded-md bg-white text-grey-900"
-                    onKeyDown={handleKeyDown}
-                  >
+                  <div className="flex h-full w-full flex-col overflow-hidden rounded-md bg-white text-grey-900">
                     <div className="flex items-center border-b px-3">
                       <svg
                         width="24"
@@ -273,7 +253,7 @@ export default function IconsPage() {
                                 }}
                                 className={`relative flex cursor-default gap-2 select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none w-full disabled:opacity-50 ${
                                   selectedIndex === index
-                                    ? 'bg-gray-100 text-grey-900'
+                                    ? 'bg-gray-100 text-grey-900 font-semibold'
                                     : ''
                                 }`}
                                 role="option"

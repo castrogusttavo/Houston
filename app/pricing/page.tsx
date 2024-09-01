@@ -252,20 +252,20 @@ export default function PricingPage() {
             <h1 className="mx-auto max-w-4xl text-3xl font-bold tracking-[-1px] text-grey-900 sm:text-5xl sm:leading-[54px]">
               The small details you wanted to make your design more beautiful
             </h1>
-            <p className="mx-auto max-w-max rounded-lg bg-gray-200 px-4 py-1 text-center text-lg font-medium text-grey-800 sm:text-base">
+            <p className="mx-auto max-w-max rounded-lg bg-blue-50 px-4 py-1 text-center text-lg font-medium text-blue-500 sm:text-base">
               Get the super beautiful icon library, created for developers and
               designers
             </p>
           </div>
-          <div className="grid w-max grid-cols-1 gap-5 md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-6">
-            <div className="w-[19rem] h-full px-6 py-8 bg-gray-50/50 border border-grey-200 rounded-lg lg:w-auto">
-              <h4 className="text-4xl mb-4 text-yellow-700">Solo</h4>
+          <div className="grid w-max grid-cols-1 gap-5 md:grid-cols-2 md:gap-5 xl:grid-cols-3 lg:gap-6">
+            <div className="h-full px-6 py-8 border border-grey-200 rounded-xl lg:w-auto max-w-[400px]">
+              <h4 className="text-4xl mb-4 text-green-700">Solo</h4>
               <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
                 Essential icons for solo developers.
               </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-7xl leading-none font-semibold">4,00</h2>
+              <div className="flex items-start h-[5.5rem] mb-6">
+                <h3 className="text-lg line-through opacity-50">$ 4,00</h3>
+                <h2 className="text-7xl leading-none font-semibold">Free</h2>
               </div>
               <a className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer">
                 Buy now
@@ -362,7 +362,7 @@ export default function PricingPage() {
                 </li>
               </ul>
             </div>
-            <div className="w-[19rem] h-full px-6 py-8 border border-grey-200 rounded-lg lg:w-auto bg-gray-50/50">
+            <div className="max-w-[400px] h-full px-6 py-8 border-4 border-grey-200 rounded-xl lg:w-auto">
               <h4 className="text-5xl mb-4 text-softis-mid font-bold">
                 Startup
               </h4>
@@ -472,8 +472,8 @@ export default function PricingPage() {
                 </li>
               </ul>
             </div>
-            <div className="w-[19rem] h-full px-6 py-8 bg-gray-50/50 border border-grey-200 rounded-lg lg:w-auto">
-              <h4 className="text-4xl mb-4 text-red-700">Business</h4>
+            <div className="max-w-[400px] h-full px-6 py-8 border border-grey-200 rounded-xl lg:w-auto">
+              <h4 className="text-4xl mb-4 text-green-700">Business</h4>
               <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
                 Unlimited projects for large teams.
               </p>
@@ -1032,7 +1032,7 @@ export default function PricingPage() {
             </a>
           </div>
         </div>
-        <div className="relative flex h-[500px] mt-24 sm:mt-36 flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
+        <div className="relative flex h-[500px] flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
           <h5 className="text-center text-white text-3xl sm:text-5xl font-semibold">
             Design beautifully with Houston Pro
           </h5>
