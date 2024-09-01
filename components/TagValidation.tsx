@@ -7,7 +7,7 @@ interface TagValidationProps {
 export function TagValidation({ job, title, subtitle }: TagValidationProps) {
   return (
     <div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         {job.map((j, index) => (
           <div
             key={index}

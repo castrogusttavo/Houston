@@ -171,7 +171,7 @@ export function Carousel() {
 
   return (
     <div
-      className="relative space-x-4 mt-9 sm:mt-10"
+      className="relative space-x-4 mt-9 sm:mt-10 overflow-auto"
       role="region"
       aria-roledescription="carousel"
       onMouseDown={handleMouseDown}
@@ -180,7 +180,7 @@ export function Carousel() {
       onMouseLeave={handleMouseLeave}
     >
       <div className="overflow-hidden" ref={carouselRef}>
-        <div className="flex">
+        <div className="flex overflow-auto scrollbar-hide">
           {visibleCards.map((card, index) => (
             <div
               key={index}
@@ -203,10 +203,8 @@ export function Carousel() {
 
       <button
         onClick={handlePrev}
-        disabled={currentIndex === 0}
-        className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 left-1 sm:left-3 bg-black text-white hover:bg-neutral-900 ${
-          progress === 0 ? 'opacity-50' : 'opacity-100'
-        }`}
+        disabled={currentIndex === visibleCards.length + 1}
+        className="inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 left-1 sm:left-3 bg-black text-white hover:bg-neutral-900 disabled:opacity-50"
       >
         <svg
           width="9"
@@ -226,12 +224,8 @@ export function Carousel() {
       </button>
       <button
         onClick={handleNext}
-        disabled={currentIndex === visibleCards.length - 5}
-        className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900 ${
-          currentIndex === visibleCards.length - 5
-            ? 'opacity-50'
-            : 'opacity-100'
-        }`}
+        disabled={progress === visibleCards.length - 1}
+        className="inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900 disabled:opacity-50"
       >
         <svg
           width="9"

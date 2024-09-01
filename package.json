@@ -21,7 +21,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-typed": "^2.0.12",
-    "react-window": "^1.8.10"
+    "react-window": "^1.8.10",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@hello.softis/eslint-config": "^1.0.1",
