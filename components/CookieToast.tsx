@@ -4,20 +4,22 @@ import { useState, useEffect } from 'react'
 import * as Toast from '@radix-ui/react-toast'
 import { Cross2Icon } from '@radix-ui/react-icons'
 import Link from 'next/link'
+import Cookies from 'js-cookie'
 
 export function CookieToast() {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const hasSeenToast = localStorage.getItem('hasSeenCookieToast')
-    if (!hasSeenToast) {
+    const hasSeenCookieToast = Cookies.get('hasSeenCookieToast')
+
+    if (!hasSeenCookieToast) {
       setIsVisible(true)
-      localStorage.setItem('hasSeenCookieToast', 'true')
     }
   }, [])
 
   function handleClickCloseToast() {
     setIsVisible(false)
+    Cookies.set('hasSeenCookieToast', 'true', { expires: 365 })
   }
 
   return (

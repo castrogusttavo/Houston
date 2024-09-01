@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { CookieOptOutLink } from '@/components/CookieOptOutLink'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -122,10 +123,7 @@ export default function privacyPolicy() {
           experience. Cookies are enabled by default but you&apos;re free to
           opt-out, and we&apos;ll remove the cookies from your machine
           accordingly.{' '}
-          <a href="" className="text-blue-500 hover:underline">
-            {' '}
-            Click Here to opt-out
-          </a>
+          <CookieOptOutLink />
         </p>
         <h2 className="text-2xl font-bold mb-[1em]- mt-[2em]">
           View or deleting your data

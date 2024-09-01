@@ -102,7 +102,7 @@ const searchTermsPopover = [
   'Wifi',
 ]
 
-const iconsNames = Object.keys(Icon)
+const iconsNames = Object.keys(Icon).slice(-6)
 
 export default function IconsPage() {
   const router = useRouter()
