@@ -1,4 +1,6 @@
-# Houston Pro - React Icons
+![image](./public/logoHorizontalBig.svg)
+
+---
 
 Welcome to the professional edition of Houston for React — an extensive library of meticulously crafted icons designed to elevate the visual appeal of your web and mobile applications. With Houston React Pro , you gain access to a vast selection of icons tailored to suit every need, allowing for highly customizable and dynamic user interfaces.
 
@@ -44,13 +46,13 @@ Access over 27,000 icons within the library, ensuring you'll find the exact icon
 To start using HoustonIcons-React in your project, install the package via npm:
 
 ```bash
-npm install houstonicons-react
+npm install @houstonicons-react
 ```
 
 Or via yarn:
 
 ```bash
-yarn add houstonicons-react
+yarn add @houstonicons-react
 ```
 
 ## Usage Examples
@@ -120,13 +122,14 @@ A: Houston React Pro is licensed for commercial use, adhering to the [CC0-1.0](#
 
 ---
 
-Enjoy the seamless integration of premium icons with Houston React Pro and take your application to the next level!
-
----
-
-
 ## License
 
 Houston React is licensed under the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication. This means you can use, modify, distribute, and even use the icons for private or commercial purposes, without any restrictions. No attribution is required, but it's appreciated.
 
 For more details, see the [LICENSE.md](./LICENSE.md) file in the repository.
+
+---
+
+![image](./public/logoIcon.svg)
+
+Enjoy the seamless integration of premium icons with Houston React Pro and take your application to the next level!
