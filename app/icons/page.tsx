@@ -1,13 +1,12 @@
 'use client'
 
 import { Header } from '@/components/Header'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import * as Icon from '@houstonicons/react'
-import InfiniteScroll from 'react-infinite-scroll-component'
 
 interface IconProps {
   iconSize: number
@@ -40,7 +39,7 @@ const searchTabsFilter = [
   { tabTitle: 'Solid', tabSubtitle: '(sharp)' },
 ] as const
 
-const searchTermsPopover = ['All Icons', 'Coming soon...']
+const searchTermsPopover = ['All Icons', 'Coming Soon...']
 
 const iconsNames = Object.keys(Icon)
 
@@ -60,9 +59,6 @@ export default function IconsPage() {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const [containerWidth, setContainerWidth] = useState(0)
 
-  const [hasMore, setHasMore] = useState(true)
-  const [page, setPage] = useState(1)
-
   useEffect(() => {
     const params = new URLSearchParams()
     if (searchTerm) params.set('search', searchTerm)
@@ -76,10 +72,7 @@ export default function IconsPage() {
       const resultSearch = iconsNames.filter((iconName) =>
         iconName.toLowerCase().includes(searchTerm.toLowerCase()),
       )
-      setFilteredIcons(resultSearch.slice(0, page * 20))
-      setHasMore(resultSearch.length > page * 20)
-
-      console.log(resultSearch.length)
+      setFilteredIcons(resultSearch)
     }, 300)
 
     return () => clearTimeout(timeoutId)
@@ -122,10 +115,6 @@ export default function IconsPage() {
       .replace(/(\d+)/g, '-$1')
       .toLowerCase()
       .replace(/^-/, '')
-  }
-
-  function fetchMoreData() {
-    if (hasMore) setPage((prevPage) => prevPage + 1)
   }
 
   return (
@@ -316,7 +305,6 @@ export default function IconsPage() {
         </div>
         {/* Renderização de ícones */}
         <div
-          id="scrollableDiv"
           className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none"
           style={{ direction: 'ltr' }}
         >
@@ -324,90 +312,79 @@ export default function IconsPage() {
             ref={containerRef}
             className="h-[28154px] w-full max-w-[80rem] mx-auto relative"
           >
-            <ScrollArea.Root className="flex-1 w-full">
-              <div className="grid grid-cols-[repeat(auto-fit,_minmax(100px,_1fr))] gap-4 p-4 max-w-screen-2xl mx-auto">
-                <InfiniteScroll
-                  dataLength={filteredIcons.length}
-                  next={fetchMoreData}
-                  hasMore={hasMore}
-                  loader={<h4>Loading...</h4>}
-                  scrollableTarget="scrollableDiv"
-                >
-                  {filteredIcons.map((iconName, iconIndex) => {
-                  const IconComponent = Icon[
-                    iconName as keyof typeof Icon
-                  ] as React.ComponentType<IconProps>
+            {filteredIcons.slice(20).map((iconName, iconIndex) => {
+              const IconComponent = Icon[
+                iconName as keyof typeof Icon
+              ] as React.ComponentType<IconProps>
 
-                  const filteredVariants = iconVariants.filter((variant) => {
-                    const matchesFillType =
-                      selectedSearchTab.tabTitle === 'All' ||
-                      variant.fillType === selectedSearchTab.tabTitle.toLowerCase()
-                    const matchesCornerStyle =
-                      !selectedSearchTab.tabSubtitle ||
-                      variant.cornerStyle ===
-                        selectedSearchTab.tabSubtitle
-                          .replace(/[()]/g, '')
-                          .toLowerCase()
+              // Filtra as variantes baseadas na aba selecionada
+              const filteredVariants = iconVariants.filter((variant) => {
+                const matchesFillType =
+                  selectedSearchTab.tabTitle === 'All' ||
+                  variant.fillType === selectedSearchTab.tabTitle.toLowerCase()
+                const matchesCornerStyle =
+                  !selectedSearchTab.tabSubtitle ||
+                  variant.cornerStyle ===
+                    selectedSearchTab.tabSubtitle
+                      .replace(/[()]/g, '')
+                      .toLowerCase()
 
-                    return matchesFillType && matchesCornerStyle
-                  })
+                return matchesFillType && matchesCornerStyle
+              })
 
-                  return filteredVariants.map((variant, variantIndex) => {
-                    const totalIndex =
-                      iconIndex * filteredVariants.length + variantIndex
-                    const iconLeftPosition = 15 + (totalIndex % columns) * iconWidth
-                    const iconTopPosition =
-                      18 + Math.floor(totalIndex / columns) * 100
+              return filteredVariants.map((variant, variantIndex) => {
+                const totalIndex =
+                  iconIndex * filteredVariants.length + variantIndex
+                const iconLeftPosition = 15 + (totalIndex % columns) * iconWidth
+                const iconTopPosition =
+                  18 + Math.floor(totalIndex / columns) * 100
 
-                    const adjustedLeftPosition = Math.min(
-                      iconLeftPosition,
-                      containerWidth - iconWidth,
-                    )
+                const adjustedLeftPosition = Math.min(
+                  iconLeftPosition,
+                  containerWidth - iconWidth,
+                )
 
-                    return (
-                      <Tooltip.Provider
-                        key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
-                        delayDuration={700}
-                      >
-                        <Tooltip.Root>
-                          <Tooltip.Trigger asChild>
-                            <div
-                              className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
-                              style={{
-                                left: `${adjustedLeftPosition}px`,
-                                top: `${iconTopPosition}px`,
-                              }}
-                            >
-                              <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
-                                <div className="w-7 h-7">
-                                  <IconComponent
-                                    iconSize={28}
-                                    fillType={variant.fillType}
-                                    cornerStyle={variant.cornerStyle}
-                                  />
-                                </div>
-                              </div>
+                return (
+                  <Tooltip.Provider
+                    key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
+                    delayDuration={700}
+                  >
+                    <Tooltip.Root>
+                      <Tooltip.Trigger asChild>
+                        <div
+                          className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
+                          style={{
+                            left: `${adjustedLeftPosition}px`,
+                            top: `${iconTopPosition}px`,
+                          }}
+                        >
+                          <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
+                            <div className="w-7 h-7">
+                              <IconComponent
+                                iconSize={28}
+                                fillType={variant.fillType}
+                                cornerStyle={variant.cornerStyle}
+                              />
                             </div>
-                          </Tooltip.Trigger>
-                          <Tooltip.Portal>
-                            <Tooltip.Content
-                              className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-softis-mid select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] z-50 mr-[20px]"
-                              side="bottom"
-                              align="center"
-                              sideOffset={5}
-                            >
-                              {formateIconName(iconName)}
-                              <Tooltip.Arrow className="fill-white" />
-                            </Tooltip.Content>
-                          </Tooltip.Portal>
-                        </Tooltip.Root>
-                      </Tooltip.Provider>
-                    )
-                  })
-                  })}
-                </InfiniteScroll>
-              </div>
-            </ScrollArea.Root>
+                          </div>
+                        </div>
+                      </Tooltip.Trigger>
+                      <Tooltip.Portal>
+                        <Tooltip.Content
+                          className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-softis-mid select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] z-50 mr-[20px]"
+                          side="bottom"
+                          align="center"
+                          sideOffset={5}
+                        >
+                          {formateIconName(iconName)}
+                          <Tooltip.Arrow className="fill-white" />
+                        </Tooltip.Content>
+                      </Tooltip.Portal>
+                    </Tooltip.Root>
+                  </Tooltip.Provider>
+                )
+              })
+            })}
           </div>
         </div>
       </main>

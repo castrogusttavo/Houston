@@ -2,7 +2,6 @@
 
 import Cookies from 'js-cookie'
 
-
 export function CookieOptOutLink() {
   function handleRemoveCookies() {
     Cookies.remove('hasSeenCookieToast')
