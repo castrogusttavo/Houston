@@ -131,10 +131,7 @@ export default function IconsPage() {
         if (entries[0].isIntersecting) {
           console.log('Ultimo icone visivel, carregando mais chunks...')
           setTimeout(() => {
-            setVisibleChunks((prevChunks) => [
-              ...prevChunks,
-              prevChunks.length,
-            ])
+            setVisibleChunks((prevChunks) => [...prevChunks, prevChunks.length])
           }, 300)
         }
       })
@@ -385,7 +382,6 @@ export default function IconsPage() {
                         chunkIndex === visibleChunks.length - 1 &&
                         iconIndex === iconsNamesChunks[chunkIndex].length - 1 &&
                         variantIndex === filteredVariants.length - 1
-
 
                       return (
                         <Tooltip.Provider
