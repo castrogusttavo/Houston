@@ -1,7 +1,7 @@
 'use client'
 
 import { Header } from '@/components/Header'
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
@@ -125,38 +125,22 @@ export default function IconsPage() {
   )
 
   const [visibleChunks, setVisibleChunks] = useState([0])
-  const observerRef = useRef<HTMLDivElement | null>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0]
-        if (
-          entry.isIntersecting &&
-          visibleChunks.length < iconsNamesChunks.length
-        ) {
+  const observerRef = useCallback((node: HTMLDivElement | null) => {
+    if (node !== null) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          console.log('Ultimo icone visivel, carregando mais chunks...')
           setTimeout(() => {
-            setVisibleChunks((prev) => [...prev, prev.length])
+            setVisibleChunks((prevChunks) => [
+              ...prevChunks,
+              prevChunks.length,
+            ])
           }, 300)
         }
-      },
-      {
-        root: null,
-        rootMargin: '200px',
-        threshold: 0.1,
-      },
-    )
-
-    if (observerRef.current) {
-      observer.observe(observerRef.current)
+      })
+      observer.observe(node)
     }
-
-    return () => {
-      if (observerRef.current) {
-        observer.unobserve(observerRef.current)
-      }
-    }
-  }, [visibleChunks])
+  }, [])
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
@@ -351,7 +335,7 @@ export default function IconsPage() {
         >
           <div
             ref={containerRef}
-            className="h-[28154px] w-full max-w-[80rem] mx-auto relative"
+            className="h-full w-full max-w-[80rem] mx-auto relative"
           >
             {visibleChunks.map((chunkIndex, chunkVisibleIndex) => {
               const chunk = iconsNamesChunks[chunkIndex]
@@ -397,6 +381,12 @@ export default function IconsPage() {
                         containerWidth - iconWidth,
                       )
 
+                      const isLastIcon =
+                        chunkIndex === visibleChunks.length - 1 &&
+                        iconIndex === iconsNamesChunks[chunkIndex].length - 1 &&
+                        variantIndex === filteredVariants.length - 1
+
+
                       return (
                         <Tooltip.Provider
                           key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
@@ -410,6 +400,7 @@ export default function IconsPage() {
                                   left: `${adjustedLeftPosition}px`,
                                   top: `${iconTopPosition}px`,
                                 }}
+                                ref={isLastIcon ? observerRef : null}
                               >
                                 <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
                                   <div className="w-7 h-7">
@@ -438,10 +429,6 @@ export default function IconsPage() {
                       )
                     })
                   })}
-                  {/* Adiciona o elemento de observação após o último ícone de cada chunk */}
-                  {chunkIndex === visibleChunks.length - 1 && (
-                    <div ref={observerRef} style={{ height: '1px' }} />
-                  )}
                 </React.Fragment>
               )
             })}
