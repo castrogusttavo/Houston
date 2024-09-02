@@ -122,8 +122,7 @@ export default function privacyPolicy() {
           Our website uses cookies to provide you the best possible browsing
           experience. Cookies are enabled by default but you&apos;re free to
           opt-out, and we&apos;ll remove the cookies from your machine
-          accordingly.{' '}
-          <CookieOptOutLink />
+          accordingly. <CookieOptOutLink />
         </p>
         <h2 className="text-2xl font-bold mb-[1em]- mt-[2em]">
           View or deleting your data
