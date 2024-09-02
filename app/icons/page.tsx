@@ -1,7 +1,7 @@
 'use client'
 
 import { Header } from '@/components/Header'
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
@@ -59,6 +59,10 @@ export default function IconsPage() {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const [containerWidth, setContainerWidth] = useState(0)
 
+  const maxColumns = 13
+  const columns = Math.min(maxColumns, Math.floor(containerWidth / 100))
+  const iconWidth = containerWidth / columns
+
   useEffect(() => {
     const params = new URLSearchParams()
     if (searchTerm) params.set('search', searchTerm)
@@ -94,10 +98,6 @@ export default function IconsPage() {
     return () => window.removeEventListener('resize', updateWidth)
   }, [])
 
-  const maxColumns = 13
-  const columns = Math.min(maxColumns, Math.floor(containerWidth / 100))
-  const iconWidth = containerWidth / columns
-
   function handleClickClearSearch() {
     setSearchTerm('')
   }
@@ -116,6 +116,47 @@ export default function IconsPage() {
       .toLowerCase()
       .replace(/^-/, '')
   }
+
+  const iconsPerPage = 20
+  const iconsNamesChunks = Array.from(
+    { length: Math.ceil(filteredIcons.length / iconsPerPage) },
+    (_, i) =>
+      filteredIcons.slice(i * iconsPerPage, i * iconsPerPage + iconsPerPage),
+  )
+
+  const [visibleChunks, setVisibleChunks] = useState([0])
+  const observerRef = useRef<HTMLDivElement | null>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0]
+        if (
+          entry.isIntersecting &&
+          visibleChunks.length < iconsNamesChunks.length
+        ) {
+          setTimeout(() => {
+            setVisibleChunks((prev) => [...prev, prev.length])
+          }, 300)
+        }
+      },
+      {
+        root: null,
+        rootMargin: '200px',
+        threshold: 0.1,
+      },
+    )
+
+    if (observerRef.current) {
+      observer.observe(observerRef.current)
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observer.unobserve(observerRef.current)
+      }
+    }
+  }, [visibleChunks])
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
@@ -312,78 +353,97 @@ export default function IconsPage() {
             ref={containerRef}
             className="h-[28154px] w-full max-w-[80rem] mx-auto relative"
           >
-            {filteredIcons.slice(20).map((iconName, iconIndex) => {
-              const IconComponent = Icon[
-                iconName as keyof typeof Icon
-              ] as React.ComponentType<IconProps>
+            {visibleChunks.map((chunkIndex, chunkVisibleIndex) => {
+              const chunk = iconsNamesChunks[chunkIndex]
+              if (!chunk) return null
 
-              // Filtra as variantes baseadas na aba selecionada
-              const filteredVariants = iconVariants.filter((variant) => {
-                const matchesFillType =
-                  selectedSearchTab.tabTitle === 'All' ||
-                  variant.fillType === selectedSearchTab.tabTitle.toLowerCase()
-                const matchesCornerStyle =
-                  !selectedSearchTab.tabSubtitle ||
-                  variant.cornerStyle ===
-                    selectedSearchTab.tabSubtitle
-                      .replace(/[()]/g, '')
-                      .toLowerCase()
+              return (
+                <React.Fragment key={chunkIndex}>
+                  {chunk.map((iconName, iconIndex) => {
+                    const IconComponent = Icon[
+                      iconName as keyof typeof Icon
+                    ] as React.ComponentType<IconProps>
 
-                return matchesFillType && matchesCornerStyle
-              })
+                    // Filtra as variantes baseadas na aba selecionada
+                    const filteredVariants = iconVariants.filter((variant) => {
+                      const matchesFillType =
+                        selectedSearchTab.tabTitle === 'All' ||
+                        variant.fillType ===
+                          selectedSearchTab.tabTitle.toLowerCase()
+                      const matchesCornerStyle =
+                        !selectedSearchTab.tabSubtitle ||
+                        variant.cornerStyle ===
+                          selectedSearchTab.tabSubtitle
+                            .replace(/[()]/g, '')
+                            .toLowerCase()
 
-              return filteredVariants.map((variant, variantIndex) => {
-                const totalIndex =
-                  iconIndex * filteredVariants.length + variantIndex
-                const iconLeftPosition = 15 + (totalIndex % columns) * iconWidth
-                const iconTopPosition =
-                  18 + Math.floor(totalIndex / columns) * 100
+                      return matchesFillType && matchesCornerStyle
+                    })
 
-                const adjustedLeftPosition = Math.min(
-                  iconLeftPosition,
-                  containerWidth - iconWidth,
-                )
+                    return filteredVariants.map((variant, variantIndex) => {
+                      const totalIndex =
+                        chunkVisibleIndex *
+                          iconsPerPage *
+                          filteredVariants.length +
+                        iconIndex * filteredVariants.length +
+                        variantIndex
+                      const iconLeftPosition =
+                        15 + (totalIndex % columns) * iconWidth
+                      const iconTopPosition =
+                        18 + Math.floor(totalIndex / columns) * 100
 
-                return (
-                  <Tooltip.Provider
-                    key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
-                    delayDuration={700}
-                  >
-                    <Tooltip.Root>
-                      <Tooltip.Trigger asChild>
-                        <div
-                          className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
-                          style={{
-                            left: `${adjustedLeftPosition}px`,
-                            top: `${iconTopPosition}px`,
-                          }}
+                      const adjustedLeftPosition = Math.min(
+                        iconLeftPosition,
+                        containerWidth - iconWidth,
+                      )
+
+                      return (
+                        <Tooltip.Provider
+                          key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
+                          delayDuration={700}
                         >
-                          <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
-                            <div className="w-7 h-7">
-                              <IconComponent
-                                iconSize={28}
-                                fillType={variant.fillType}
-                                cornerStyle={variant.cornerStyle}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </Tooltip.Trigger>
-                      <Tooltip.Portal>
-                        <Tooltip.Content
-                          className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-softis-mid select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] z-50 mr-[20px]"
-                          side="bottom"
-                          align="center"
-                          sideOffset={5}
-                        >
-                          {formateIconName(iconName)}
-                          <Tooltip.Arrow className="fill-white" />
-                        </Tooltip.Content>
-                      </Tooltip.Portal>
-                    </Tooltip.Root>
-                  </Tooltip.Provider>
-                )
-              })
+                          <Tooltip.Root>
+                            <Tooltip.Trigger asChild>
+                              <div
+                                className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
+                                style={{
+                                  left: `${adjustedLeftPosition}px`,
+                                  top: `${iconTopPosition}px`,
+                                }}
+                              >
+                                <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
+                                  <div className="w-7 h-7">
+                                    <IconComponent
+                                      iconSize={28}
+                                      fillType={variant.fillType}
+                                      cornerStyle={variant.cornerStyle}
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </Tooltip.Trigger>
+                            <Tooltip.Portal>
+                              <Tooltip.Content
+                                className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-softis-mid select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] z-50 mr-[20px]"
+                                side="bottom"
+                                align="center"
+                                sideOffset={5}
+                              >
+                                {formateIconName(iconName)}
+                                <Tooltip.Arrow className="fill-white" />
+                              </Tooltip.Content>
+                            </Tooltip.Portal>
+                          </Tooltip.Root>
+                        </Tooltip.Provider>
+                      )
+                    })
+                  })}
+                  {/* Adiciona o elemento de observação após o último ícone de cada chunk */}
+                  {chunkIndex === visibleChunks.length - 1 && (
+                    <div ref={observerRef} style={{ height: '1px' }} />
+                  )}
+                </React.Fragment>
+              )
             })}
           </div>
         </div>
