@@ -46,13 +46,13 @@ Access over 27,000 icons within the library, ensuring you'll find the exact icon
 To start using HoustonIcons-React in your project, install the package via npm:
 
 ```bash
-npm install @houstonicons-react
+npm install @houstonicons/react
 ```
 
 Or via yarn:
 
 ```bash
-yarn add @houstonicons-react
+yarn add @houstonicons/react
 ```
 
 ## Usage Examples
@@ -63,7 +63,7 @@ Import the icons you need from the library and integrate them into your React co
 Adjust the size of your icons by passing a `size` prop:
 
 ```jsx
-import { Home01Icon } from "houstonicons-react";
+import { Home01Icon } from '@houstonicons/react'
 
 <Home01Icon size={32} /> // Custom size
 ```
@@ -72,7 +72,7 @@ import { Home01Icon } from "houstonicons-react";
 Change the color of your icons by passing a `color` prop:
 
 ```jsx
-import { MarketingIcon } from "houstonicons-react";
+import { MarketingIcon } from '@houstonicons/react'
 
 <MarketingIcon color="#00FF00" /> // Green color
 ```
@@ -81,7 +81,7 @@ import { MarketingIcon } from "houstonicons-react";
 Easily modify the corner style of your icons by using the cornerStyle prop:
 
 ```jsx
-import { ListSettingIcon } from "houstonicons-react";
+import { ListSettingIcon } from '@houstonicons/react'
 
 <ListSettingIcon cornerStyle="rounded" /> // Rounded corners
 ```
@@ -90,18 +90,14 @@ import { ListSettingIcon } from "houstonicons-react";
 Set the fill style of your icons using the fillType prop:
 
 ```jsx
-import { AddSquareIcons } from "houstonicons-react";
+import { AddSquareIcons } from '@houstonicons/react'
 
 <AddSquareIcons fillType="solid" /> // Solid fill
 ```
 
 ## Live Example
 
-Explore a live demonstration of HugeIcons React in action at [Houston Pro Example](https://houston-icons.vercek.app/docs). This example showcases the versatility and ease of customizing our icons to fit your design needs, providing a hands-on experience with the icon collection.
-
-## Example
-
-Check out our example project to see HoustonIcons-Pro in action and explore more customization options.
+Explore a live demonstration of HugeIcons React in action at [Houston Pro Example](https://houston-icons.vercel.app/use-cases). This example showcases the versatility and ease of customizing our icons to fit your design needs, providing a hands-on experience with the icon collection.
 
 ## FAQ
 
@@ -110,9 +106,6 @@ A: You can install the package via npm or yarn and then import the react icons i
 
 **Q: Are these React icons customizable in terms of size and color?**
 A: Yes, all react icons are fully customizable. You can adjust their size, color, and other properties easily within your React application. See [Usage Examples](#usage-examples) for more information.
-
-**Q: Can I contribute my own designs to the Houston React collection?**
-A: Absolutely! We welcome contributions. Please refer to our [Contributing](#contributing) section for guidelines on how to submit your icons.
 
 **Q: Is there a live demo where I can see these React icons in action?**
 A: Yes, we have a live example available at [Houston React Example](#live-example). It showcases the usage import various react icons and their customization options.
