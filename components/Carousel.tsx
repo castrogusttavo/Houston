@@ -203,6 +203,7 @@ export function Carousel() {
 
       <button
         onClick={handlePrev}
+        disabled={progress === visibleCards.length - 1}
         className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 left-1 sm:left-3 bg-black text-white hover:bg-neutral-900`}
       >
         <svg
@@ -223,6 +224,7 @@ export function Carousel() {
       </button>
       <button
         onClick={handleNext}
+        disabled={progress === visibleCards.length - 1}
         className={`inline-flex items-center justify-center font-bold text-sm mx-2 h-11 w-11 rounded-full absolute bottom-3 sm:bottom-7 right-5 sm:right-7 bg-black text-white hover:bg-neutral-900`}
       >
         <svg
