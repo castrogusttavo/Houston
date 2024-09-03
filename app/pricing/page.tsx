@@ -1,6 +1,5 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { DialogPromotion } from '@/components/DialogPromotion'
 import Link from 'next/link'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import type { Metadata } from 'next'
@@ -1066,8 +1065,6 @@ export default function PricingPage() {
         </div>
       </main>
       <Footer />
-
-      <DialogPromotion />
     </div>
   )
 }

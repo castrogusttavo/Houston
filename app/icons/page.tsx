@@ -144,7 +144,7 @@ export default function IconsPage() {
       <Header />
       <main className="flex flex-col flex-1">
         {/* Filtragem de dados */}
-        <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0]">
+        <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0] sticky top-0">
           <div className="flex gap-6 p-3 rounded-lg bg-white items-center border border-[#F0F2F7] mb-6 relative max-w-[80rem] mx-auto shadow-[0px_2px_3px_-2px_#B4E903]">
             <Popover.Root>
               <Popover.Trigger className="w-[250px] hidden sm:flex" asChild>
@@ -327,7 +327,7 @@ export default function IconsPage() {
         </div>
         {/* Renderização de ícones */}
         <div
-          className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none"
+          className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none scrollbar-hide"
           style={{ direction: 'ltr' }}
         >
           <div
@@ -369,7 +369,7 @@ export default function IconsPage() {
                         iconIndex * filteredVariants.length +
                         variantIndex
                       const iconLeftPosition =
-                        15 + (totalIndex % columns) * iconWidth
+                        (totalIndex % columns) * iconWidth
                       const iconTopPosition =
                         18 + Math.floor(totalIndex / columns) * 100
 
@@ -391,7 +391,7 @@ export default function IconsPage() {
                           <Tooltip.Root>
                             <Tooltip.Trigger asChild>
                               <div
-                                className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col"
+                                className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col mr-1"
                                 style={{
                                   left: `${adjustedLeftPosition}px`,
                                   top: `${iconTopPosition}px`,
