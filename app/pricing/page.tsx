@@ -333,8 +333,9 @@ export default function PricingPage() {
                     />
                   </svg>
                   <p className="font-xs font-normal sm:text-md ml-4">
-                    NPM package for easy integration into React/Next/React
-                    Native projects
+                    NPM package for easy integration with
+                    <br />
+                    JS frameworks
                   </p>
                 </li>
                 <li className="flex items-center py-5 border-t border-grey-100">
@@ -552,8 +553,9 @@ export default function PricingPage() {
                     />
                   </svg>
                   <p className="font-xs font-normal sm:text-md ml-4">
-                    Exclusive Figma plugin for quick and customization directly
-                    in Figma. <strong>(Coming Soon!)</strong>
+                    Exclusive Figma plugin for quick,
+                    <br/>
+                    customizable design. <strong>(Coming Soon!)</strong>
                   </p>
                 </li>
                 <li className="flex items-center py-5 border-t border-grey-100">
