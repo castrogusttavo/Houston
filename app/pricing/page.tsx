@@ -554,7 +554,7 @@ export default function PricingPage() {
                   </svg>
                   <p className="font-xs font-normal sm:text-md ml-4">
                     Exclusive Figma plugin for quick,
-                    <br/>
+                    <br />
                     customizable design. <strong>(Coming Soon!)</strong>
                   </p>
                 </li>
