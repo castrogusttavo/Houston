@@ -2346,7 +2346,7 @@ export default function ReactIconsPage() {
                         Unlimited use
                       </h3>
                       <p className="mt-2 self-stretch font-normal leading-[165%] tracking-[-0.13px] text-grey-700">
-                        Use the react icon libray for unlimited personal and
+                        Use the react icon library for unlimited personal and
                         commercial projects, of any sizes.
                       </p>
                     </div>

@@ -12,7 +12,7 @@ export function Footer() {
             <ul className="mt-6 space-y-4">
               <li>
                 <Link
-                  href=""
+                  href="https://www.figma.com/community/file/1414792481171455704"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
@@ -21,8 +21,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href=""
-                  target="_blank"
+                  href="/figma-icon-library"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
                   Figma icon library
