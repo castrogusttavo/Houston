@@ -75,40 +75,6 @@ export default function FigmaIconLibraryPage() {
               <div className="px-6 lg:px-0 flex flex-col text-center lg:text-left lg:flex-row justify-between items-center w-full max-w-[80rem]">
                 <div className="lg:pr-[8rem]">
                   <h3 className="text-grey-900 mx-auto lg:mx-0 text-2xl sm:text-3xl max-w-[350px] font-bold leading-[30px] sm:leading-[40px] tracking-[-1px]">
-                    Quick search results
-                  </h3>
-                  <p className="mx-auto mt-3 sm:mt-4 text-base lg:text-lg lg:leading-6 text-grey-500">
-                    Experience the speed of design with our quick search results
-                    feature. Find what you need instantly, making your creative
-                    process smoother and more efficient than ever.
-                  </p>
-                  <div className="mt-7 sm:mt-11 flex flex-col justify-center sm:justify-start sm:flex-row gap-y-3 sm:gap-x-2 max-w-[80rem]">
-                    <a className="w-full lg:w-auto">
-                      <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-gray-50 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg border-[1.5px] border-[#E3E3E3] text-base">
-                        Buy now
-                      </button>
-                    </a>
-                    <a className="w-full lg:w-auto">
-                      <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#E7E7E7] hover:bg-[#E7E7E7]/80 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg text-base">
-                        Explore the icons
-                      </button>
-                    </a>
-                  </div>
-                </div>
-                <video
-                  src="https://cdn.hugeicons.com/videos/figma-icon-library/quick-search.mp4"
-                  autoPlay
-                  loop
-                  className="border border-[#C9ED1] w-full h-auto mt-7 lg:w-[50%] rounded-3xl"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="relative w-full">
-            <div className="h-full">
-              <div className="px-6 lg:px-0 flex flex-col text-center lg:text-left lg:flex-row justify-between items-center w-full max-w-[80rem]">
-                <div className="lg:pr-[8rem]">
-                  <h3 className="text-grey-900 mx-auto lg:mx-0 text-2xl sm:text-3xl max-w-[350px] font-bold leading-[30px] sm:leading-[40px] tracking-[-1px]">
                     Any size, color and stroke
                   </h3>
                   <p className="mx-auto mt-3 sm:mt-4 text-base lg:text-lg lg:leading-6 text-grey-500">
