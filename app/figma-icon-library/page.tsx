@@ -153,7 +153,7 @@ export default function FigmaIconLibraryPage() {
           </div>
           <div className="relative w-full">
             <div className="h-full transform">
-              <div className="mt-7 sm:mt-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-7 sm:mt-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[80rem]">
                 <div>
                   <div className="duration-400 group z-0 h-full rounded-xl from-[#0BA41A] to-[#FFD850] p-[2px] transition-all ease-in-out will-change-transform hover:bg-gradient-to-b hover:shadow-[0px_44px_64px_0px_rgba(147,197,146,0.44)]">
                     <div className="flex h-full flex-col items-start justify-start rounded-xl p-7 group-hover:bg-white">
@@ -694,7 +694,7 @@ export default function FigmaIconLibraryPage() {
           <div className="relative mt-12 flex flex-col items-center justify-between">
             <div className="z-10">
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -3328,7 +3328,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll direction-reverse">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -5742,7 +5742,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -8036,7 +8036,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll direction-reverse">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -10640,7 +10640,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -13384,7 +13384,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll direction-reverse">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -15878,7 +15878,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -18192,7 +18192,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll direction-reverse">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -20856,7 +20856,7 @@ export default function FigmaIconLibraryPage() {
                 </ul>
               </section>
               <section className="mb-8">
-                <ul className="flex gap-5 overflow-hidden">
+                <ul className="flex gap-5 overflow-hidden animate-scroll">
                   <li>
                     <div className="flex min-w-[220px] items-center gap-4 rounded-xl border border-solid border-[#DDE4CE] bg-white px-6 py-4 shadow-[0px_11.796px_43.25px_0px_rgba(231,231,231,0.16)]">
                       <div>
@@ -23399,7 +23399,7 @@ export default function FigmaIconLibraryPage() {
             className="mt-10 w-full scale-150 sm:mt-0 sm:scale-100"
           />
         </div>
-        <div className="max-w-[80rem] mx-auto mt-[6rem] flex w-full flex-col gap-7 px-6 md:mt-[10rem] lg:gap-[54px] lg:px-0">
+        <div className="max-w-[80rem] mx-auto mt-1 flex w-full flex-col gap-7 px-6 md:mt-2 lg:gap-[54px] lg:px-0">
           <div className="z-10 w-full text-center max-lg:max-w-full lg:text-left">
             <div className="flex items-center gap-[54px] max-lg:flex-col max-lg:gap-0">
               <h1 className="w-full max-w-[492px] text-2xl font-bold tracking-tighter text-grey-950 max-lg:mt-10 lg:text-4xl lg:leading-[48px]">
