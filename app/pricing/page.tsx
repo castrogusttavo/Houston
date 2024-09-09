@@ -1,12 +1,12 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import Link from "next/link";
-import * as Tooltip from "@radix-ui/react-tooltip";
-import type { Metadata } from "next";
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import Link from 'next/link'
+import * as Tooltip from '@radix-ui/react-tooltip'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Houston Pro Pricing - Flexible Plans for Developers and Designers",
-};
+  title: 'Houston Pro Pricing - Flexible Plans for Developers and Designers',
+}
 
 export default function PricingPage() {
   return (
@@ -604,7 +604,7 @@ export default function PricingPage() {
             <div className="relative z-10 flex-1">
               <h2 className="mb-4 font-medium text-grey-800 text-lg">Why?</h2>
               <p className="text-grey-800 text-sm">
-                Save time and effort by selecting the right icon library. <br />{" "}
+                Save time and effort by selecting the right icon library. <br />{' '}
                 Poorly designed icons can be difficult and users may get
                 confused or frustrated. <br /> Houston Pro provides the
                 beautiful and consistent icons.
@@ -1014,7 +1014,7 @@ export default function PricingPage() {
           </h3>
           <div className="flex flex-col space-y-3 sm:flex-row sm:space-x-10 sm:space-y-0">
             <p className="text-grey-500">
-              Send us a message:{" "}
+              Send us a message:{' '}
               <a
                 href="https://x.com/gustta_dev"
                 className="underline text-black underline-offset-4"
@@ -1024,7 +1024,7 @@ export default function PricingPage() {
               </a>
             </p>
             <p className="text-grey-500">
-              Or mail us:{" "}
+              Or mail us:{' '}
               <a
                 href="mailto:hello.softis@gmail.com"
                 className="underline text-black underline-offset-4"
@@ -1035,7 +1035,7 @@ export default function PricingPage() {
             </p>
           </div>
           <div className="mt-5 rounded-lg bg-blue-100 px-3 py-1.5 text-center text-ms text-blue-900 sm:mt-[34px] sm:text-left sm:text-base">
-            If you are a student or a new founder, take our love with{" "}
+            If you are a student or a new founder, take our love with{' '}
             <span className="font-bold">50% OFF. </span>
             <a
               href="https://linkedin.com/in/castrogusttavo"
@@ -1055,8 +1055,8 @@ export default function PricingPage() {
               print, or any modern interface,
               <br />
               Houston Pro has you covered.
-            </span>{" "}
-            {""}
+            </span>{' '}
+            {''}
             <span className="text-slate-300 font-semibold">
               Made for developers and designers.
             </span>
@@ -1080,5 +1080,5 @@ export default function PricingPage() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
