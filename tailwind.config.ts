@@ -88,7 +88,6 @@ const config: Config = {
         swipeOut: 'swipeOut 100ms ease-out',
         scroll: 'scroll 50s linear infinite',
         scrollCategories: 'scroll 50s linear infinite',
-        scrollCategories: 'scroll 50s linear infinite',
         scrollTagType: 'scroll 60s linear infinite',
         slideDownAndFade:
           'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
