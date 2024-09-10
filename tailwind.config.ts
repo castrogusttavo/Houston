@@ -43,6 +43,10 @@ const config: Config = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        scrollCategories: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
         scrollTagType: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(100%)' },
@@ -83,6 +87,8 @@ const config: Config = {
         slideIn: 'slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1)',
         swipeOut: 'swipeOut 100ms ease-out',
         scroll: 'scroll 50s linear infinite',
+        scrollCategories: 'scroll 50s linear infinite',
+        scrollCategories: 'scroll 50s linear infinite',
         scrollTagType: 'scroll 60s linear infinite',
         slideDownAndFade:
           'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
