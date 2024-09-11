@@ -702,7 +702,7 @@ export default function FigmaIconLibraryPage() {
                 loop
                 className="border border-[#C9CED1] rounded-2xl w-full h-full object-cover blur-[10px]"
               />
-              <span className="absolute inset-0 flex items-center justify-center mx-auto max-w-max rounded-lg bg-blue-50 px-3 py-1 text-center text-sm font-normal text-blue-500 sm:text-base">
+              <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center mx-auto max-w-max rounded-lg bg-softis-light px-3 py-1 text-center text-sm font-normal text-zinc-50 sm:text-base">
                 Get Ready for an Amazing Figma Plugin - Coming Soon!
               </span>
             </div>
