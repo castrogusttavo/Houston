@@ -32,7 +32,8 @@ const config: Config = {
         'pro-footer-sm-bg':
           "url('https://hugeicons.com/home/pro-footer-sm-bg.png')",
         'pro-footer-bg': "url('https://hugeicons.com/pro-footer-bg.png')",
-        'icon-box-bg': "url('https://hugeicons.com/_next/static/media/icon-box-bg.ab806028.svg')"
+        'icon-box-bg':
+          "url('https://hugeicons.com/_next/static/media/icon-box-bg.ab806028.svg')",
       },
       keyframes: {
         hide: {
@@ -42,10 +43,6 @@ const config: Config = {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
-        },
-        scrollCategories: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
         },
         scrollTagType: {
           '0%': { transform: 'translateX(0)' },
@@ -87,7 +84,6 @@ const config: Config = {
         slideIn: 'slideIn 150ms cubic-bezier(0.16, 1, 0.3, 1)',
         swipeOut: 'swipeOut 100ms ease-out',
         scroll: 'scroll 50s linear infinite',
-        scrollCategories: 'scroll 50s linear infinite',
         scrollTagType: 'scroll 60s linear infinite',
         slideDownAndFade:
           'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',

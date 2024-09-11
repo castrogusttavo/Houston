@@ -415,6 +415,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Novo Conteúdo */}
+        {/* Fim Novo Conteúdo */}
         <div className="pt-32 sm:pt-40 px-6 lg:px-0">
           <div className="max-w-5xl mx-auto px-6 lg:px-0 align-bottom">
             <h3 className="text-3xl sm:text-4xl relative font-bold">
