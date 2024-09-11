@@ -271,7 +271,7 @@ export default function PricingPage() {
                 target="_blank"
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
-                Buy now
+                Access Free
               </a>
               <ul className="max-w-[366px]">
                 <li className="flex items-center py-5 border-t border-grey-100">
@@ -904,7 +904,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/DaveyHeuser.png"
+                        src="/feedback/DiegoFernandes.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -916,9 +916,9 @@ export default function PricingPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Davey Heuser</h3>
+                          <h3 className="font-bold">Diego Fernandes</h3>
                           <div className="text-xs font-light">
-                            Founder @IconJar
+                            CTO @Rocketseat
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -930,7 +930,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/JordanHughes.png"
+                        src="/feedback/FelipeSantana.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -942,9 +942,9 @@ export default function PricingPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Jordan Hughes</h3>
+                          <h3 className="font-bold">Felipe Santana</h3>
                           <div className="text-xs font-light">
-                            Founder @Untitledui
+                            Founder @cfPRO
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -956,7 +956,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/Graeme.png"
+                        src="/feedback/MaykBrito.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -968,9 +968,9 @@ export default function PricingPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Graeme</h3>
+                          <h3 className="font-bold">Mayk Brito</h3>
                           <div className="text-xs font-light">
-                            Founder @Prototypr
+                            CCO @Rocketseat
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -982,7 +982,7 @@ export default function PricingPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/LiamMcCabe.png"
+                        src="/feedback/RianDutra.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -994,9 +994,9 @@ export default function PricingPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Liam McCabe</h3>
+                          <h3 className="font-bold">Rian Dutra</h3>
                           <div className="text-xs font-light">
-                            Founder @layers_to
+                            Founder @Enviesados
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />

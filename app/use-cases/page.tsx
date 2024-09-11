@@ -398,7 +398,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/DaveyHeuser.png"
+                        src="/feedback/DiegoFernandes.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -410,9 +410,9 @@ export default function ExamplesPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Davey Heuser</h3>
+                          <h3 className="font-bold">Diego Fernandes</h3>
                           <div className="text-xs font-light">
-                            Founder @IconJar
+                            CTO @Rocketseat
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -424,7 +424,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/JordanHughes.png"
+                        src="/feedback/FelipeSantana.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -436,9 +436,9 @@ export default function ExamplesPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Jordan Hughes</h3>
+                          <h3 className="font-bold">Felipe Santana</h3>
                           <div className="text-xs font-light">
-                            Founder @Untitledui
+                            Founder @cfPRO
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -450,7 +450,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/Graeme.png"
+                        src="/feedback/MaykBrito.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -462,9 +462,9 @@ export default function ExamplesPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Graeme</h3>
+                          <h3 className="font-bold">Mayk Brito</h3>
                           <div className="text-xs font-light">
-                            Founder @Prototypr
+                            CCO @Rocketseat
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
@@ -476,7 +476,7 @@ export default function ExamplesPage() {
                   <Tooltip.Root>
                     <Tooltip.Trigger asChild>
                       <img
-                        src="/feedback/LiamMcCabe.png"
+                        src="/feedback/RianDutra.png"
                         className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
                         alt=""
                       />
@@ -488,9 +488,9 @@ export default function ExamplesPage() {
                         className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
                       >
                         <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Liam McCabe</h3>
+                          <h3 className="font-bold">Rian Dutra</h3>
                           <div className="text-xs font-light">
-                            Founder @layers_to
+                            Founder @Enviesados
                           </div>
                         </div>
                         <Tooltip.Arrow className="fill-white" />
