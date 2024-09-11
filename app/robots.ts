@@ -18,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],
       },
     ],
-    sitemap: 'https://www.houstonicons.com.br/sitemap.xml'
+    sitemap: 'https://www.houstonicons.com.br/sitemap.xml',
   }
 }
