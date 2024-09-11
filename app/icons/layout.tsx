@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react'
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'React Icons - Houston Pro',
@@ -13,9 +13,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Suspense fallback={<div>Loading...</div>}>
-          <div>{children}</div>
-        </Suspense>
+        <div>
+          {children} <Analytics />
+        </div>
       </body>
     </html>
   )
