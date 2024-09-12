@@ -13,7 +13,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
+        <Suspense
+          fallback={
+            <div className="flex justify-center items-center h-screen">
+              Loading...
+            </div>
+          }
+        >
           <div>
             {children} <Analytics />{' '}
           </div>
