@@ -60,6 +60,15 @@ export function Footer() {
                   React icons
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/free-icon-font"
+                  target="_blank"
+                  className="leading-6 text-grey-600 hover:text-grey-400"
+                >
+                  Free Icon font
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
