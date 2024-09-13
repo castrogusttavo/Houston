@@ -102,7 +102,7 @@ export default function Home() {
               <div className="mt-auto">
                 <div className="px-6 rounded-lg sm:rounded-2xl flex flex-col mt-auto relative mb-5 p-3 justify-center items-center gap-3 border-t border-t-solid border-t-[#edf1f6] bg-gradient-to-l from-[#f8f9fa] via-[#f9fdf6] to-[#f7f8f9]">
                   <svg
-                    width="75%"
+                    width="100%"
                     height="1"
                     viewBox="0 0 491 1"
                     fill="none"
@@ -160,6 +160,11 @@ export default function Home() {
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
+                      src="/logos/astro.svg"
+                      alt="Astro"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
                       src="/logos/npm.svg"
                       alt="Npm"
                       className="w-8 h-8 sm:w-14 sm:h-14"
@@ -167,6 +172,11 @@ export default function Home() {
                     <img
                       src="/logos/svg.svg"
                       alt="Svg"
+                      className="w-8 h-8 sm:w-14 sm:h-14"
+                    />
+                    <img
+                      src="/logos/webfont.svg"
+                      alt="Web Font"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                   </div>
@@ -408,8 +418,18 @@ export default function Home() {
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
+                src="/logos/astro.svg"
+                alt="Astro"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
                 src="/logos/svg.svg"
                 alt="Svg"
+                className="w-8 h-8 sm:w-14 sm:h-14"
+              />
+              <img
+                src="/logos/webfont.svg"
+                alt="Web Font"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
             </div>
