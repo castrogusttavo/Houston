@@ -267,7 +267,7 @@ export default function PricingPage() {
                 <h2 className="text-7xl leading-none font-semibold">Free</h2>
               </div>
               <a
-                href="https://www.npmjs.com/package/@houstonicons/react"
+                href="https://www.npmjs.com/package/@houstonicons/pro"
                 target="_blank"
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
@@ -373,12 +373,12 @@ export default function PricingPage() {
               <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
                 Collaboration tools for small teams.
               </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-8xl leading-none font-bold">8,00</h2>
+              <div className="flex items-start h-[5.5rem] mb-6">
+                <h3 className="text-lg line-through opacity-50">$ 8,00</h3>
+                <h2 className="text-7xl leading-none font-semibold">Free</h2>
               </div>
               <a
-                href="/payment"
+                href="https://www.npmjs.com/package/@houstonicons/pro"
                 target="_blank"
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
@@ -485,12 +485,12 @@ export default function PricingPage() {
               <p className="min-h-[4rem] mb-3 text-grey-500 text-md">
                 Unlimited projects for large teams.
               </p>
-              <div className="flex items-center h-[5.5rem] mb-6">
-                <h3 className="text-4xl">$</h3>
-                <h2 className="text-7xl leading-none font-semibold">16,99</h2>
+              <div className="flex items-start h-[5.5rem] mb-6">
+                <h3 className="text-lg line-through opacity-50">$ 16,99</h3>
+                <h2 className="text-7xl leading-none font-semibold">Free</h2>
               </div>
               <a
-                href="/payment"
+                href="https://www.npmjs.com/package/@houstonicons/pro"
                 target="_blank"
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
