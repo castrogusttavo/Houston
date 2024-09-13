@@ -374,8 +374,8 @@ export default function PricingPage() {
                 Collaboration tools for small teams.
               </p>
               <div className="flex items-start h-[5.5rem] mb-6">
-                <h3 className="text-lg line-through opacity-50">$ 8,00</h3>
-                <h2 className="text-7xl leading-none font-semibold">Free</h2>
+                <h3 className="text-4xl line-through opacity-50">$ 8,00</h3>
+                <h2 className="text-8xl leading-none font-semibold">Free</h2>
               </div>
               <a
                 href="https://www.npmjs.com/package/@houstonicons/pro"
