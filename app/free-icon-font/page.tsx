@@ -25,7 +25,7 @@ export default function FreeIconFontPage() {
             <div>
               <iframe
                 src="https://codesandbox.io/embed/49vtxz?autoresize=1&module=&2Findex.html&hidenavigation=1"
-                className="w-full h-[352px] border-0 rounded-sm overflow-hidden"
+                className="w-full h-[302px] border-0 rounded-sm overflow-hidden"
                 title="distracted-currying-49vtxz"
                 allow="accelerometer; ambient-light-sensor; encrypted-media; geolocation; gryroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
                 sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
