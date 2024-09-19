@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import * as Tooltip from '@radix-ui/react-tooltip'
-import * as Icon from '@houstonicons/react'
+import * as Icon from '@houstonicons/pro'
 
 interface IconProps {
   iconSize: number
@@ -73,8 +73,14 @@ export default function IconsPage() {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
+      const normalizedSearchTerm = searchTerm
+        .toLowerCase()
+        .replace(/[-\s]/g, '')
       const resultSearch = iconsNames.filter((iconName) =>
-        iconName.toLowerCase().includes(searchTerm.toLowerCase()),
+        iconName
+          .toLowerCase()
+          .replace(/[-\s]/g, '')
+          .includes(normalizedSearchTerm),
       )
       setFilteredIcons(resultSearch)
     }, 300)
