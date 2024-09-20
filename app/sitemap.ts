@@ -21,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://www.houstonicons.com.br/pricing',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: 'https://www.houstonicons.com.br/figma-icon-library',
       lastModified: new Date(),
       changeFrequency: 'yearly',

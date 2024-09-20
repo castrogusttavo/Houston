@@ -56,10 +56,10 @@ export function DialogPromotion() {
                 </div>
                 <div className="flex flex-col items-center mt-11">
                   <Link
-                    href="/pricing"
+                    href="https://www.npmjs.com/package/@houstonicons/pro"
                     className="h-14 px-8 py-5 bg-amber-200 rounded-full border border-white justify-center items-center gap-2 inline-flex text-yellow-900 text-base font-bold focus:border-yellow-700/50 focus:border-4 transition-colors"
                   >
-                    Show me the discounted price
+                    Go to package
                   </Link>
                   <button
                     onClick={handleClickCloseDialog}

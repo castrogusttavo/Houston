@@ -7,6 +7,7 @@ import * as Popover from '@radix-ui/react-popover'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import * as Icon from '@houstonicons/pro'
+import * as Dialog from '@radix-ui/react-dialog'
 
 interface IconProps {
   iconSize: number
@@ -52,6 +53,8 @@ export default function IconsPage() {
   const [selectedSearchTab, setSelectedSearchTab] = useState<
     (typeof searchTabsFilter)[number]
   >(searchTabsFilter[0])
+  const [isOpenAlert, setIsOpenAlert] = useState(false)
+  const svgRefs = useRef<(HTMLDivElement | null)[]>([])
 
   const [searchTerm, setSearchTerm] = useState(searchTermFromURL)
   const [filteredIcons, setFilteredIcons] = useState<string[]>([])
@@ -144,6 +147,22 @@ export default function IconsPage() {
       observer.observe(node)
     }
   }, [])
+
+  async function copySvgToClipboard(index: number) {
+    try {
+      if (svgRefs.current) {
+        const svgCode = svgRefs.current[index]?.innerHTML || ''
+        await navigator.clipboard.writeText(svgCode)
+        setIsOpenAlert(true)
+
+        setTimeout(() => {
+          setIsOpenAlert(false)
+        }, 10000)
+      }
+    } catch (err) {
+      console.error('Falha ao copiar o SVG: ', err)
+    }
+  }
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
@@ -351,7 +370,6 @@ export default function IconsPage() {
                       iconName as keyof typeof Icon
                     ] as React.ComponentType<IconProps>
 
-                    // Filtra as variantes baseadas na aba selecionada
                     const filteredVariants = iconVariants.filter((variant) => {
                       const matchesFillType =
                         selectedSearchTab.tabTitle === 'All' ||
@@ -374,16 +392,15 @@ export default function IconsPage() {
                           filteredVariants.length +
                         iconIndex * filteredVariants.length +
                         variantIndex
+
                       const iconLeftPosition =
                         (totalIndex % columns) * iconWidth
                       const iconTopPosition =
                         18 + Math.floor(totalIndex / columns) * 100
-
                       const adjustedLeftPosition = Math.min(
                         iconLeftPosition,
                         containerWidth - iconWidth,
                       )
-
                       const isLastIcon =
                         chunkIndex === visibleChunks.length - 1 &&
                         iconIndex === iconsNamesChunks[chunkIndex].length - 1 &&
@@ -403,9 +420,15 @@ export default function IconsPage() {
                                   top: `${iconTopPosition}px`,
                                 }}
                                 ref={isLastIcon ? observerRef : null}
+                                onClick={() => copySvgToClipboard(totalIndex)}
                               >
                                 <div className="p-4 flex gap-1 items-center justify-center py-7 group hover:bg-gray-50 cursor-grab mb-2 relative aspect-square shrink-0 rounded-lg border-[0.5px] border-solid border-[#ECEEF2]">
-                                  <div className="w-7 h-7">
+                                  <div
+                                    className="w-7 h-7"
+                                    ref={(el) => {
+                                      svgRefs.current[totalIndex] = el
+                                    }}
+                                  >
                                     <IconComponent
                                       iconSize={28}
                                       fillType={variant.fillType}
@@ -437,6 +460,34 @@ export default function IconsPage() {
           </div>
         </div>
       </main>
+
+      {isOpenAlert && (
+        <Dialog.Root open={isOpenAlert} onOpenChange={setIsOpenAlert}>
+          <Dialog.Portal>
+            <Dialog.Overlay className="fixed inset-0 z-50 flex flex-col p-[25px] gap-[10px] max-w-[100vw] m-0 list-none outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=close]:fade-out-0 data-[state=open]:fade-in-0" />
+            <Dialog.Content className="fixed left-[50%] top-[50px] z-50 translate-x-[-50%] translate-y-[-50%] duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top[48%] bg-black text-white border-2 border-neutral-700 shadow-lg w-[356px] h-[53px] flex items-center gap-[6px] rounded-lg p-4 text-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                height="20"
+                width="20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <div className="flex flex-col gap-1/2">
+                <span className="font-bold leading-none text-white">
+                  Copied to clipboard
+                </span>
+              </div>
+            </Dialog.Content>
+          </Dialog.Portal>
+        </Dialog.Root>
+      )}
     </div>
   )
 }

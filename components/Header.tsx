@@ -44,14 +44,6 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  href="/pricing"
-                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/docs"
                   className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
                 >
@@ -129,15 +121,6 @@ export function Header() {
                 className={`hover:text-black transition-colors ${pathname === '/use-cases' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Example</span>
-              </Link>
-            </li>
-            <li className="relative">
-              <Link
-                href="/pricing"
-                onClick={testeButton}
-                className={`hover:text-black transition-colors  ${pathname === '/pricing' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
-              >
-                <span>Pricing</span>
               </Link>
             </li>
             <li className="relative">
