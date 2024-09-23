@@ -171,17 +171,7 @@ export default function Home() {
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
-                      src="/logos/angular.svg"
-                      alt="Astro"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
                       src="/logos/vue.svg"
-                      alt="Astro"
-                      className="w-8 h-8 sm:w-14 sm:h-14"
-                    />
-                    <img
-                      src="/logos/astro.svg"
                       alt="Astro"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
