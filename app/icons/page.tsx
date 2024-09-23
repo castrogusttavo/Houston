@@ -3,11 +3,10 @@
 import { Header } from '@/components/Header'
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import * as Popover from '@radix-ui/react-popover'
-import * as ScrollArea from '@radix-ui/react-scroll-area'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import * as Icon from '@houstonicons/pro'
 import * as Dialog from '@radix-ui/react-dialog'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
 interface IconProps {
   iconSize: number
@@ -40,16 +39,13 @@ const searchTabsFilter = [
   { tabTitle: 'Solid', tabSubtitle: '(sharp)' },
 ] as const
 
-const searchTermsPopover = ['All Icons', 'Coming Soon...']
-
 const iconsNames = Object.keys(Icon)
 
 export default function IconsPage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const searchTermFromURL = searchParams.get('search') || ''
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const itemRefs = useRef<HTMLButtonElement[]>([])
+  const [category, setCategory] = useState('all-icons')
   const [selectedSearchTab, setSelectedSearchTab] = useState<
     (typeof searchTabsFilter)[number]
   >(searchTabsFilter[0])
@@ -90,10 +86,6 @@ export default function IconsPage() {
 
     return () => clearTimeout(timeoutId)
   }, [searchTerm])
-
-  useEffect(() => {
-    setSelectedIndex(0)
-  }, [])
 
   useEffect(() => {
     const updateWidth = () => {
@@ -165,21 +157,25 @@ export default function IconsPage() {
   }
 
   return (
-    <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
+    <div className="antialiased font-sans min-h-full transition-[grid-template-columns] duration-300 ease-in-out overflow-hidden">
       <Header />
-      <main className="flex flex-col flex-1">
-        {/* Filtragem de dados */}
+      <main className="flex flex-col flex-1 max-h-screen overflow-hidden">
         <div className="bg-[#FCFDFF] z-20 px-6 pt-8 pb-8 border-b border-[#CED4E0] sticky top-0">
           <div className="flex gap-6 p-3 rounded-lg bg-white items-center border border-[#F0F2F7] mb-6 relative max-w-[80rem] mx-auto shadow-[0px_2px_3px_-2px_#B4E903]">
-            <Popover.Root>
-              <Popover.Trigger className="w-[250px] hidden sm:flex" asChild>
+            <DropdownMenu.Root>
+              <DropdownMenu.Trigger
+                className="w-[250px] hidden sm:flex"
+                asChild
+              >
                 <button
                   className="inline-flex relative items-center justify-start font-bold whitespace-nowrap rounded-lg text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-grey-700 px-4 py-2 max-w-[250px] gap-2 h-[44px] bg-[#F0F2F7] border-none"
                   type="button"
                 >
                   <span className="font-normal text-grey-500">Category:</span>
                   <span className="text-ellipsis overflow-w-hidden">
-                    All Icons
+                    {category
+                      .replace(/-/g, ' ')
+                      .replace(/\b\w/g, (char) => char.toUpperCase())}
                   </span>
                   <svg
                     width="15"
@@ -196,9 +192,9 @@ export default function IconsPage() {
                     />
                   </svg>
                 </button>
-              </Popover.Trigger>
-              <Popover.Portal>
-                <Popover.Content
+              </DropdownMenu.Trigger>
+              <DropdownMenu.Portal>
+                <DropdownMenu.Content
                   className="z-50 rounded-md border bg-white text-grey-900 shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-[250px] p-0 ml-6"
                   sideOffset={5}
                 >
@@ -225,42 +221,65 @@ export default function IconsPage() {
                     </div>
                     <div className="overflow-hidden p-1 text-grey-950">
                       <div role="group">
-                        <ScrollArea.Root className="relative overflow-scroll h-screen max-h-80 text-grey-600">
-                          <ScrollArea.Viewport
-                            className="h-full w-full rounded-[inherit]"
-                            style={{ overflow: 'hidden scroll' }}
+                        <div className="relative overflow-scroll h-screen max-h-80 text-grey-600">
+                          <DropdownMenu.RadioGroup
+                            value={category}
+                            onValueChange={setCategory}
                           >
-                            {searchTermsPopover.map((term, index) => (
-                              <button
-                                ref={(el) => {
-                                  if (el) {
-                                    itemRefs.current[index] = el
-                                  }
-                                }}
-                                className={`relative flex cursor-default gap-2 select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none w-full disabled:opacity-50 ${
-                                  selectedIndex === index
-                                    ? 'bg-gray-100 text-grey-900 font-semibold'
-                                    : ''
-                                }`}
-                                role="option"
-                                disabled={true}
-                                key={index}
-                                data-selected={selectedIndex === index}
-                                aria-selected={selectedIndex === index}
-                              >
-                                {term}
-                              </button>
-                            ))}
-                          </ScrollArea.Viewport>
-                        </ScrollArea.Root>
+                            <DropdownMenu.RadioItem
+                              value="all-icons"
+                              className="relative flex cursor-default gap-2 select-none items-center justify-between rounded-sm px-2 py-1.5 text-sm outline-none data-[state=checked]:bg-gray-100 data-[state=checked]:text-grey-800"
+                            >
+                              All Icons
+                              <DropdownMenu.ItemIndicator>
+                                <svg
+                                  width="15"
+                                  height="15"
+                                  viewBox="0 0 15 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="ml-auto h-4 w-4 opacity-100"
+                                >
+                                  <path
+                                    d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </DropdownMenu.ItemIndicator>
+                            </DropdownMenu.RadioItem>
+                            <DropdownMenu.RadioItem
+                              value="coming-soon"
+                              className="relative flex cursor-default gap-2 select-none items-center justify-between rounded-sm px-2 py-1.5 text-sm outline-none data-[state=checked]:bg-gray-100 data-[state=checked]:text-grey-800"
+                            >
+                              Coming Soon...
+                              <DropdownMenu.ItemIndicator>
+                                <svg
+                                  width="15"
+                                  height="15"
+                                  viewBox="0 0 15 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="ml-auto h-4 w-4 opacity-100"
+                                >
+                                  <path
+                                    d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                  />
+                                </svg>
+                              </DropdownMenu.ItemIndicator>
+                            </DropdownMenu.RadioItem>
+                          </DropdownMenu.RadioGroup>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <Popover.Close />
-                  <Popover.Arrow className="fill-white" />
-                </Popover.Content>
-              </Popover.Portal>
-            </Popover.Root>
+                </DropdownMenu.Content>
+              </DropdownMenu.Portal>
+            </DropdownMenu.Root>
             <div
               data-orientation="vertical"
               className="shrink-0 h-9 w-[1.5px] bg-[#D9DCE5] hidden sm:block"
@@ -349,11 +368,87 @@ export default function IconsPage() {
               </div>
             </div>
           </div>
+          <div className="flex gap-2 items-center h-max justify-end mx-auto lg:hidden">
+            <DropdownMenu.Root>
+              <DropdownMenu.Trigger
+                className="inline-flex relative items-center font-bold whitespace-nowrap rounded-lg text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-grey-700 px-4 py-2 w-[170px] justify-start gap-2 ml-auto"
+                asChild
+              >
+                <button
+                  className="inline-flex relative items-center justify-start font-bold whitespace-nowrap rounded-lg text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-grey-700 px-4 py-2 max-w-[250px] gap-2 h-[44px] border-[#e5e5e5] bg-white hover:bg-[#F0F2F7]"
+                  type="button"
+                >
+                  <span className="font-normal text-grey-500">Style:</span>
+                  <span className="text-ellipsis overflow-w-hidden">
+                    {selectedSearchTab.tabTitle}
+                  </span>
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    className="ml-auto h-7 w-7 shrink-0 opacity-80"
+                  >
+                    <path
+                      d="M4.18179 6.18181C4.35753 6.00608 4.64245 6.00608 4.81819 6.18181L7.49999 8.86362L10.1818 6.18181C10.3575 6.00608 10.6424 6.00608 10.8182 6.18181C10.9939 6.35755 10.9939 6.64247 10.8182 6.81821L7.81819 9.81821C7.73379 9.9026 7.61934 9.95001 7.49999 9.95001C7.38064 9.95001 7.26618 9.9026 7.18179 9.81821L4.18179 6.81821C4.00605 6.64247 4.00605 6.35755 4.18179 6.18181Z"
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </DropdownMenu.Trigger>
+              <DropdownMenu.Portal>
+                <DropdownMenu.Content
+                  className="z-50 rounded-md border bg-white text-grey-900 shadow-md outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-[250px] p-0 ml-6 h-full"
+                  sideOffset={5}
+                >
+                  <div className="flex h-full w-full flex-col overflow-hidden rounded-md bg-white text-grey-900 p-1 px-2 py-1.5 text-xs font-medium">
+                    <div className="overflow-hidden p-1 text-grey-950">
+                      <div role="group">
+                        <div className="relative overflow-scroll h-screen max-h-80 text-grey-600">
+                          <DropdownMenu.RadioGroup
+                            value={selectedSearchTab.tabTitle}
+                            onValueChange={(value: string) => {
+                              const selectedTab = searchTabsFilter.find(
+                                (tab) => tab.tabTitle === value,
+                              )
+                              if (selectedTab) {
+                                setSelectedSearchTab(selectedTab)
+                              }
+                            }}
+                            className="h-full"
+                          >
+                            {searchTabsFilter.map((tab, index) => (
+                              <DropdownMenu.RadioItem
+                                key={index}
+                                value={`${tab.tabTitle}-${tab.tabSubtitle}`}
+                                onClick={() => handleActiveTabClick(tab)}
+                                className="flex justify-start items-start text-start whitespace-nowrap text-sm disabled:pointer-events-none disabled:opacity-50 relative gap-3 border px-2 py-1.5 rounded-lg font-normal border-[#ECEEF2] border-none hover:bg-gray-50 hover:border-none hover:outline-none cursor-pointer data-[state=checked]:bg-gray-100"
+                              >
+                                <span className="text-grey-800 text-sm leading-[18px] tracking-[-0.7px]">
+                                  {tab.tabTitle}
+                                </span>
+                                {tab.tabSubtitle !== '(rounded)' && (
+                                  <span className="text-sm opacity-50 -ml-1">
+                                    {tab.tabSubtitle}
+                                  </span>
+                                )}
+                              </DropdownMenu.RadioItem>
+                            ))}
+                          </DropdownMenu.RadioGroup>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </DropdownMenu.Content>
+              </DropdownMenu.Portal>
+            </DropdownMenu.Root>
+          </div>
         </div>
-        {/* Renderização de ícones */}
         <div
           className="select-none relative h-[665px] overflow-auto will-change-transform focus:outline-none focus:border-none scrollbar-hide"
-          style={{ direction: 'ltr' }}
+          dir="ltr"
         >
           <div
             ref={containerRef}
@@ -460,7 +555,6 @@ export default function IconsPage() {
           </div>
         </div>
       </main>
-
       {isOpenAlert && (
         <Dialog.Root open={isOpenAlert} onOpenChange={setIsOpenAlert}>
           <Dialog.Portal>

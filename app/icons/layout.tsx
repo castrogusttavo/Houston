@@ -15,7 +15,7 @@ export default function RootLayout({
       <body>
         <Suspense
           fallback={
-            <div className="flex justify-center items-center h-screen">
+            <div className="flex justify-center items-center max-h-screen">
               Loading...
             </div>
           }
