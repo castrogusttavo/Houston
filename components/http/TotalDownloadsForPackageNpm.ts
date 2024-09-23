@@ -24,11 +24,19 @@ async function getNpmDownloads(
 export async function TotalDownloadsForPackagesNpm(
   packageName1: string,
   packageName2: string,
+  packageName3: string,
+  packageName4: string,
 ): Promise<string> {
   const package1 = await getNpmDownloads(packageName1, 'week')
   const package2 = await getNpmDownloads(packageName2, 'week')
+  const package3 = await getNpmDownloads(packageName3, 'week')
+  const package4 = await getNpmDownloads(packageName4, 'week')
 
-  const totalDownloads = package1.downloads + package2.downloads
+  const totalDownloads =
+    package1.downloads +
+    package2.downloads +
+    package3.downloads +
+    package4.downloads
 
   if (totalDownloads <= 500) {
     return '2,000'

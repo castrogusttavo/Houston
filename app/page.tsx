@@ -38,6 +38,8 @@ export default function Home() {
       const totalDownloads = await TotalDownloadsForPackagesNpm(
         '@houstonicons/pro',
         '@houstonicons/react',
+        '@houstonicons/vue',
+        '@houstonicons/angular',
       )
       setTotalDownloads(totalDownloads)
     }
