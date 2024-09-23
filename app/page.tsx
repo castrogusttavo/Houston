@@ -172,7 +172,7 @@ export default function Home() {
                     />
                     <img
                       src="/logos/vue.svg"
-                      alt="Astro"
+                      alt="Vue"
                       className="w-8 h-8 sm:w-14 sm:h-14"
                     />
                     <img
@@ -425,12 +425,12 @@ export default function Home() {
               />
               <img
                 src="/logos/angular.svg"
-                alt="Astro"
+                alt="Angular"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
                 src="/logos/vue.svg"
-                alt="Astro"
+                alt="Vue"
                 className="w-8 h-8 sm:w-14 sm:h-14"
               />
               <img
