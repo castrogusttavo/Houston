@@ -36,16 +36,24 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  href="/examples"
-                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
+                  href="/use-cases"
+                  className={`hover:text-grey-500 text-black ${pathname === '/use-cases' ? 'font-bold text-black' : 'font-normal'}`}
                 >
                   Example
                 </Link>
               </li>
               <li>
                 <Link
+                  href="/packages"
+                  className={`hover:text-grey-500 text-black ${pathname === '/packages' ? 'font-bold text-black' : 'font-normal'}`}
+                >
+                  Packages
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/docs"
-                  className={`hover:text-grey-500 text-black ${pathname === '/icons' ? 'font-bold text-black' : 'font-normal'}`}
+                  className={`hover:text-grey-500 text-black ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal'}`}
                 >
                   Docs
                 </Link>
@@ -125,6 +133,15 @@ export function Header() {
             </li>
             <li className="relative">
               <Link
+                href="/packages"
+                onClick={testeButton}
+                className={`hover:text-black transition-colors ${pathname === '/packages' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
+              >
+                <span>Packages</span>
+              </Link>
+            </li>
+            <li className="relative">
+              <Link
                 href="/docs"
                 onClick={testeButton}
                 className={`hover:text-black transition-colors ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
@@ -134,79 +151,20 @@ export function Header() {
             </li>
           </ul>
           <li>
-            <button>
+            <span>
               <svg
-                width="48"
-                height="49"
-                viewBox="0 0 48 49"
+                width="24"
+                height="33"
+                viewBox="0 0 24 33"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g filter="url(#filter0_i_219_1722)">
-                  <rect y="0.5" width="48" height="48" rx="24" fill="#F7FBFE" />
-                  <rect
-                    x="0.5"
-                    y="1"
-                    width="47"
-                    height="47"
-                    rx="23.5"
-                    stroke="#E5E7EB"
-                  />
-                  <path
-                    d="M24 34.5C29.5228 34.5 34 30.0228 34 24.5C34 18.9772 29.5228 14.5 24 14.5C18.4772 14.5 14 18.9772 14 24.5C14 30.0228 18.4772 34.5 24 34.5Z"
-                    stroke="black"
-                    stroke-width="1.5"
-                  />
-                  <path
-                    d="M19.5 29.5C21.8317 27.0578 26.1432 26.9428 28.5 29.5M26.4951 22C26.4951 23.3807 25.3742 24.5 23.9915 24.5C22.6089 24.5 21.488 23.3807 21.488 22C21.488 20.6193 22.6089 19.5 23.9915 19.5C25.3742 19.5 26.4951 20.6193 26.4951 22Z"
-                    stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_i_219_1722"
-                    x="0"
-                    y="0.5"
-                    width="48"
-                    height="48"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="BackgroundImageFix"
-                      result="shape"
-                    />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
-                    <feOffset dy="-3" />
-                    <feComposite
-                      in2="hardAlpha"
-                      operator="arithmetic"
-                      k2="-1"
-                      k3="1"
-                    />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0.0666667 0 0 0 0 0.0705882 0 0 0 0 0.14902 0 0 0 0.2 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="shape"
-                      result="effect1_innerShadow_219_1722"
-                    />
-                  </filter>
-                </defs>
+                <path
+                  d="M23.0407 6.26496C22.5895 3.4641 19.7887 1.0204 16.1795 0.26849C14.3937 -0.0886688 8.66043 -0.0886688 6.94984 0.26849C4.44974 0.813622 2.19402 2.22344 1.14134 3.87764C0.0322798 5.60703 -0.042911 6.20856 0.0134822 12.9569L0.0698744 19.0474L2.62636 19.7053L5.20165 20.3632L11.5553 18.6714L17.9277 16.9608L17.9841 20.9836C18.0029 23.5213 17.9465 25.307 17.8149 25.7958C17.5329 26.886 16.1419 28.2207 14.9013 28.5778C13.4914 28.9914 9.16797 28.935 8.02131 28.5026C6.89345 28.0703 5.69039 26.7733 5.38963 25.6454C5.38963 25.6454 5.08886 24.7995 5.01367 24.7995C4.88209 24.7995 1.19774 25.777 0.314245 26.0401C0.0510773 26.1153 0.0322804 26.2281 0.257853 27.0552C0.972166 29.7433 3.1527 31.6795 6.55508 32.6193C8.32207 33.1269 14.9201 33.1269 16.7058 32.6193C19.6195 31.811 21.8752 30.0253 22.7587 27.8447C23.1723 26.7921 23.1911 26.6229 23.1911 20.382V13.9908L20.6534 13.2953L18.1157 12.5998L11.856 14.2916C8.39726 15.2127 5.50241 15.9646 5.40842 15.9646C5.29564 15.9646 5.23925 14.3292 5.27684 11.5847V7.92424C5.27684 7.49785 5.39712 7.08011 5.62386 6.71901L5.89717 6.28375C5.89717 6.28375 6.78066 5.21228 7.49497 4.79873L8.01713 4.53319C8.31692 4.38073 8.64688 4.2969 8.98308 4.28779L11.6305 4.21601H11.6305C14.7321 4.21601 14.7321 4.21601 15.7472 4.77994C16.8562 5.40026 17.7397 6.54692 17.9465 7.63719C18.0405 8.10713 18.1533 8.23871 18.3788 8.18232C18.83 8.05074 21.3677 7.37402 22.3264 7.12964C23.1159 6.92287 23.1347 6.90408 23.0407 6.26496Z"
+                  fill="#9956F6"
+                />
               </svg>
-            </button>
+            </span>
           </li>
         </ul>
       </div>
