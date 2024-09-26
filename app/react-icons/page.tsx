@@ -1808,12 +1808,12 @@ export default function ReactIconsPage() {
                   </p>
                   <div className="max-w-[80rem] mt-7 flex flex-col justify-center gap-y-3 sm:mt-11 sm:flex-row sm:justify-start sm:gap-x-2">
                     <Link
-                      href="https://www.npmjs.com/package/@houstonicons/react"
+                      href="/pricing"
                       className="w-full lg:w-auto"
                       target="_blank"
                     >
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-1.5 border-solid border-[#E3E3E3] bg-black text-white hover:bg-black/80 h-10 flex w-full items-center justify-center rounded-lg p-6 text-base lg:w-auto">
-                        Explore react icons
+                        Go Pro
                       </button>
                     </Link>
                     <Link href="/icons" className="w-full lg:auto">
@@ -1953,6 +1953,15 @@ export default function ReactIconsPage() {
                     commercial projects.
                   </p>
                   <div className="max-w-[80rem] mt-7 flex flex-col justify-center gap-y-3 sm:mt-11 sm:flex-row sm:justify-start sm:gap-x-2">
+                    <Link
+                      href="https://www.npmjs.com/package/@houstonicons/react"
+                      className="w-full lg:w-auto"
+                      target="_blank"
+                    >
+                      <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border-1.5 border-solid border-[#E3E3E3] bg-black text-white hover:bg-black/80 h-10 flex w-full items-center justify-center rounded-lg p-6 text-base lg:w-auto">
+                        Use for free
+                      </button>
+                    </Link>
                     <Link href="/icons" className="w-full lg:auto">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-black text-black hover:bg-black hover:text-white h-10 flex w-full items-center justify-center rounded-lg p-6 text-base lg:w-auto">
                         Explore react icons

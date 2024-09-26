@@ -1,6 +1,8 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import Link from 'next/link'
+import { DialogPromotion } from '@/components/DialogPromotion'
+import { CookieToast } from '@/components/CookieToast'
 
 export default function PackagePage() {
   return (
@@ -311,6 +313,9 @@ export default function PackagePage() {
           </div>
         </div>
       </main>
+
+      <DialogPromotion />
+      <CookieToast />
       <Footer />
     </div>
   )

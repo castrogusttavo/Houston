@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Figma Icon Library by Houston Pro - 27,000+ Icons',
@@ -55,11 +56,11 @@ export default function FigmaIconLibraryPage() {
                     for a seamless design experience.
                   </p>
                   <div className="mt-7 sm:mt-11 flex flex-col justify-center sm:justify-start sm:flex-row gap-y-3 sm:gap-x-2 max-w-[80rem]">
-                    <a className="w-full lg:w-auto">
+                    <Link className="w-full lg:w-auto" href="/pricing">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-gray-50 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg border-[1.5px] border-[#E3E3E3] text-base">
                         Buy now
                       </button>
-                    </a>
+                    </Link>
                     <a className="w-full lg:w-auto">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#E7E7E7] hover:bg-[#E7E7E7]/80 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg text-base">
                         Explore the icons
@@ -89,11 +90,11 @@ export default function FigmaIconLibraryPage() {
                     to keep the stroke responsive.
                   </p>
                   <div className="mt-7 sm:mt-11 flex flex-col justify-center sm:justify-start sm:flex-row gap-y-3 sm:gap-x-2 max-w-[80rem]">
-                    <a className="w-full lg:w-auto">
+                    <Link className="w-full lg:w-auto" href="/pricing">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-gray-50 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg border-[1.5px] border-[#E3E3E3] text-base">
                         Buy now
                       </button>
-                    </a>
+                    </Link>
                     <a className="w-full lg:w-auto">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-[#E7E7E7] hover:bg-[#E7E7E7]/80 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg text-base">
                         Explore the icons
@@ -714,7 +715,7 @@ export default function FigmaIconLibraryPage() {
                 Try it free
               </a>
               <a
-                href="https://www.npmjs.com/package/@houstonicons/pro"
+                href="/pricing"
                 className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-white text-black hover:bg-gray-50 hover:text-grey-900 h-12 rounded-lg px-6 border-black"
               >
                 Go Pro

@@ -30,7 +30,7 @@ export function StyleIconCard({
           Explore the icons
         </Link>
         <Link
-          href="/npmjs.com/package/@houstonicons/pro"
+          href="/pricing"
           className="relative font-bold whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-grey-900 hover:bg-grey-100 flex h-14 justify-center items-center gap-2 px-6 py-3 rounded-xl border border-solid border-grey-950"
         >
           Go pro
