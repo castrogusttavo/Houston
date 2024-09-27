@@ -18,7 +18,7 @@ export default function PricingPage() {
     setLoading(true)
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/checkout_sessions`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/api/checkout_sessions`,
         {
           method: 'POST',
           headers: {
