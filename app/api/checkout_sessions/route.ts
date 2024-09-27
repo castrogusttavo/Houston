@@ -6,6 +6,12 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 })
 
 export async function POST(req: Request) {
+  const headers = new Headers({
+    'Access-Control-Allow-Origin': 'https://www.houstonicons.com.br',
+    'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Headers': 'Content-Type',
+  })
+
   const { plan } = await req.json()
 
   const prices: { [key: string]: string } = {
@@ -15,7 +21,10 @@ export async function POST(req: Request) {
   }
 
   if (!prices[plan]) {
-    return NextResponse.json({ error: 'Plano inválido' }, { status: 400 })
+    return NextResponse.json(
+      { error: 'Plano inválido' },
+      { status: 400, headers },
+    )
   }
 
   try {
@@ -33,9 +42,9 @@ export async function POST(req: Request) {
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/pricing`,
     })
 
-    return NextResponse.json({ sessionId: session.id })
+    return NextResponse.json({ sessionId: session.id }, { headers })
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 })
+    return NextResponse.json({ error: err.message }, { status: 500, headers })
   }
 }
