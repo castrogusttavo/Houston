@@ -35,6 +35,9 @@ const config: Config = {
         'icon-box-bg':
           "url('https://hugeicons.com/_next/static/media/icon-box-bg.ab806028.svg')",
       },
+      boxShadow: {
+        card: '0px 8px 24px 0px rgba(170, 170, 170, 0.12)',
+      },
       keyframes: {
         hide: {
           from: { opacity: '1' },
@@ -78,6 +81,10 @@ const config: Config = {
           '0%': { 'stroke-dashoffset': '126' },
           '100%': { 'stroke-dashoffset': '0' },
         },
+        spinCircle: {
+          '0%': { 'stroke-dashoffset': '0' },
+          '100%': { 'stroke-dashoffset': '240' },
+        },
       },
       animation: {
         hide: 'hide 100ms ease-in',
@@ -93,6 +100,7 @@ const config: Config = {
         slideRightAndFade:
           'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         dash: 'dash 4s linear infinite',
+        spinCircle: 'spinCircle 2s linear infinite',
       },
     },
   },

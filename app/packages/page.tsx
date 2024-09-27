@@ -34,13 +34,13 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/"
+                  href="/docs"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.npmjs.com/package/@houstonicons/react"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                 >
                   Use for free
@@ -69,7 +69,7 @@ export default function PackagePage() {
                   Pro guide
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.npmjs.com/package/@houstonicons/react"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                 >
                   Use for free
@@ -92,13 +92,13 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/"
+                  href="/docs"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.npmjs.com/package/@houstonicons/vue"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                 >
                   Use for free
@@ -121,13 +121,13 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/"
+                  href="/docs"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
                 </Link>
                 <Link
-                  href="/"
+                  href="https://www.npmjs.com/package/@houstonicons/angular"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                 >
                   Use for free
@@ -150,13 +150,13 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/"
+                  href="/docs"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
                 </Link>
                 <Link
-                  href="/"
+                  href="/https://www.npmjs.com/package/@houstonicons/astro"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                 >
                   Use for free
@@ -181,13 +181,13 @@ export default function PackagePage() {
                 </p>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/"
+                    href="/docs"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Pro guide
                   </Link>
                   <Link
-                    href="/"
+                    href="/https://www.npmjs.com/package/@houstonicons/react-native"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                   >
                     Use for free
@@ -236,13 +236,13 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/"
+                    href="/docs"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Pro guide
                   </Link>
                   <Link
-                    href="/"
+                    href="http://houstonicons.com.br/free-icon-font"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                   >
                     Use for free
@@ -267,13 +267,13 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/"
+                    href="/pricing"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Pro guide
+                    Buy now
                   </Link>
                   <Link
-                    href="/"
+                    href="https://www.figma.com/community/file/1414792481171455704"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                   >
                     Use for free
@@ -296,13 +296,13 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/"
+                    href="/pricing"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Pro guide
+                    Buy now
                   </Link>
                   <Link
-                    href="/"
+                    href="/icons"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
                   >
                     Use for free

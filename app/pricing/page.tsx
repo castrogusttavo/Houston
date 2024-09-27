@@ -1,14 +1,55 @@
+'use client'
+
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import Link from 'next/link'
+import { useState } from 'react'
+import { loadStripe } from '@stripe/stripe-js'
 import * as Tooltip from '@radix-ui/react-tooltip'
-import type { Metadata } from 'next'
+import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Houston Pro Pricing - Flexible Plans for Developers and Designers',
-}
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!,
+)
 
 export default function PricingPage() {
+  const [loading, setLoading] = useState(false)
+
+  const handleCheckout = async (plan: 'solo' | 'startup' | 'business') => {
+    setLoading(true)
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/checkout_sessions`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ plan }),
+        },
+      )
+
+      const data = await res.json()
+
+      if (res.ok && data.sessionId) {
+        const stripe = await stripePromise
+        if (stripe) {
+          const { error } = await stripe.redirectToCheckout({
+            sessionId: data.sessionId,
+          })
+          if (error) {
+            console.error('Erro ao redirecionar para o Stripe:', error)
+          }
+        }
+      } else {
+        console.error('Erro ao criar sessão de pagamento:', data.error)
+      }
+    } catch (error) {
+      console.error('Erro ao processar pagamento:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
       <Header />
@@ -263,16 +304,16 @@ export default function PricingPage() {
                 Essential icons for solo developers.
               </p>
               <div className="flex items-start h-[5.5rem] mb-6">
-                <h3 className="text-lg line-through opacity-50">$ 4,00</h3>
-                <h2 className="text-7xl leading-none font-semibold">Free</h2>
+                <h3 className="text-4xl">$</h3>
+                <h2 className="text-7xl leading-none font-semibold">4,00</h2>
               </div>
-              <a
-                href="https://www.npmjs.com/package/@houstonicons/react"
-                target="_blank"
+              <button
+                onClick={() => handleCheckout('solo')}
+                disabled={loading}
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
-                Access Free
-              </a>
+                Buy now
+              </button>
               <ul className="max-w-[366px]">
                 <li className="flex items-center py-5 border-t border-grey-100">
                   <svg
@@ -377,13 +418,13 @@ export default function PricingPage() {
                 <h3 className="text-4xl">$</h3>
                 <h2 className="text-8xl leading-none font-bold">8,00</h2>
               </div>
-              <Link
-                href="/payment"
-                target="_blank"
+              <button
+                onClick={() => handleCheckout('startup')}
+                disabled={loading}
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
                 Buy now
-              </Link>
+              </button>
               <ul className="max-w-[366px]">
                 <li className="flex items-center py-5 border-t border-grey-100">
                   <p className="font-xs font-normal sm:text-md ml-4">
@@ -489,13 +530,13 @@ export default function PricingPage() {
                 <h3 className="text-4xl">$</h3>
                 <h2 className="text-7xl leading-none font-semibold">16,99</h2>
               </div>
-              <Link
-                href="/payment"
-                target="_blank"
+              <button
+                onClick={() => handleCheckout('business')}
+                disabled={loading}
                 className="text-md tracking-[.05em] font-bold uppercase inline-flex justify-center items-center text-center rounded-lg h-11 px-7 text-green-700 transition-colors hover:text-green-900 w-full mb-6 bg-green-200 cursor-pointer"
               >
                 Buy now
-              </Link>
+              </button>
               <ul className="max-w-[366px]">
                 <li className="flex items-center py-5 border-t border-grey-100">
                   <p className="font-xs font-normal sm:text-md ml-4">
