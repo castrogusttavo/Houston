@@ -2,7 +2,6 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { DialogPromotion } from '@/components/DialogPromotion'
 import { ExplorerStyles } from '@/components/ExploreStyles'
-import * as Tooltip from '@radix-ui/react-tooltip'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
@@ -388,119 +387,6 @@ export default function ExamplesPage() {
               </span>
             </div>
           </div>
-          <div className="relative mt-2 flex w-full flex-col justify-center gap-[84px] py-12">
-            <div className="flex flex-col items-center gap-4">
-              <h3 className="text-lg font-semibold leading-normal tracking-[-1px] text-grey-800">
-                Trusted by popular creators
-              </h3>
-              <div className="mt-3 flex items-center -space-x-3">
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/DiegoFernandes.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Diego Fernandes</h3>
-                          <div className="text-xs font-light">
-                            CTO @Rocketseat
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/FelipeSantana.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Felipe Santana</h3>
-                          <div className="text-xs font-light">
-                            Founder @cfPRO
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/MaykBrito.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Mayk Brito</h3>
-                          <div className="text-xs font-light">
-                            CCO @Rocketseat
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/RianDutra.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Rian Dutra</h3>
-                          <div className="text-xs font-light">
-                            Founder @Enviesados
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-              </div>
-            </div>
-          </div>
         </div>
         <div className="relative flex h-[500px] mt-24 sm:mt-36 flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
           <h5 className="text-center text-white text-3xl sm:text-5xl font-semibold">
@@ -527,7 +413,7 @@ export default function ExamplesPage() {
               Use for free
             </Link>
             <Link
-              href="/pricing"
+              href="https://www.npmjs.com/package/@houstonicons/pro"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full"
             >
               Go Pro

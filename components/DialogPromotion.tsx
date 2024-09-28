@@ -47,26 +47,27 @@ export function DialogPromotion() {
                   />
                   <div className="text-center">
                     <h2 className="text-center text-black text-2xl font-bold leading-loose">
-                      40% OFF on Lifetime Pack
+                      Discover the Houston Icons Pro Pack!
                     </h2>
                     <p className="text-grey-700 text-base font-medium leading-normal">
-                      Offer ending in 3 days
+                      Expand your design options with over +36,000 icons for all
+                      your projects.
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center mt-11">
                   <Link
-                    href="/pricing"
+                    href="https://www.npmjs.com/package/@houstonicons/pro"
                     className="h-14 px-8 py-5 bg-amber-200 rounded-full border border-white justify-center items-center gap-2 inline-flex text-yellow-900 text-base font-bold focus:border-yellow-700/50 focus:border-4 transition-colors"
                   >
-                    Show me the discount price
+                    Go to package
                   </Link>
-                  <button
-                    onClick={handleClickCloseDialog}
+                  <Link
+                    href="/icons"
                     className="text-center text-yellow-800 opacity-70 text-base font-medium underline mt-4"
                   >
                     I want to explore more
-                  </button>
+                  </Link>
                 </div>
               </div>
             </p>

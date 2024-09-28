@@ -715,7 +715,7 @@ export default function FigmaIconLibraryPage() {
                 Try it free
               </a>
               <a
-                href="/pricing"
+                href="https://www.npmjs.com/package/@houstonicons/pro"
                 className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-white text-black hover:bg-gray-50 hover:text-grey-900 h-12 rounded-lg px-6 border-black"
               >
                 Go Pro

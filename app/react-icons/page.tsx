@@ -1808,7 +1808,7 @@ export default function ReactIconsPage() {
                   </p>
                   <div className="max-w-[80rem] mt-7 flex flex-col justify-center gap-y-3 sm:mt-11 sm:flex-row sm:justify-start sm:gap-x-2">
                     <Link
-                      href="/pricing"
+                      href="https://www.npmjs.com/package/@houstonicons/pro"
                       className="w-full lg:w-auto"
                       target="_blank"
                     >

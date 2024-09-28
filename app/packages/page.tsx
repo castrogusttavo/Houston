@@ -267,7 +267,7 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/pricing"
+                    href="https://www.npmjs.com/package/@houstonicons/react"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Buy now
@@ -296,10 +296,10 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/pricing"
+                    href="https://www.npmjs.com/package/@houstonicons/pro"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Buy now
+                    Go Pro
                   </Link>
                   <Link
                     href="/icons"

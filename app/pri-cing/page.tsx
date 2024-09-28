@@ -4,7 +4,6 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { useState } from 'react'
 import { loadStripe } from '@stripe/stripe-js'
-import * as Tooltip from '@radix-ui/react-tooltip'
 import Link from 'next/link'
 
 const stripePromise = loadStripe(
@@ -913,143 +912,7 @@ export default function PricingPage() {
             </ul>
           </div>
         </div>
-        <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center px-5 pb-20">
-          <div className="relative mt-2 flex-2 w-full flex-col justify-center gap-[84px] py-[50px]">
-            <div className="flex flex-col items-center gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                color="currentColor"
-                className="h-11 w-11 text-[#AFE67F]"
-              >
-                <path
-                  opacity="0.4"
-                  d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M19.4626 3.99415C16.7809 2.34923 14.4404 3.01211 13.0344 4.06801C12.4578 4.50096 12.1696 4.71743 12 4.71743C11.8304 4.71743 11.5422 4.50096 10.9656 4.06801C9.55962 3.01211 7.21909 2.34923 4.53744 3.99415C1.01807 6.15294 0.221721 13.2749 8.33953 19.2834C9.88572 20.4278 10.6588 21 12 21C13.3412 21 14.1143 20.4278 15.6605 19.2834C23.7783 13.2749 22.9819 6.15294 19.4626 3.99415Z"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-width="1.5"
-                />
-              </svg>
-              <h3 className="text-lg font-semibold leading-normal tracking-[-1px] text-grey-800">
-                Trusted by popular creators
-              </h3>
-              <div className="mt-3 flex items-center -space-x-3">
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/DiegoFernandes.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Diego Fernandes</h3>
-                          <div className="text-xs font-light">
-                            CTO @Rocketseat
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/FelipeSantana.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Felipe Santana</h3>
-                          <div className="text-xs font-light">
-                            Founder @cfPRO
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/MaykBrito.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Mayk Brito</h3>
-                          <div className="text-xs font-light">
-                            CCO @Rocketseat
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-                <Tooltip.Provider>
-                  <Tooltip.Root>
-                    <Tooltip.Trigger asChild>
-                      <img
-                        src="/feedback/RianDutra.png"
-                        className="h-12 w-12 sm:h-[60px] sm:w-[60px]"
-                        alt=""
-                      />
-                    </Tooltip.Trigger>
-                    <Tooltip.Portal>
-                      <Tooltip.Content
-                        sideOffset={5}
-                        side="bottom"
-                        className="data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade select-none rounded-sm bg-white px-3 py-2 text-sm leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]"
-                      >
-                        <div className="text-center flex flex-col gap-2">
-                          <h3 className="font-bold">Rian Dutra</h3>
-                          <div className="text-xs font-light">
-                            Founder @Enviesados
-                          </div>
-                        </div>
-                        <Tooltip.Arrow className="fill-white" />
-                      </Tooltip.Content>
-                    </Tooltip.Portal>
-                  </Tooltip.Root>
-                </Tooltip.Provider>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="top-[#FFF] flex w-full flex-col items-center gap-6 border-b border-gray-100 bg-gradient-to-b from-[#F1F8FF] to-[#FFF] px-5 py-[50px] sm:py-[70px]">
+        <div className="top-[#FFF] flex w-full flex-col items-center gap-6 border-b border-gray-100 px-5 py-[50px] sm:py-[70px]">
           <h3 className="text-center text-xl font-semibold leading-normal tracking-[-1px] text-grey-900 sm:text-3xl">
             Need help choosing a plan?
           </h3>
@@ -1111,10 +974,10 @@ export default function PricingPage() {
               Use for free
             </Link>
             <Link
-              href="/pricing"
+              href="https://www.npmjs.com/package/@houstonicons/pro"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full"
             >
-              Buy now
+              Go Pro
             </Link>
           </div>
         </div>
