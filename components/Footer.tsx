@@ -36,14 +36,6 @@ export function Footer() {
             <ul className="mt-6 space-y-4">
               <li>
                 <Link
-                  href="/docs"
-                  className="leading-6 text-grey-600 hover:text-grey-400"
-                >
-                  Docs
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="https://www.npmjs.com/package/@houstonicons/react"
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
@@ -191,8 +183,8 @@ export function Footer() {
         </div>
         <p className="mt-8 leading-5 text-shape-primary font-medium md:order-1 md:mt-0">
           © 2024 {''}
-          <Link target="_blank" href="https://castrogusttavo.vercel.app">
-            Gusttavo Castro.{' '}
+          <Link target="_blank" href="#">
+            Houston Icons.{' '}
           </Link>
           All rights reserved.
         </p>

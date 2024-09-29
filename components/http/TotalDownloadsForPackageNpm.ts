@@ -38,8 +38,8 @@ export async function TotalDownloadsForPackagesNpm(
     package3.downloads +
     package4.downloads
 
-  if (totalDownloads <= 500) {
-    return '2,000'
+  if (totalDownloads <= 2500) {
+    return '3,000'
   }
 
   return totalDownloads.toLocaleString('en-US')

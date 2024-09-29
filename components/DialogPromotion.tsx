@@ -49,8 +49,8 @@ export function DialogPromotion() {
                     <h2 className="text-center text-black text-2xl font-bold leading-loose">
                       Discover the Houston Icons Pro Pack!
                     </h2>
-                    <p className="text-grey-700 text-base font-medium leading-normal">
-                      Expand your design options with over +36,000 icons for all
+                    <p className="text-grey-500 text-base font-medium leading-normal">
+                      Expand your design options with over +4,000 icons for all
                       your projects.
                     </p>
                   </div>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { Header } from '@/components/Header'
 import { Carousel } from '@/components/Carousel'
@@ -11,11 +11,9 @@ import { CookieToast } from '@/components/CookieToast'
 import { Footer } from '@/components/Footer'
 import { ReactTyped } from 'react-typed'
 import Link from 'next/link'
-import { TotalDownloadsForPackagesNpm } from '@/components/http/TotalDownloadsForPackageNpm'
 
 export default function Home() {
   const [querySearch, setQuerySearch] = useState('')
-  const [totalDownloads, setTotalDownloads] = useState<string>('')
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
@@ -32,20 +30,6 @@ export default function Home() {
   function handleSearchIcons() {
     router.push(`/icons?search=${encodeURIComponent(querySearch)}`)
   }
-
-  useEffect(() => {
-    async function getTotalDownloads() {
-      const totalDownloads = await TotalDownloadsForPackagesNpm(
-        '@houstonicons/pro',
-        '@houstonicons/react',
-        '@houstonicons/vue',
-        '@houstonicons/angular',
-      )
-      setTotalDownloads(totalDownloads)
-    }
-
-    getTotalDownloads()
-  }, [])
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
@@ -217,7 +201,7 @@ export default function Home() {
         <div className="grid max-w-[80rem] grid-cols-1 sm:grid-cols-2 mx-auto pt-32 sm:pt-40 w-full px-6 lg:px-0">
           <div>
             <p className="text-2xl font-bold mb-7 text-black">
-              Join over 50,000 developers and
+              Join over 5,000 developers and
               <br />
               designers globally.
             </p>
@@ -283,13 +267,8 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-10 sm:gap-12 mt-14 sm:mt-0">
             <TagValidation
               job={['Developers']}
-              title={`${totalDownloads}+`}
+              title="3,000+"
               subtitle="Weekly NPM Download"
-            />
-            <TagValidation
-              job={['Designers']}
-              title="530+"
-              subtitle="Figma plugins beta users"
             />
             <TagValidation
               job={['Designers']}

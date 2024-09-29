@@ -50,14 +50,6 @@ export function Header() {
                   Packages
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/docs"
-                  className={`hover:text-grey-500 text-black ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal'}`}
-                >
-                  Docs
-                </Link>
-              </li>
             </ul>
             <Dialog.Close />
           </Dialog.Content>
@@ -138,15 +130,6 @@ export function Header() {
                 className={`hover:text-black transition-colors ${pathname === '/packages' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
                 <span>Packages</span>
-              </Link>
-            </li>
-            <li className="relative">
-              <Link
-                href="/docs"
-                onClick={testeButton}
-                className={`hover:text-black transition-colors ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
-              >
-                <span>Docs</span>
               </Link>
             </li>
           </ul>

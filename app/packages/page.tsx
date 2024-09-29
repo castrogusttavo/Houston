@@ -34,36 +34,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
-                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
-                >
-                  Pro guide
-                </Link>
-                <Link
-                  href="https://www.npmjs.com/package/@houstonicons/react"
-                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
-                >
-                  Use for free
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
-              <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
-                <div className="flex items-center justify-between w-full">
-                  <img
-                    src="./logos/next.svg"
-                    alt="next"
-                    className="max-w-20 object-cover"
-                  />
-                </div>
-                <h3 className="mt-6 tracking-[-1px] font-medium">Next</h3>
-                <p className="mt-2 self-stretch text-base tracking-tighter text-grey-500">
-                  A Houston Icons Pro library package for Next applications
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4 w-full">
-                <Link
-                  href="/"
+                  href="https://www.npmjs.com/package/@houstonicons/pro"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -92,7 +63,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://www.npmjs.com/package/@houstonicons/pro"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -121,7 +92,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://www.npmjs.com/package/@houstonicons/pro"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -132,67 +103,6 @@ export default function PackagePage() {
                 >
                   Use for free
                 </Link>
-              </div>
-            </div>
-            <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
-              <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
-                <div className="flex items-center justify-between w-full">
-                  <img
-                    src="./logos/astro.svg"
-                    alt="angular"
-                    className="max-w-20 object-cover"
-                  />
-                </div>
-                <h3 className="mt-6 tracking-[-1px] font-medium">Astro</h3>
-                <p className="mt-2 self-stretch text-base tracking-tighter text-grey-500">
-                  A Houston Icons Pro library package for Astro applications
-                </p>
-              </div>
-              <div className="grid grid-cols-2 gap-4 w-full">
-                <Link
-                  href="/docs"
-                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
-                >
-                  Pro guide
-                </Link>
-                <Link
-                  href="/https://www.npmjs.com/package/@houstonicons/astro"
-                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
-                >
-                  Use for free
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
-              <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
-                <div className="flex items-center justify-between w-full">
-                  <img
-                    src="./logos/reactNative.svg"
-                    alt="reactNative"
-                    className="max-w-20 object-cover"
-                  />
-                </div>
-                <h3 className="mt-6 tracking-[-1px] font-medium">
-                  React Native
-                </h3>
-                <p className="mt-2 self-stretch text-base tracking-tighter text-grey-500">
-                  A Houston Icons Pro library package for React Native
-                  applications
-                </p>
-                <div className="grid grid-cols-2 gap-4 w-full">
-                  <Link
-                    href="/docs"
-                    className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
-                  >
-                    Pro guide
-                  </Link>
-                  <Link
-                    href="/https://www.npmjs.com/package/@houstonicons/react-native"
-                    className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
-                  >
-                    Use for free
-                  </Link>
-                </div>
               </div>
             </div>
             <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
@@ -236,7 +146,7 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/docs"
+                    href="https://www.npmjs.com/package/@houstonicons/pro"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Pro guide
@@ -267,10 +177,10 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="https://www.npmjs.com/package/@houstonicons/react"
+                    href="https://www.figma.com/community/file/1414792481171455704"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Buy now
+                    Go Pro
                   </Link>
                   <Link
                     href="https://www.figma.com/community/file/1414792481171455704"
