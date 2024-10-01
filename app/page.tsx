@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Header } from '@/components/Header'
 import { Carousel } from '@/components/Carousel'
@@ -11,9 +11,16 @@ import { CookieToast } from '@/components/CookieToast'
 import { Footer } from '@/components/Footer'
 import { ReactTyped } from 'react-typed'
 import Link from 'next/link'
+import { TotalDownloadsForPackagesNpm } from '@/components/http/TotalDownloadsForPackageNpm'
+import { TotalDownloadsForFigmaFile } from '@/components/http/TotalDownloadsForFigmaFile'
+import { TotalWebUsers } from '@/components/http/TotalWebUsers'
 
 export default function Home() {
   const [querySearch, setQuerySearch] = useState('')
+  const [totalDownloads, setTotalDownloads] = useState<string>('')
+  const [totalWebUsers, setTotalWebUsers] = useState<string>('')
+  const [totalDownloadsFigmaFile, setTotalDownloadsFigmaFile] =
+    useState<string>('')
   const inputRef = useRef<HTMLInputElement>(null)
   const router = useRouter()
 
@@ -30,6 +37,35 @@ export default function Home() {
   function handleSearchIcons() {
     router.push(`/icons?search=${encodeURIComponent(querySearch)}`)
   }
+
+  useEffect(() => {
+    async function getTotalDownloads() {
+      const totalDownloads = await TotalDownloadsForPackagesNpm(
+        '@houstonicons/pro',
+        '@houstonicons/react',
+        '@houstonicons/vue',
+        '@houstonicons/angular',
+      )
+      setTotalDownloads(totalDownloads)
+    }
+    getTotalDownloads()
+  }, [])
+
+  useEffect(() => {
+    async function getTotalWebUsers() {
+      const totalWebUsers = await TotalWebUsers()
+      setTotalWebUsers(totalWebUsers)
+    }
+    getTotalWebUsers()
+  }, [])
+
+  useEffect(() => {
+    async function getTotalDownloadsFigmaFile() {
+      const totalDownloadsFigmaFile = await TotalDownloadsForFigmaFile()
+      setTotalDownloadsFigmaFile(totalDownloadsFigmaFile)
+    }
+    getTotalDownloadsFigmaFile()
+  }, [])
 
   return (
     <div className="antialiased font-sans min-h-screen transition-[grid-template-columns] duration-300 ease-in-out">
@@ -267,17 +303,17 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-10 sm:gap-12 mt-14 sm:mt-0">
             <TagValidation
               job={['Developers']}
-              title="3,000+"
+              title={`${totalDownloads}+`}
               subtitle="Weekly NPM Download"
             />
             <TagValidation
               job={['Designers']}
-              title="1,780+"
+              title={`${totalDownloadsFigmaFile}+`}
               subtitle="Figma users"
             />
             <TagValidation
               job={['Developers', 'Designers']}
-              title="2,285+"
+              title={`${totalWebUsers}+`}
               subtitle="Web app users"
             />
           </div>

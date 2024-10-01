@@ -19,8 +19,8 @@ const tagsStyles: TagsProps = {
 const styleTagImages = {
   Rounded: [
     {
-      sideBar: '/useCases/stylesBox/StandardStrokeSideBar.png',
-      egIcon: '/useCases/stylesBox/StandardStrokeEg.png',
+      sideBar: '/useCases/stylesBox/RoundedStrokeSideBar.png',
+      egIcon: '/useCases/stylesBox/RoundedStrokeEg.png',
     },
     {
       sideBar: '/useCases/stylesBox/RoundedTwotoneSideBar.png',

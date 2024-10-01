@@ -92,17 +92,6 @@ export default function ExamplesPage() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-6 sm:flex-row">
-              <div>
-                <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="relative z-10">
-                    <img src="/home/components/Image11.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="w-full">
               <div className="relative p-1 sm:p-2 group">
                 <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
