@@ -109,6 +109,67 @@ export default function PackagePage() {
               <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
                 <div className="flex items-center justify-between w-full">
                   <img
+                    src="./logos/ionic.svg"
+                    alt="vue"
+                    className="max-w-20 object-cover"
+                  />
+                </div>
+                <h3 className="mt-6 tracking-[-1px] font-medium">Ionic</h3>
+                <p className="mt-2 self-stretch text-base tracking-tighter text-grey-500">
+                  A Houston Icons Pro library package for Ionic applications
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4 w-full">
+                <Link
+                  href="https://www.npmjs.com/package/@houstonicons/pro"
+                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
+                >
+                  Pro guide
+                </Link>
+                <Link
+                  href="https://www.npmjs.com/package/@houstonicons/ionic"
+                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
+                >
+                  Use for free
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
+              <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
+                <div className="flex items-center justify-between w-full">
+                  <img
+                    src="./logos/reactnative.svg"
+                    alt="vue"
+                    className="max-w-20 object-cover"
+                  />
+                </div>
+                <h3 className="mt-6 tracking-[-1px] font-medium">
+                  React Native
+                </h3>
+                <p className="mt-2 self-stretch text-base tracking-tighter text-grey-500">
+                  A Houston Icons Pro library package for React Native
+                  applications
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4 w-full">
+                <Link
+                  href="https://www.npmjs.com/package/@houstonicons/pro"
+                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
+                >
+                  Pro guide
+                </Link>
+                <Link
+                  href="https://www.npmjs.com/package/@houstonicons/react"
+                  className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-grey-100  hover:bg-grey-50 h-12 px-4 max-w-[233px] font-bold gap-3 text-black text-sm mt-[2rem] leading-0"
+                >
+                  Use for free
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-md border border-grey-50 border-solid box-border overflow-hidden flex flex-col py-6 pl-5 pr-6 relative leading-normal tracking-normal">
+              <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
+                <div className="flex items-center justify-between w-full">
+                  <img
                     src="./logos/more.svg"
                     alt="more"
                     className="max-w-20 object-cover"
