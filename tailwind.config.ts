@@ -85,6 +85,10 @@ const config: Config = {
           '0%': { 'stroke-dashoffset': '0' },
           '100%': { 'stroke-dashoffset': '240' },
         },
+        fadeUp: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
       },
       animation: {
         hide: 'hide 100ms ease-in',
@@ -104,6 +108,10 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar-hide')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('tailwind-scrollbar-hide'),
+    require('tailwindcss-animated'),
+  ],
 }
 export default config
