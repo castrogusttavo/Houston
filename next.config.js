@@ -7,7 +7,7 @@ module.exports = {
         has: [
           {
             type: 'host',
-            value: 'docs.houstonicons.com.br',
+            value: 'https://docs.houstonicons.com.br',
           },
         ],
       },
