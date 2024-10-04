@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 export const metadata: Metadata = {
   title: 'React Icons - Houston Pro',
 }
@@ -21,7 +22,9 @@ export default function RootLayout({
           }
         >
           <div>
-            {children} <Analytics />{' '}
+            {children}
+            <Analytics />
+            <SpeedInsights />
           </div>
         </Suspense>
       </body>
