@@ -1,6 +1,5 @@
 'use client'
 
-import type { Metadata } from 'next'
 import { Article } from '@/components/docs/Article'
 import { ListItem, UnorderedList } from '@/components/docs/article/List'
 import {
@@ -18,10 +17,6 @@ import { Footer } from '@/components/docs/Footer'
 import { Header } from '@/components/docs/Header'
 import { Link, OnThisPage } from '@/components/docs/OnThisPage'
 import { SideBar } from '@/components/docs/SideBar'
-
-export const metadata: Metadata = {
-  title: 'Houston Icons Pro Documentation',
-}
 
 export default function DocsPage() {
   return (
