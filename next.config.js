@@ -1,5 +1,4 @@
 module.exports = {
-  basePath: '/docs',
   async rewrites() {
     return {
       beforeFiles: [
