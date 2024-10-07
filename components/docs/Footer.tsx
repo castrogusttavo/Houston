@@ -1,3 +1,5 @@
+'use client'
+
 export function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-neutral-900 pb-[env(safe-area-inset-bottom)]">

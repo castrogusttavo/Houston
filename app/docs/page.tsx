@@ -1,5 +1,3 @@
-'use client'
-
 import { Article } from '@/components/docs/Article'
 import { ListItem, UnorderedList } from '@/components/docs/article/List'
 import {
