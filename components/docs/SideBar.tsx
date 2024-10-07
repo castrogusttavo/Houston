@@ -278,7 +278,7 @@ export function AccordionItem({ groupName, children, value }: AccordionProps) {
 
 export function SideBar() {
   return (
-    <aside className="flex flex-col md:shrink-0 motion-reduce:translate-none transform-gpu transition-all ease-in-out print:hidden md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:h-[calc(100vh-(4rem)-(3.75rem))] scrollbar-hide sticky top-16">
+    <aside className="flex-col md:shrink-0 motion-reduce:translate-none transform-gpu transition-all ease-in-out print:hidden md:w-64 md:self-start max-md:[transform:translate3d(0,-100%,0)] md:h-[calc(100vh-(4rem)-(3.75rem))] scrollbar-hide sticky top-16 hidden md:flex">
       <div className="overflow-y-auto overflow-x-hidden p-4 grow md:h-[calc(100vh-(4rem)-(3.75rem))] sticky top-16 scrollbar-hide">
         <div className="transform-gpu overflow-hidden transition-all ease-in-out motion-reduce:transition-none scrollbar-hide">
           <div className="transition-opacity duration-500 ease-in-out motion-reduce:transition-none opacity-100 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 dark:scrollbar-thumb-neutral-700 dark:scrollbar-track-neutral-800 scrollbar-hide">

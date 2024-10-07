@@ -6,6 +6,8 @@ import { useState, useEffect, useRef } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import LogoDark from '@/public/logoHorizontalDark.svg'
 import Logo from '@/public/logoHorizontal.svg'
+import * as Accordion from '@radix-ui/react-accordion'
+import { AccordionItem, TabIndex } from './SideBar'
 
 export function Header() {
   const [isShowMenuBurger, setIsShowMenuBurger] = useState(false)
@@ -186,7 +188,7 @@ export function Header() {
       >
         <Dialog.Portal>
           <Dialog.Overlay className="fixed top-16 inset-0 z-50 bg-black/50 data-[state=open]:animate in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 lg:hidden" />
-          <Dialog.Content className="fixed top-16 z-50 gap-4 w-full flex flex-col bg-slate-50 dark:bg-zinc-900 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 left-0 h-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left pt-4 lg:hidden">
+          <Dialog.Content className="fixed top-16 z-50 gap-4 w-full flex flex-col bg-slate-50 dark:bg-zinc-900 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 inset-y-0 left-0 h-full border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left pt-4 lg:hidden overflow-x-auto">
             <div className="relative md:w-64 min-w-[200px]">
               <div className="relative flex items-center text-grey-800 dark:text-grey-300">
                 <input
@@ -201,6 +203,97 @@ export function Header() {
                 </span>
               </div>
             </div>
+            <Accordion.Root
+              className="flex flex-col gap-1 scrollbar-hide"
+              type="multiple"
+              defaultValue={[
+                'installation',
+                'usage',
+                'features',
+                'best-practice',
+                'troubleshooting',
+                'faqs',
+              ]}
+            >
+              <Accordion.Item value="introduction">
+                <TabIndex link="docs">Introduction</TabIndex>
+              </Accordion.Item>
+              <AccordionItem groupName="Installation" value="installation">
+                <TabIndex link="/installation/react-package-installation">
+                  React Package
+                </TabIndex>
+                <TabIndex link="/installation/vye-package-installation">
+                  Vue Package
+                </TabIndex>
+                <TabIndex link="/installation/angular-package-installation">
+                  Angular Package
+                </TabIndex>
+                <TabIndex link="/installation/ionic-package-installation">
+                  Ionic Package
+                </TabIndex>
+                <TabIndex link="/installation/react-native-package-installation">
+                  React Native Package
+                </TabIndex>
+                <TabIndex link="/installation/icon-font-installation">
+                  Icon Font
+                </TabIndex>
+              </AccordionItem>
+              <AccordionItem groupName="Usage" value="usage">
+                <TabIndex link="/installation/react-package-installation">
+                  Customization
+                </TabIndex>
+                <TabIndex link="/installation/vye-package-installation">
+                  Using React
+                </TabIndex>
+                <TabIndex link="/installation/angular-package-installation">
+                  Using Vue
+                </TabIndex>
+                <TabIndex link="/installation/ionic-package-installation">
+                  Using Angular
+                </TabIndex>
+                <TabIndex link="/installation/react-native-package-installation">
+                  Using Ionic
+                </TabIndex>
+                <TabIndex link="/installation/icon-font-installation">
+                  Using React Native
+                </TabIndex>
+              </AccordionItem>
+              <AccordionItem groupName="Features" value="features">
+                <TabIndex link="/installation/react-package-installation">
+                  Autocomplete
+                </TabIndex>
+                <TabIndex link="/installation/vye-package-installation">
+                  Customizable Icons
+                </TabIndex>
+                <TabIndex link="/installation/angular-package-installation">
+                  Icon Library
+                </TabIndex>
+              </AccordionItem>
+              <AccordionItem groupName="Best Practice" value="best-practice">
+                <TabIndex link="/installation/react-package-installation">
+                  Application Integration
+                </TabIndex>
+                <TabIndex link="/installation/vye-package-installation">
+                  Icon Selection
+                </TabIndex>
+              </AccordionItem>
+              <AccordionItem
+                groupName="Troubleshooting"
+                value="troubleshooting"
+              >
+                <TabIndex link="/installation/react-package-installation">
+                  Common Issues
+                </TabIndex>
+              </AccordionItem>
+              <AccordionItem groupName="FAQs" value="faqs">
+                <TabIndex link="/installation/react-package-installation">
+                  License Questions
+                </TabIndex>
+                <TabIndex link="/installation/vye-package-installation">
+                  Technical Support
+                </TabIndex>
+              </AccordionItem>
+            </Accordion.Root>
             <ul className="flex flex-col gap-5">
               <li>
                 <Link
