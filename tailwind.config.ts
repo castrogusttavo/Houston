@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import * as tokens from '@hello.softis/andromeda-tokens'
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -112,6 +113,7 @@ const config: Config = {
     require('tailwindcss-animate'),
     require('tailwind-scrollbar-hide'),
     require('tailwindcss-animated'),
+    require('tailwind-scrollbar'),
   ],
 }
 export default config
