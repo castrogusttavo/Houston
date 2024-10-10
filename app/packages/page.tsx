@@ -241,7 +241,7 @@ export default function PackagePage() {
                     href="https://www.figma.com/community/file/1414792481171455704"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Go Pro
+                    Pro Guide
                   </Link>
                   <Link
                     href="https://www.figma.com/community/file/1414792481171455704"
@@ -270,7 +270,7 @@ export default function PackagePage() {
                     href="https://docs.houstonicons.com.br/features/icon-library"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
-                    Go Pro
+                    Pro Guide
                   </Link>
                   <Link
                     href="/icons"
