@@ -34,7 +34,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br/installation/react-package"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -63,7 +63,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br/installation/vue-package"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -92,7 +92,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br/installation/angular-package"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -121,7 +121,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br/installation/ionic-package"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -153,7 +153,7 @@ export default function PackagePage() {
               </div>
               <div className="grid grid-cols-2 gap-4 w-full">
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br/installation/react-native-package"
                   className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                 >
                   Pro guide
@@ -207,7 +207,7 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/docs"
+                    href="https://docs.houstonicons.com.br/installation/icon-font"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Pro guide
@@ -267,7 +267,7 @@ export default function PackagePage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4 w-full">
                   <Link
-                    href="/docs"
+                    href="https://docs.houstonicons.com.br/features/icon-library"
                     className="flex items-center justify-center rounded-md transition-all focus:shadow-md bg-softis-mid  hover:bg-softis-light h-12 px-4 max-w-[233px] font-bold gap-3 text-white text-sm mt-[2rem] leading-0"
                   >
                     Go Pro

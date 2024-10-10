@@ -52,7 +52,7 @@ export function Header() {
               </li>
               <li>
                 <Link
-                  href="/docs"
+                  href="https://docs.houstonicons.com.br"
                   className={`hover:text-grey-500 text-black ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal'}`}
                 >
                   Docs
@@ -142,7 +142,7 @@ export function Header() {
             </li>
             <li className="relative">
               <Link
-                href="/docs"
+                href="https://docs.houstonicons.com.br"
                 onClick={testeButton}
                 className={`hover:text-black transition-colors ${pathname === '/docs' ? 'font-bold text-black' : 'font-normal text-grey-500'}`}
               >
