@@ -138,7 +138,7 @@ export default function PackagePage() {
               <div className="self-stretch flex flex-col items-start justify-start text-left text-2xl text-grey-600">
                 <div className="flex items-center justify-between w-full">
                   <img
-                    src="./logos/reactnative.svg"
+                    src="./logos/reactNative.svg"
                     alt="vue"
                     className="max-w-20 object-cover"
                   />
