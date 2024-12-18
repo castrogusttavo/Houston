@@ -58,7 +58,7 @@ export default function FigmaIconLibraryPage() {
                   <div className="mt-7 sm:mt-11 flex flex-col justify-center sm:justify-start sm:flex-row gap-y-3 sm:gap-x-2 max-w-[80rem]">
                     <Link className="w-full lg:w-auto" href="/pricing">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-gray-50 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg border-[1.5px] border-[#E3E3E3] text-base">
-                        Buy now
+                        Access now
                       </button>
                     </Link>
                     <a className="w-full lg:w-auto">
@@ -92,7 +92,7 @@ export default function FigmaIconLibraryPage() {
                   <div className="mt-7 sm:mt-11 flex flex-col justify-center sm:justify-start sm:flex-row gap-y-3 sm:gap-x-2 max-w-[80rem]">
                     <Link className="w-full lg:w-auto" href="/pricing">
                       <button className="relative font-bold whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white hover:bg-gray-50 text-black hover:text-grey-900 h-10 w-full lg:w-auto flex items-center justify-center p-6 rounded-lg border-[1.5px] border-[#E3E3E3] text-base">
-                        Buy now
+                        Access now
                       </button>
                     </Link>
                     <a className="w-full lg:w-auto">
@@ -676,55 +676,6 @@ export default function FigmaIconLibraryPage() {
             alt="Consistency"
             className="mt-10 w-full scale-150 sm:mt-0 sm:scale-100"
           />
-        </div>
-        <div className="max-w-[80rem] mx-auto mt-1 flex w-full flex-col gap-7 px-6 md:mt-2 lg:gap-[54px] lg:px-0">
-          <div className="z-10 w-full text-center max-lg:max-w-full lg:text-left">
-            <div className="flex items-center gap-[54px] max-lg:flex-col max-lg:gap-0">
-              <h1 className="w-full max-w-[492px] text-2xl font-bold tracking-tighter text-grey-950 max-lg:mt-10 lg:text-4xl lg:leading-[48px]">
-                Imagine a game changing <br /> Figma plugin
-              </h1>
-              <div className="mt-3 flex w-[68%] flex-col max-lg:ml-0 max-lg:w-full lg:ml-5 lg:mt-0">
-                <p className="text-base font-normal leading-[25px] text-grey-500 lg:max-w-[650px]">
-                  Boost your design efficiency with this amazing Figma plugin
-                  that every designer needs. Instantly search and magically swap
-                  icons of any size, color, and stroke with incredible ease. Why
-                  settle for less when you can enhance your productivity?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="relative flex w-full flex-col items-center">
-            <div className="absolute -left-[150px] -to-[150px] z-0 h-[317px] w-[317px] shrink-0 rounded-full blur-[45px] [background:linear-gradient(184deg, #FEFFFE_23.18%,#99FF89_62.74%,#FFD600_92%)]" />
-            <div className="relative w-full h-screen">
-              <video
-                src="/figma-icon-library/figmaplugin.mp4"
-                autoPlay
-                playsInline
-                loop
-                className="border border-[#C9CED1] rounded-2xl w-full h-full object-cover blur-[10px]"
-              />
-              <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center mx-auto max-w-max rounded-lg bg-softis-light px-3 py-1 text-center text-sm font-normal text-zinc-50 sm:text-base">
-                Get Ready for an Amazing Figma Plugin - Coming Soon!
-              </span>
-            </div>
-            <div className="mt-7 flex items-center justify-center gap-x-6 sm:mt-10">
-              <a
-                href="https://www.figma.com/community/file/1414792481171455704"
-                className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-black/80 h-12 rounded-lg px-6"
-              >
-                Try it free
-              </a>
-              <a
-                href="https://www.npmjs.com/package/@houstonicons/pro"
-                className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-white text-black hover:bg-gray-50 hover:text-grey-900 h-12 rounded-lg px-6 border-black"
-              >
-                Go Pro
-              </a>
-            </div>
-            <p className="mt-5 text-center text-base font-normal leading-[25px]">
-              No credit card or commitment required
-            </p>
-          </div>
         </div>
       </main>
       <Footer />

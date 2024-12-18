@@ -224,7 +224,7 @@ export default function Home() {
         <div className="mx-auto px-6 lg:px-0 pt-32 sm:pt-40 flex w-full flex-col overflow-hidden">
           <div>
             <p className="text-center text-lg sm:text-xl font-normal leading-7 text-grey-500">
-              Discover a new styles of extraordinary experiences.
+              Produto a new styles of extraordinary experiences.
               <br />
               Plus a new styles ways to design.
             </p>
@@ -4191,14 +4191,14 @@ export default function Home() {
           </div>
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:justify-center">
             <Link
-              href="https://www.npmjs.com/package/@houstonicons/react"
+              href="/figma-icon-library"
               target="_blank"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full"
             >
               Use for free
             </Link>
             <Link
-              href="https://www.npmjs.com/package/@houstonicons/pro"
+              href="/packages"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full"
             >
               Go Pro

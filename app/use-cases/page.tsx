@@ -16,12 +16,14 @@ export default function ExamplesPage() {
       <main className="max-w-screen min-h-screen overflow-hidden">
         <div className="max-w-[80rem] mx-auto mt-10 flex flex-col items-center px-6 sm:mt-20 sm:px-0">
           <div className="space-y-2 text-center">
-            <h1 className="mx-auto max-w-3xl text-3xl font-bold tracking-[-1px] text-grey-900 sm:text-5xl sm:leading-relaxed">
+            <h1
+              className="mx-auto max-w-3xl text-3xl font-bold tracking-[-1px] text-grey-900 sm:text-5xl sm:leading-relaxed">
               You can make beautiful design
               <br />
               with Houston Pro
             </h1>
-            <p className="mx-auto max-w-max rounded-lg bg-blue-50 px-3 py-1 text-center text-sm font-normal text-blue-500 sm:text-base">
+            <p
+              className="mx-auto max-w-max rounded-lg bg-blue-50 px-3 py-1 text-center text-sm font-normal text-blue-500 sm:text-base">
               If icons ar right, they enhance navigation and boost satisfaction.
             </p>
             <p className="text-grey-700 mx-auto mt-4 max-w-2xl">
@@ -35,8 +37,10 @@ export default function ExamplesPage() {
             <div className="flex flex-col gap-6 sm:flex-row">
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image10Big.png" alt="" />
                   </div>
@@ -44,8 +48,10 @@ export default function ExamplesPage() {
               </div>
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image02.png" alt="" />
                   </div>
@@ -55,8 +61,10 @@ export default function ExamplesPage() {
             <div className="flex flex-col gap-6 sm:flex-row">
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image09.png" alt="" />
                   </div>
@@ -64,8 +72,10 @@ export default function ExamplesPage() {
               </div>
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image08.png" alt="" />
                   </div>
@@ -75,8 +85,10 @@ export default function ExamplesPage() {
             <div className="flex flex-col gap-6 sm:flex-row">
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image07.png" alt="" />
                   </div>
@@ -84,8 +96,10 @@ export default function ExamplesPage() {
               </div>
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image06.png" alt="" />
                   </div>
@@ -94,8 +108,10 @@ export default function ExamplesPage() {
             </div>
             <div className="w-full">
               <div className="relative p-1 sm:p-2 group">
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
                   <img src="/home/components/Image05.png" alt="" />
                 </div>
@@ -103,8 +119,10 @@ export default function ExamplesPage() {
             </div>
             <div className="w-full">
               <div className="relative p-1 sm:p-2 group">
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
                   <img src="/home/components/Image12.png" alt="" />
                 </div>
@@ -113,8 +131,10 @@ export default function ExamplesPage() {
             <div className="flex flex-col gap-6 sm:flex-row">
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image04.png" alt="" />
                   </div>
@@ -122,8 +142,10 @@ export default function ExamplesPage() {
               </div>
               <div>
                 <div className="relative p-1 sm:p-2 group">
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                  <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                  <div
+                    className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                   <div className="relative z-10">
                     <img src="/home/components/Image03.png" alt="" />
                   </div>
@@ -132,8 +154,10 @@ export default function ExamplesPage() {
             </div>
             <div className="w-full">
               <div className="relative p-1 sm:p-2 group">
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
-                <div className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
+                <div
+                  className="absolute inset-0 rounded-xl z-[1] opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out will-change-transform bg-gradient-to-b from-[#B4F32D] to-[#FF9A24]" />
                 <div className="relative z-10">
                   <img src="/home/components/Image13.png" alt="" />
                 </div>
@@ -377,7 +401,8 @@ export default function ExamplesPage() {
             </div>
           </div>
         </div>
-        <div className="relative flex h-[500px] mt-24 sm:mt-36 flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
+        <div
+          className="relative flex h-[500px] mt-24 sm:mt-36 flex-col items-center justify-center px-10 text-center bg-[url('https://hugeicons.com/home/pro-footer-sm-bg.png')] sm:bg-[url('https://hugeicons.com/pro-footer-bg.png')] bg-cover bg-no-repeat bg-center">
           <h5 className="text-center text-white text-3xl sm:text-5xl font-semibold">
             Design beautifully with Houston Pro
           </h5>
@@ -395,14 +420,14 @@ export default function ExamplesPage() {
           </div>
           <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-4 w-full sm:justify-center">
             <Link
-              href="https://www.npmjs.com/package/@houstonicons/react"
+              href="/figma-icon-library"
               target="_blank"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-grey-900 border-none hover:bg-[#e7e7e7]/80 py-2 bg-white px-12 w-full sm:max-w-max h-12 rounded-full"
             >
               Use for free
             </Link>
             <Link
-              href="https://www.npmjs.com/package/@houstonicons/pro"
+              href="/packages"
               className="inline-flex relative items-center justify-center font-bold whitespace-nowrap text-sm ring-off set-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-secondary text-[#1d3208] border-none hover:bg-[#afe67f]/50 py-2 bg-[#afe67f] px-12 w-full sm:max-w-max h-12 rounded-full"
             >
               Go Pro

@@ -40,7 +40,16 @@ export function Footer() {
                   target="_blank"
                   className="leading-6 text-grey-600 hover:text-grey-400"
                 >
-                  React package (Free)
+                  React package
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/packages"
+                  target="_blank"
+                  className="leading-6 text-grey-600 hover:text-grey-400"
+                >
+                  Packages
                 </Link>
               </li>
               <li>
