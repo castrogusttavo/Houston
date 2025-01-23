@@ -1,7 +1,5 @@
 'use client'
 
-// git commit -m "feat: add live icon experience"
-
 import { Header } from '@/components/Header'
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
@@ -14,22 +12,22 @@ import { Footer } from '@/components/Footer'
 import * as Icon from '@houstonicons/pro'
 
 interface IconProps {
-  iconSize: number
-  fillType: 'stroke' | 'bulk' | 'solid' | 'twotone' | 'duotone'
-  cornerStyle: 'sharp' | 'rounded' | 'standard'
+  size: number
+  variant: 'stroke' | 'bulk' | 'solid' | 'twotone' | 'duotone'
+  type: 'sharp' | 'rounded' | 'standard'
   strokeWidth: number
 }
 
 const iconVariants = [
-  { fillType: 'stroke', cornerStyle: 'standard' },
-  { fillType: 'solid', cornerStyle: 'standard' },
-  { fillType: 'stroke', cornerStyle: 'rounded' },
-  { fillType: 'twotone', cornerStyle: 'rounded' },
-  { fillType: 'duotone', cornerStyle: 'rounded' },
-  { fillType: 'bulk', cornerStyle: 'rounded' },
-  { fillType: 'solid', cornerStyle: 'rounded' },
-  { fillType: 'stroke', cornerStyle: 'sharp' },
-  { fillType: 'solid', cornerStyle: 'sharp' },
+  { variant: 'stroke', type: 'standard' },
+  { variant: 'solid', type: 'standard' },
+  { variant: 'stroke', type: 'rounded' },
+  { variant: 'twotone', type: 'rounded' },
+  { variant: 'duotone', type: 'rounded' },
+  { variant: 'bulk', type: 'rounded' },
+  { variant: 'solid', type: 'rounded' },
+  { variant: 'stroke', type: 'sharp' },
+  { variant: 'solid', type: 'sharp' },
 ] as const
 
 const searchTabsFilter = [
@@ -624,11 +622,11 @@ export default ${selectedIconName};
                   const filteredVariants = iconVariants.filter((variant) => {
                     const matchesFillType =
                       selectedSearchTab.tabTitle === 'All' ||
-                      variant.fillType ===
+                      variant.variant ===
                         selectedSearchTab.tabTitle.toLowerCase()
                     const matchesCornerStyle =
                       !selectedSearchTab.tabSubtitle ||
-                      variant.cornerStyle ===
+                      variant.type ===
                         selectedSearchTab.tabSubtitle
                           .replace(/[()]/g, '')
                           .toLowerCase()
@@ -654,11 +652,11 @@ export default ${selectedIconName};
                         (variant) => {
                           const matchesFillType =
                             selectedSearchTab.tabTitle === 'All' ||
-                            variant.fillType ===
+                            variant.variant ===
                               selectedSearchTab.tabTitle.toLowerCase()
                           const matchesCornerStyle =
                             !selectedSearchTab.tabSubtitle ||
-                            variant.cornerStyle ===
+                            variant.type ===
                               selectedSearchTab.tabSubtitle
                                 .replace(/[()]/g, '')
                                 .toLowerCase()
@@ -687,7 +685,7 @@ export default ${selectedIconName};
 
                         return (
                           <div
-                            key={`${iconName}-${variant.fillType}-${variant.cornerStyle}-${variantIndex}`}
+                            key={`${iconName}-${variant.variant}-${variant.type}-${variantIndex}`}
                             className="absolute h-[82px] w-[100px] pr-[18px] flex flex-col mr-1"
                             style={{
                               left: `${iconLeftPosition}px`,
@@ -697,12 +695,12 @@ export default ${selectedIconName};
                             onClick={() =>
                               handleOpenModal(
                                 iconName,
-                                variant.fillType,
-                                variant.cornerStyle,
+                                variant.variant,
+                                variant.type,
                                 <IconComponent
-                                  iconSize={parseInt(sizeIcon)}
-                                  fillType={variant.fillType}
-                                  cornerStyle={variant.cornerStyle}
+                                  size={parseInt(sizeIcon)}
+                                  variant={variant.variant}
+                                  type={variant.type}
                                   strokeWidth={1.5}
                                 />,
                               )
@@ -716,9 +714,9 @@ export default ${selectedIconName};
                                 }}
                               >
                                 <IconComponent
-                                  iconSize={28}
-                                  fillType={variant.fillType}
-                                  cornerStyle={variant.cornerStyle}
+                                  size={28}
+                                  variant={variant.variant}
+                                  type={variant.type}
                                   strokeWidth={1.5}
                                 />
                               </div>
@@ -786,10 +784,10 @@ export default ${selectedIconName};
             const filteredVariants = iconVariants.filter((variant) => {
               const matchesFillType =
                 selectedSearchTab.tabTitle === 'All' ||
-                variant.fillType === selectedSearchTab.tabTitle.toLowerCase()
+                variant.variant === selectedSearchTab.tabTitle.toLowerCase()
               const matchesCornerStyle =
                 !selectedSearchTab.tabSubtitle ||
-                variant.cornerStyle ===
+                variant.type ===
                   selectedSearchTab.tabSubtitle
                     .replace(/[()]/g, '')
                     .toLowerCase()
