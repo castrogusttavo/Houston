@@ -51,7 +51,7 @@ export default function IconsPage() {
   const searchTermFromURL = searchParams.get('search') || ''
   const [category, setCategory] = useState('all-icons')
   const [strokeWidthIcon, setStrokeWidthIcon] = useState(1.5)
-  const [sizeIcon, setSizeIcon] = useState('16')
+  const [sizeIcon, setSizeIcon] = useState(16)
   const [colorIcon, setColorIcon] = useState('#000000')
   const [selectedIconName, setSelectedIconName] = useState('')
   const [selectedFillType, setSelectedFillType] = useState('')
@@ -623,13 +623,13 @@ export default ${selectedIconName};
                     const matchesFillType =
                       selectedSearchTab.tabTitle === 'All' ||
                       variant.variant ===
-                        selectedSearchTab.tabTitle.toLowerCase()
+                      selectedSearchTab.tabTitle.toLowerCase()
                     const matchesCornerStyle =
                       !selectedSearchTab.tabSubtitle ||
                       variant.type ===
-                        selectedSearchTab.tabSubtitle
-                          .replace(/[()]/g, '')
-                          .toLowerCase()
+                      selectedSearchTab.tabSubtitle
+                        .replace(/[()]/g, '')
+                        .toLowerCase()
 
                     return matchesFillType && matchesCornerStyle
                   })
@@ -646,20 +646,20 @@ export default ${selectedIconName};
                     {chunk.map((iconName, iconIndex) => {
                       const IconComponent = Icon[
                         iconName as keyof typeof Icon
-                      ] as React.ComponentType<IconProps>
+                        ] as React.ComponentType<IconProps>
 
                       const filteredVariants = iconVariants.filter(
                         (variant) => {
                           const matchesFillType =
                             selectedSearchTab.tabTitle === 'All' ||
                             variant.variant ===
-                              selectedSearchTab.tabTitle.toLowerCase()
+                            selectedSearchTab.tabTitle.toLowerCase()
                           const matchesCornerStyle =
                             !selectedSearchTab.tabSubtitle ||
                             variant.type ===
-                              selectedSearchTab.tabSubtitle
-                                .replace(/[()]/g, '')
-                                .toLowerCase()
+                            selectedSearchTab.tabSubtitle
+                              .replace(/[()]/g, '')
+                              .toLowerCase()
 
                           return matchesFillType && matchesCornerStyle
                         },
@@ -668,8 +668,8 @@ export default ${selectedIconName};
                       return filteredVariants.map((variant, variantIndex) => {
                         const totalIndex =
                           chunkVisibleIndex *
-                            iconsPerPage *
-                            filteredVariants.length +
+                          iconsPerPage *
+                          filteredVariants.length +
                           iconIndex * filteredVariants.length +
                           variantIndex
 
@@ -680,7 +680,7 @@ export default ${selectedIconName};
                         const isLastIcon =
                           chunkIndex === visibleChunks.length - 1 &&
                           iconIndex ===
-                            iconsNamesChunks[chunkIndex].length - 1 &&
+                          iconsNamesChunks[chunkIndex].length - 1 &&
                           variantIndex === filteredVariants.length - 1
 
                         return (
@@ -698,7 +698,7 @@ export default ${selectedIconName};
                                 variant.variant,
                                 variant.type,
                                 <IconComponent
-                                  size={parseInt(sizeIcon)}
+                                  size={sizeIcon}
                                   variant={variant.variant}
                                   type={variant.type}
                                   strokeWidth={1.5}
@@ -788,9 +788,9 @@ export default ${selectedIconName};
               const matchesCornerStyle =
                 !selectedSearchTab.tabSubtitle ||
                 variant.type ===
-                  selectedSearchTab.tabSubtitle
-                    .replace(/[()]/g, '')
-                    .toLowerCase()
+                selectedSearchTab.tabSubtitle
+                  .replace(/[()]/g, '')
+                  .toLowerCase()
 
               return matchesFillType && matchesCornerStyle
             })
@@ -850,7 +850,7 @@ export default ${selectedIconName};
                           {React.cloneElement(
                             selectedIconComponent as React.ReactElement,
                             {
-                              iconSize: sizeIcon,
+                              size: sizeIcon,
                               color: colorIcon,
                               strokeWidth: strokeWidthIcon,
                             },
@@ -1081,6 +1081,7 @@ export default ${selectedIconName};
                           <button
                             className="flex text-xs items-center justify-between rounded-md border border-gray-300 px-3 py-2  placeholder:text-grey-700 focus:outline-none focus:ring-none gap-2 w-[90px] h-10"
                             type="button"
+                            onClick={() => setSizeIcon(sizeIcon)}
                           >
                             <span className="text-ellipsis overflow-w-hidden">
                               {sizeIcon}px
@@ -1111,8 +1112,10 @@ export default ${selectedIconName};
                                 <div role="group">
                                   <div className="relative overflow-scroll h-screen max-h-80 text-grey-600">
                                     <DropdownMenu.RadioGroup
-                                      value={sizeIcon}
-                                      onValueChange={setSizeIcon}
+                                      value={sizeIcon.toString()}
+                                      onValueChange={(value) =>
+                                        setSizeIcon(Number(value))
+                                      }
                                       className="text-center"
                                     >
                                       <h3 className="font-bold text-sm">
